@@ -5,6 +5,6 @@
       location = "group:RNAlertController/RNAlertController.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertControllerExample/RNAlertControllerExample.xcodeproj">
+      location = "group:RNAlertControllerExample/RNAlertControllerExample.xcodeproj">
    </FileRef>
 </Workspace>
