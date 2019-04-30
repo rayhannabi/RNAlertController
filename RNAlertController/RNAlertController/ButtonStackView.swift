@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ButtonStackView: UIStackView {
+final class ButtonStackView: UIStackView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +31,7 @@ class ButtonStackView: UIStackView {
             let attributes = createAttributes(for: alertButton.type)
             let attributedString = NSAttributedString(string: alertButton.text, attributes: attributes)
             button.setAttributedTitle(attributedString, for: .normal)
-            button.addAction(for: .touchUpInside, action: alertButton.action)
+            button.addAction(for: .touchUpInside, action: alertButton.action, dismiss: alertButton.dismiss)
             NSLayoutConstraint.activate([
                 button.heightAnchor.constraint(equalToConstant: 40)
                 ]
