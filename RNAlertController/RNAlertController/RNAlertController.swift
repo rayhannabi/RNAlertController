@@ -39,11 +39,15 @@ public final class RNAlertController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         createBlurredContainerView()
         createAlertBody()
     }
     
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateAlert()
+    }
+
 }
 
 fileprivate extension RNAlertController {
@@ -53,6 +57,7 @@ fileprivate extension RNAlertController {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         containerView.layer.cornerRadius = 10
+        containerView.layer.opacity = 0.0
         containerView.clipsToBounds = true
         view.addSubview(containerView)
         NSLayoutConstraint.activate([
@@ -142,17 +147,27 @@ fileprivate extension RNAlertController {
         }
     }
     
+    
+    func animateAlert() {
+            containerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
+                self.containerView.transform = .identity
+                self.containerView.layer.opacity = 1.0
+                self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+            }, completion: nil)
+    }
+    
 }
 
 public extension RNAlertController {
     
     func present(on viewController: UIViewController, completion: (() -> Void)? = nil) {
-        viewController.present(self, animated: true, completion: completion)
+        viewController.present(self, animated: false, completion: completion)
     }
     
     @discardableResult
     func addButton(title: String, type: AlertButtonType = .normal , action: AlertAction? = nil) -> RNAlertController {
-        let defaultAction = { self.dismiss(animated: false, completion: nil) }
+        let defaultAction = { self.dismiss(animated: true, completion: nil) }
         if let buttonAction = action {
             let button = AlertButton(text: title, type: type, action: buttonAction, dismiss: defaultAction)
             buttons?.append(button)
