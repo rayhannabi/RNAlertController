@@ -16,15 +16,17 @@ public enum AlertButtonType {
 
 public typealias AlertAction = () -> Void
 
-public class AlertButton: NSObject {
+class AlertButton: NSObject {
     
-    let text:   String
-    let action: AlertAction
-    let type:   AlertButtonType
+    let text:       String
+    let action:     AlertAction
+    let dismiss:    AlertAction?
+    let type:       AlertButtonType
     
-    init(text: String, type: AlertButtonType, action: @escaping AlertAction) {
+    init(text: String, type: AlertButtonType, action: @escaping AlertAction, dismiss: (AlertAction)?) {
         self.text = text
         self.action = action
+        self.dismiss = dismiss
         self.type = type
     }
     

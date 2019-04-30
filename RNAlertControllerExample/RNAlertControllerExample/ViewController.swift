@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
             .addButton(title: "Ok")
             .addButton(title: "Cancel", type: .cancel, action: nil)
-            .addButton(title: "Delete", type: .destructive)
+            .addButton(title: "Delete", type: .destructive, action: {
+                print("deleted")
+            })
             .present(on: self)
     }
     

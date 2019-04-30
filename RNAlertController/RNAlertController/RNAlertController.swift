@@ -152,12 +152,12 @@ public extension RNAlertController {
     
     @discardableResult
     func addButton(title: String, type: AlertButtonType = .normal , action: AlertAction? = nil) -> RNAlertController {
+        let defaultAction = { self.dismiss(animated: false, completion: nil) }
         if let buttonAction = action {
-            let button = AlertButton(text: title, type: type, action: buttonAction)
+            let button = AlertButton(text: title, type: type, action: buttonAction, dismiss: defaultAction)
             buttons?.append(button)
         } else {
-            let defaultAction = { self.dismiss(animated: false, completion: nil) }
-            let button = AlertButton(text: title, type: type, action: defaultAction)
+            let button = AlertButton(text: title, type: type, action: defaultAction, dismiss: nil)
             buttons?.append(button)
         }
         
