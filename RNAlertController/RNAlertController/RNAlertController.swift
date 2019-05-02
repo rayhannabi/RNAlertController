@@ -81,12 +81,38 @@ fileprivate extension RNAlertController {
         return messageLabel
     }
     
-    func createImageView() {
-        
+    func createImageView() -> UIImageView? {
+        guard let image = image else { return nil }
+        let imageView = UIImageView(frame: .zero)
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        let heightConstraint = imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 120)
+        NSLayoutConstraint.activate([heightConstraint])
+        return imageView
     }
     
-    func createPickerView() {
-        
+    func createPickerView() -> UIPickerView? {
+        return nil
+    }
+    
+    func createExtraStackView() -> UIStackView {
+        var extraStackItems = [UIView]()
+        let imageView = createImageView()
+        let pickerView = createPickerView()
+        if imageView != nil {
+            extraStackItems.append(imageView!)
+        }
+        if pickerView != nil {
+            extraStackItems.append(pickerView!)
+        }
+        let extraStackView = UIStackView(arrangedSubviews: extraStackItems)
+        extraStackView.translatesAutoresizingMaskIntoConstraints = false
+        extraStackView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        extraStackView.axis = .vertical
+        extraStackView.alignment = .fill
+        extraStackView.distribution = .fill
+        extraStackView.spacing = 8
+        return extraStackView
     }
     
     func createAlertStackView() -> UIStackView {
@@ -119,10 +145,19 @@ fileprivate extension RNAlertController {
             ]
         )
         
+        let extraStack = createExtraStackView()
+        containerView.contentView.addSubview(extraStack)
+        NSLayoutConstraint.activate([
+            extraStack.topAnchor.constraint(equalTo: alertStack.bottomAnchor, constant: 8),
+            extraStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
+            extraStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.85)
+            ]
+        )
+        
         let separator = HorizontalSeparator()
         containerView.contentView.addSubview(separator)
         NSLayoutConstraint.activate([
-            separator.topAnchor.constraint(equalTo: alertStack.bottomAnchor, constant: 16),
+            separator.topAnchor.constraint(equalTo: extraStack.bottomAnchor, constant: 8),
             separator.leadingAnchor.constraint(equalTo: containerView.contentView.leadingAnchor),
             separator.trailingAnchor.constraint(equalTo: containerView.contentView.trailingAnchor)
             ]
@@ -177,6 +212,11 @@ public extension RNAlertController {
         }
         
         return self
+    }
+    
+    @discardableResult
+    func addOkButton(action: AlertAction? = nil) -> RNAlertController {
+        return addButton(title: "OK", type: .normal, action: action)
     }
     
     @discardableResult

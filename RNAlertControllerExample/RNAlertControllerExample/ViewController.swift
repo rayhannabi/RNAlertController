@@ -23,6 +23,7 @@ class ViewController: UIViewController {
             .addButton(title: "Delete", type: .destructive, action: {
                 print("deleted")
             })
+            .setImage(UIImage(named: "mag-small")!)
             .present(on: self)
     }
     
