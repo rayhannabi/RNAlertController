@@ -24,6 +24,9 @@ class ViewController: UIViewController {
                 print("deleted")
             })
             .setImage(UIImage(named: "mag-small")!)
+            .setPickerData(items: ["Item", "World", "Sun", "Milky Way"], selectedRow: 1, selectionAction: { pickerRow in
+                print("Chose row: \(pickerRow.index) item: \(pickerRow.title)")
+            })
             .present(on: self)
     }
     
