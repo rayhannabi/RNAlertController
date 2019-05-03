@@ -1,6 +1,6 @@
 //
 //  RNAlertController.swift
-//  alert-trial
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/24/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
@@ -39,7 +39,7 @@ public final class RNAlertController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        createBlurredContainerView()
+        createAlertContainerView()
         createAlertBody()
     }
     
@@ -47,18 +47,16 @@ public final class RNAlertController: UIViewController {
         super.viewDidAppear(animated)
         animateAlert()
     }
-
+    
 }
+
+// MARK: - Private methods
 
 fileprivate extension RNAlertController {
     
-    func createBlurredContainerView() {
-        containerView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        containerView.layer.cornerRadius = 10
+    func createAlertContainerView() {
+        containerView = AlertContainerView()
         containerView.layer.opacity = 0.0
-        containerView.clipsToBounds = true
         view.addSubview(containerView)
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -81,13 +79,9 @@ fileprivate extension RNAlertController {
         return messageLabel
     }
     
-    func createImageView() -> UIImageView? {
+    func createImageView() -> AlertImageView? {
         guard let image = image else { return nil }
-        let imageView = UIImageView(frame: .zero)
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFit
-        let heightConstraint = imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 120)
-        NSLayoutConstraint.activate([heightConstraint])
+        let imageView = AlertImageView(image: image)
         return imageView
     }
     
@@ -95,7 +89,7 @@ fileprivate extension RNAlertController {
         return nil
     }
     
-    func createExtraStackView() -> UIStackView {
+    func createExtraStackView() -> AlertStackView {
         var extraStackItems = [UIView]()
         let imageView = createImageView()
         let pickerView = createPickerView()
@@ -105,17 +99,11 @@ fileprivate extension RNAlertController {
         if pickerView != nil {
             extraStackItems.append(pickerView!)
         }
-        let extraStackView = UIStackView(arrangedSubviews: extraStackItems)
-        extraStackView.translatesAutoresizingMaskIntoConstraints = false
-        extraStackView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        extraStackView.axis = .vertical
-        extraStackView.alignment = .fill
-        extraStackView.distribution = .fill
-        extraStackView.spacing = 8
+        let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
         return extraStackView
     }
     
-    func createAlertStackView() -> UIStackView {
+    func createAlertStackView() -> AlertStackView {
         var alertStackItems = [UIView]()
         let titleLabel = createTitleLabel()
         let messageLabel = createMessageLabel()
@@ -125,13 +113,7 @@ fileprivate extension RNAlertController {
         if messageLabel != nil {
             alertStackItems.append(messageLabel!)
         }
-        let alertStackView = UIStackView(arrangedSubviews: alertStackItems)
-        alertStackView.translatesAutoresizingMaskIntoConstraints = false
-        alertStackView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        alertStackView.axis = .vertical
-        alertStackView.alignment = .fill
-        alertStackView.distribution = .fill
-        alertStackView.spacing = 8
+        let alertStackView = AlertStackView(arrangedSubviews: alertStackItems)
         return alertStackView
     }
     
@@ -164,7 +146,7 @@ fileprivate extension RNAlertController {
         )
         
         if let buttons = buttons, buttons.count > 0 {
-            let buttonStack = ButtonStackView(alertButtons: buttons)
+            let buttonStack = AlertButtonStackView(alertButtons: buttons)
             containerView.contentView.addSubview(buttonStack)
             NSLayoutConstraint.activate([
                 buttonStack.topAnchor.constraint(equalTo: separator.bottomAnchor),
@@ -184,22 +166,37 @@ fileprivate extension RNAlertController {
     
     
     func animateAlert() {
-            containerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
-                self.containerView.transform = .identity
-                self.containerView.layer.opacity = 1.0
-                self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
-            }, completion: nil)
+        containerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
+            self.containerView.transform = .identity
+            self.containerView.layer.opacity = 1.0
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        }, completion: nil)
     }
     
 }
 
+// MARK: - Public API
+
 public extension RNAlertController {
     
+    /// Presents alert on specified View Controller
+    ///
+    /// Always use this method to present *RNAlertController* alert
+    /// - Parameters:
+    ///   - viewController: *UIViewController* where the alert is to be presented
+    ///   - completion: Block to run after presenting the alert
     func present(on viewController: UIViewController, completion: (() -> Void)? = nil) {
         viewController.present(self, animated: false, completion: completion)
     }
     
+    /// Adds a button to alert
+    ///
+    /// - Parameters:
+    ///   - title: Title for the button
+    ///   - type: Choose `.normal` for regular button, `.cancel` for bold button, `.destructive` for red button
+    ///   - action: Block to run when the button is pressed (i.e. touchUpInside: action)
+    /// - Returns: *RNAlertController* instance
     @discardableResult
     func addButton(title: String, type: AlertButtonType = .normal , action: AlertAction? = nil) -> RNAlertController {
         let defaultAction = { self.dismiss(animated: true, completion: nil) }
@@ -214,17 +211,31 @@ public extension RNAlertController {
         return self
     }
     
+    /// Adds an OK button to alert
+    ///
+    /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside: action)
+    /// - Returns: *RNAlertController* instance
     @discardableResult
     func addOkButton(action: AlertAction? = nil) -> RNAlertController {
         return addButton(title: "OK", type: .normal, action: action)
     }
     
+    /// Sets image for the alert
+    ///
+    /// Multiple calls of this method will result in replacement of previously set image
+    /// - Parameter image: image to use in alert
+    /// - Returns: *RNAlertController* instance
     @discardableResult
     func setImage(_ image: UIImage) -> RNAlertController {
         self.image = image
         return self
     }
     
+    /// Sets picker view data for the alert
+    ///
+    /// Multiple calls of this method will result in replacement of previously set picker data
+    /// - Parameter items: An array of *String* to represent picker data
+    /// - Returns: *RNAlertController* instance
     @discardableResult
     func setPickerData(items: [String]) -> RNAlertController {
         pickerData = items

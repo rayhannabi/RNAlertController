@@ -1,6 +1,6 @@
 //
 //  AlertLabel.swift
-//  alert-trial
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/25/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
