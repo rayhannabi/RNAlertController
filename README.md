@@ -3,24 +3,15 @@
 An easy-to-use alert library for iOS with native look and feel. You can replace UIAlertController and extend the capabilities of it with various features.
 
 
-
 ## Feature
 
 * Title
-
 * Description message
-
 * Image below the description message
-
 * Header Image (coming soon)
-
 * Fixed header image for situation based alert such as *error*, *warning*, *information*, *done* etc. (coming soon)
-
 * Multiple buttons with closure action
-
 * Picker view (coming soon)
-
-  
 
 ## Requirements
 
@@ -28,21 +19,17 @@ An easy-to-use alert library for iOS with native look and feel. You can replace 
 * Xcode 10+
 * Swift 5
 
-
-
 ## Usage
 
 RNAlertController is simple to use. The following example shows how to create a simple alert with an OK button within a view controller.
 
-```Swift
+```swift
 let alertController = RNAlertController(title: "Message", message: "This is a demo")
 alertController.addButton(title: "OK")
 alertController.present(on: self)
 ```
 
 You can also specify button styles when adding them.
-
-
 
 The following example shows how to create an alert with message and image.
 
