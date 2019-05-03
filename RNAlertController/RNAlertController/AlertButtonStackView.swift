@@ -1,6 +1,6 @@
 //
-//  ButtonStackView.swift
-//  alert-trial
+//  AlertButtonStackView.swift
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/24/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ButtonStackView: UIStackView {
+final class AlertButtonStackView: UIStackView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
