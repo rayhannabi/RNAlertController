@@ -17,6 +17,8 @@ public final class RNAlertController: UIViewController {
     private var buttons: [AlertButton]?
     private var image: UIImage?
     private var pickerData: [String]?
+    private var pickerAction: AlertPickerAction?
+    private var selectedPickerRow: Int?
     
     fileprivate var containerView: UIVisualEffectView!
     
@@ -85,8 +87,15 @@ fileprivate extension RNAlertController {
         return imageView
     }
     
-    func createPickerView() -> UIPickerView? {
-        return nil
+    func createPickerView() -> AlertPickerView? {
+        guard let pickerData = pickerData,
+            pickerData.count > 0 else {
+                return nil
+        }
+        let alertPicker = AlertPickerView(items: pickerData,
+                                          selectedIndex: selectedPickerRow ?? 0,
+                                          action: pickerAction)
+        return alertPicker
     }
     
     func createExtraStackView() -> AlertStackView {
@@ -237,8 +246,10 @@ public extension RNAlertController {
     /// - Parameter items: An array of *String* to represent picker data
     /// - Returns: *RNAlertController* instance
     @discardableResult
-    func setPickerData(items: [String]) -> RNAlertController {
+    func setPickerData(items: [String], selectedRow: Int = 0, selectionAction: AlertPickerAction?) -> RNAlertController {
         pickerData = items
+        pickerAction = selectionAction
+        selectedPickerRow = selectedRow
         return self
     }
     

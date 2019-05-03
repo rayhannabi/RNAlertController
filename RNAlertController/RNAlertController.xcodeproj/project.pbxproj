@@ -10,6 +10,7 @@
 		E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE528E227B07D200466CAF /* AlertImageView.swift */; };
 		E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5290227B092400466CAF /* AlertStackView.swift */; };
 		E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5292227B0FD400466CAF /* AlertContainerView.swift */; };
+		E8CE5295227C506000466CAF /* AlertPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5294227C506000466CAF /* AlertPickerView.swift */; };
 		E8ECFAD022772ED000D4BA3F /* RNAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8ECFACE22772ED000D4BA3F /* RNAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8ECFAE122772EFC00D4BA3F /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */; };
 		E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */; };
@@ -24,6 +25,7 @@
 		E8CE528E227B07D200466CAF /* AlertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImageView.swift; sourceTree = "<group>"; };
 		E8CE5290227B092400466CAF /* AlertStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStackView.swift; sourceTree = "<group>"; };
 		E8CE5292227B0FD400466CAF /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
+		E8CE5294227C506000466CAF /* AlertPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPickerView.swift; sourceTree = "<group>"; };
 		E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ECFACE22772ED000D4BA3F /* RNAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNAlertController.h; sourceTree = "<group>"; };
 		E8ECFACF22772ED000D4BA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
 				E8CE528E227B07D200466CAF /* AlertImageView.swift */,
 				E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */,
+				E8CE5294227C506000466CAF /* AlertPickerView.swift */,
 				E8CE5290227B092400466CAF /* AlertStackView.swift */,
 				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
 				E8ECFADD22772EFB00D4BA3F /* Separators.swift */,
@@ -166,6 +169,7 @@
 				E8ECFAE122772EFC00D4BA3F /* UIButton+Action.swift in Sources */,
 				E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */,
 				E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */,
+				E8CE5295227C506000466CAF /* AlertPickerView.swift in Sources */,
 				E8ECFAE622772EFC00D4BA3F /* AlertButtonStackView.swift in Sources */,
 				E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */,
 				E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */,
