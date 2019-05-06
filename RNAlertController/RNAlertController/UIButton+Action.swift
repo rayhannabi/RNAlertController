@@ -10,26 +10,23 @@ import UIKit
 
 @objc class AlertActionWrapper: NSObject {
     
-    let alertAction:    AlertAction
-    let dismissAction:  AlertAction?
+    let alertAction: AlertAction
     
-    init(_ action: @escaping AlertAction, dismissalAction: (AlertAction)?) {
+    init(_ action: @escaping AlertAction) {
         alertAction = action
-        dismissAction = dismissalAction
         super.init()
     }
     
     @objc func invoke() {
         alertAction()
-        dismissAction?()
     }
     
 }
 
 extension UIButton {
     
-    func addAction(for controlState: UIControl.Event, action: @escaping AlertAction, dismiss: (AlertAction)?) {
-        let wrapper = AlertActionWrapper(action, dismissalAction: dismiss)
+    func addAction(for controlState: UIControl.Event, action: @escaping AlertAction) {
+        let wrapper = AlertActionWrapper(action)
         addTarget(wrapper, action: #selector(wrapper.invoke), for: controlState)
         let objcAssocKey = String(ObjectIdentifier(self).hashValue) + String(controlState.rawValue)
         objc_setAssociatedObject(self, objcAssocKey, wrapper, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)

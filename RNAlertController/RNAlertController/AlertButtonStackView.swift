@@ -31,7 +31,7 @@ final class AlertButtonStackView: UIStackView {
             let attributes = createAttributes(for: alertButton.type)
             let attributedString = NSAttributedString(string: alertButton.text, attributes: attributes)
             button.setAttributedTitle(attributedString, for: .normal)
-            button.addAction(for: .touchUpInside, action: alertButton.action, dismiss: alertButton.dismiss)
+            button.addAction(for: .touchUpInside, action: alertButton.action)
             NSLayoutConstraint.activate([
                 button.heightAnchor.constraint(equalToConstant: 40)
                 ]

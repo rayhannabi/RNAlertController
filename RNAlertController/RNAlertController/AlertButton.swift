@@ -25,13 +25,11 @@ class AlertButton: NSObject {
     
     let text:       String
     let action:     AlertAction
-    let dismiss:    AlertAction?
     let type:       AlertButtonType
     
-    init(text: String, type: AlertButtonType, action: @escaping AlertAction, dismiss: (AlertAction)?) {
+    init(text: String, type: AlertButtonType, action: @escaping AlertAction) {
         self.text = text
         self.action = action
-        self.dismiss = dismiss
         self.type = type
     }
     
