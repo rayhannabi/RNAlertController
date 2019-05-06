@@ -137,7 +137,7 @@ fileprivate extension RNAlertController {
         let alertStack = createAlertStackView()
         containerView.contentView.addSubview(alertStack)
         NSLayoutConstraint.activate([
-            alertStack.topAnchor.constraint(equalTo: containerView.contentView.topAnchor, constant: 16),
+            alertStack.topAnchor.constraint(equalTo: containerView.contentView.topAnchor, constant: 20),
             alertStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
             alertStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.8)
             ]
@@ -155,7 +155,7 @@ fileprivate extension RNAlertController {
         let separator = HorizontalSeparator()
         containerView.contentView.addSubview(separator)
         NSLayoutConstraint.activate([
-            separator.topAnchor.constraint(equalTo: extraStack.bottomAnchor, constant: 8),
+            separator.topAnchor.constraint(equalTo: extraStack.bottomAnchor, constant: 12),
             separator.leadingAnchor.constraint(equalTo: containerView.contentView.leadingAnchor),
             separator.trailingAnchor.constraint(equalTo: containerView.contentView.trailingAnchor)
             ]
@@ -186,7 +186,7 @@ fileprivate extension RNAlertController {
         UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
             self.containerView.transform = .identity
             self.containerView.layer.opacity = 1.0
-            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
         }, completion: nil)
     }
     
@@ -236,6 +236,15 @@ public extension RNAlertController {
         return addButton(title: "OK", type: .normal, action: action)
     }
     
+    /// Adds a Cancel button to alert
+    ///
+    /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside: action)
+    /// - Returns: *RNAlertController* instance
+    @discardableResult
+    func addCancelButton(action: AlertAction? = nil) -> RNAlertController {
+        return addButton(title: "Cancel", type: .cancel, action: action)
+    }
+    
     /// Sets image for the alert
     ///
     /// Multiple calls of this method will result in replacement of previously set image
@@ -246,11 +255,14 @@ public extension RNAlertController {
         self.image = image
         return self
     }
-    
+
     /// Sets picker view data for the alert
     ///
     /// Multiple calls of this method will result in replacement of previously set picker data
-    /// - Parameter items: An array of *String* to represent picker data
+    /// - Parameters:
+    ///   - items: An array of *String* to represent picker data
+    ///   - selectedRow: Row to be selected, defaults to 0 (zero) indicating the first item from options
+    ///   - selectionAction: Block to execute when an item is selected
     /// - Returns: *RNAlertController* instance
     @discardableResult
     func setPickerData(items: [String], selectedRow: Int = 0, selectionAction: AlertPickerAction?) -> RNAlertController {

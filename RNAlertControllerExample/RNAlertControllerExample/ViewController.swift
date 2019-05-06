@@ -11,15 +11,17 @@ import RNAlertController
 
 class ViewController: UIViewController {
 
-    @IBAction func didTapShowAlert(_ sender: UIButton) {
-        let message = """
-        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers,
-        or
-        anything else that runs code.
-        """
+    fileprivate func regularAlert(_ message: String) {
+        let alertController = UIAlertController(title: "Test", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    fileprivate func customAlertFull(_ message: String) {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
-            .addButton(title: "Ok")
-            .addButton(title: "Cancel", type: .cancel, action: nil)
+            .addOkButton()
+            .addCancelButton()
             .addButton(title: "Delete", type: .destructive, action: {
                 print("deleted")
             })
@@ -28,10 +30,26 @@ class ViewController: UIViewController {
                 print("Chose row: \(pickerRow.index) item: \(pickerRow.title)")
             })
             .present(on: self)
-//        let alertController = UIAlertController(title: "Test", message: message, preferredStyle: .alert)
-//        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alertController.addAction(action)
-//        present(alertController, animated: true, completion: nil)
+    }
+    
+    fileprivate func customAlertLess(_ message: String) {
+        RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
+            .addOkButton()
+            .addCancelButton()
+            .present(on: self) {
+                print(message)
+        }
+    }
+    
+    @IBAction func didTapShowAlert(_ sender: UIButton) {
+        let message = """
+        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers,
+        or
+        anything else that runs code.
+        """
+        customAlertLess(message)
+//        customAlertFull(message)
+//        regularAlert(message)
     }
     
 }
