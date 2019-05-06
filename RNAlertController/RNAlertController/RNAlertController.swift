@@ -9,16 +9,14 @@
 import UIKit
 
 public final class RNAlertController: UIViewController {
-    
-    typealias ButtonAction = () -> Void
-    
-    private var titleText: String?
-    private var messageText: String?
-    private var buttons: [AlertButton]?
-    private var image: UIImage?
-    private var pickerData: [String]?
-    private var pickerAction: AlertPickerAction?
-    private var selectedPickerRow: Int?
+        
+    private var titleText:          String?
+    private var messageText:        String?
+    private var buttons:            [AlertButton]?
+    private var image:              UIImage?
+    private var pickerData:         [String]?
+    private var pickerAction:       AlertPickerAction?
+    private var selectedPickerRow:  Int?
     
     fileprivate var containerView: UIVisualEffectView!
     
@@ -215,15 +213,12 @@ public extension RNAlertController {
     /// - Returns: *RNAlertController* instance
     @discardableResult
     func addButton(title: String, type: AlertButtonType = .normal , action: AlertAction? = nil) -> RNAlertController {
-        let defaultAction = { self.dismiss(animated: true, completion: nil) }
-        if let buttonAction = action {
-            let button = AlertButton(text: title, type: type, action: buttonAction, dismiss: defaultAction)
-            buttons?.append(button)
-        } else {
-            let button = AlertButton(text: title, type: type, action: defaultAction, dismiss: nil)
-            buttons?.append(button)
+        let action = {
+            self.dismiss(animated: true, completion: action)
         }
-        
+        let button = AlertButton(text: title, type: type, action: action)
+        buttons?.append(button)
+
         return self
     }
     

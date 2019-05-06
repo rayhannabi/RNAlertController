@@ -22,23 +22,23 @@ class ViewController: UIViewController {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
             .addOkButton()
             .addCancelButton()
-            .addButton(title: "Delete", type: .destructive, action: {
+            .addButton(title: "Delete", type: .destructive) {
                 print("deleted")
-            })
+            }
             .setImage(UIImage(named: "mag-small")!)
-            .setPickerData(items: ["Item", "World", "Sun", "Milky Way"], selectedRow: 1, selectionAction: { pickerRow in
+            .setPickerData(items: ["Item", "World", "Sun", "Milky Way"], selectedRow: 1) { pickerRow in
                 print("Chose row: \(pickerRow.index) item: \(pickerRow.title)")
-            })
+            }
             .present(on: self)
     }
     
     fileprivate func customAlertLess(_ message: String) {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
-            .addOkButton()
+            .addOkButton { [weak self] in
+                self?.customAlertFull(message)
+            }
             .addCancelButton()
-            .present(on: self) {
-                print(message)
-        }
+            .present(on: self)
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {
@@ -46,10 +46,10 @@ class ViewController: UIViewController {
         Swift is a fantastic way to write software, whether it’s for phones, desktops, servers,
         or
         anything else that runs code.
+        
+        Tap "OK" to see magic.
         """
         customAlertLess(message)
-//        customAlertFull(message)
-//        regularAlert(message)
     }
     
 }
