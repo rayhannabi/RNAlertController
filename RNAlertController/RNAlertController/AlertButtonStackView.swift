@@ -33,7 +33,7 @@ final class AlertButtonStackView: UIStackView {
             button.setAttributedTitle(attributedString, for: .normal)
             button.addAction(for: .touchUpInside, action: alertButton.action)
             NSLayoutConstraint.activate([
-                button.heightAnchor.constraint(equalToConstant: 40)
+                button.heightAnchor.constraint(equalToConstant: 44)
                 ]
             )
             stackItems.append(button)
@@ -64,10 +64,12 @@ fileprivate func createAttributes(for type: AlertButtonType) -> [NSAttributedStr
     var attributes = [NSAttributedString.Key: Any]()
     switch type {
     case .cancel:
-        attributes[.font] = UIFont.systemFont(ofSize: 15, weight: .bold)
+        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .semibold)
     case .destructive:
+        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .regular)
         attributes[.foregroundColor] = UIColor.red
     default:
+        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .regular)
         break
     }
     
