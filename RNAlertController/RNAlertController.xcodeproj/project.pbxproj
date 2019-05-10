@@ -19,7 +19,6 @@
 		E8ECFAE522772EFC00D4BA3F /* Separators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADD22772EFB00D4BA3F /* Separators.swift */; };
 		E8ECFAE622772EFC00D4BA3F /* AlertButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */; };
 		E8ECFAE722772EFC00D4BA3F /* RNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */; };
-		E8FF167D2281555500CC8807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8FF167C2281555500CC8807 /* Images.xcassets */; };
 		E8FF167F2282B48C00CC8807 /* RNAlertController+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */; };
 		E8FF16812282B87500CC8807 /* UILabel+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF16802282B87500CC8807 /* UILabel+Extra.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		E8ECFADD22772EFB00D4BA3F /* Separators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Separators.swift; sourceTree = "<group>"; };
 		E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButtonStackView.swift; sourceTree = "<group>"; };
 		E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNAlertController.swift; sourceTree = "<group>"; };
-		E8FF167C2281555500CC8807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNAlertController+API.swift"; sourceTree = "<group>"; };
 		E8FF16802282B87500CC8807 /* UILabel+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extra.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +87,6 @@
 				E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */,
 				E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */,
 				E8FF16802282B87500CC8807 /* UILabel+Extra.swift */,
-				E8FF167C2281555500CC8807 /* Images.xcassets */,
 			);
 			path = RNAlertController;
 			sourceTree = "<group>";
@@ -163,7 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8FF167D2281555500CC8807 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
