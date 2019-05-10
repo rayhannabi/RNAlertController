@@ -1,6 +1,6 @@
 //
 //  AlertButton.swift
-//  alert-trial
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/24/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
@@ -8,6 +8,11 @@
 
 import UIKit
 
+/// Alert button type
+///
+/// - normal: Regular button with standard text
+/// - cancel: Bold button text
+/// - destructive: Regular button with red colored text
 public enum AlertButtonType {
     case normal
     case cancel
@@ -16,11 +21,11 @@ public enum AlertButtonType {
 
 public typealias AlertAction = () -> Void
 
-public class AlertButton: NSObject {
+class AlertButton: NSObject {
     
-    let text:   String
-    let action: AlertAction
-    let type:   AlertButtonType
+    let text:       String
+    let action:     AlertAction
+    let type:       AlertButtonType
     
     init(text: String, type: AlertButtonType, action: @escaping AlertAction) {
         self.text = text

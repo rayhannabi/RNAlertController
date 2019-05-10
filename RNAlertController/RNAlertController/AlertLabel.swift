@@ -1,6 +1,6 @@
 //
 //  AlertLabel.swift
-//  alert-trial
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/25/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
@@ -18,7 +18,6 @@ class AlertLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        autoresizingMask = [.flexibleHeight, .flexibleWidth]
         textColor = UIColor.black
         textAlignment = .center
         numberOfLines = 0

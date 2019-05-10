@@ -1,6 +1,6 @@
 //
 //  RNAlertController.swift
-//  alert-trial
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/24/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
@@ -9,14 +9,14 @@
 import UIKit
 
 public final class RNAlertController: UIViewController {
-    
-    typealias ButtonAction = () -> Void
-    
-    private var titleText: String?
-    private var messageText: String?
-    private var buttons: [AlertButton]?
-    private var image: UIImage?
-    private var pickerData: [String]?
+        
+    var titleText:          String?
+    var messageText:        String?
+    var buttons:            [AlertButton]?
+    var image:              UIImage?
+    var pickerData:         [String]?
+    var pickerAction:       AlertPickerAction?
+    var selectedPickerRow:  Int?
     
     fileprivate var containerView: UIVisualEffectView!
     
@@ -39,26 +39,36 @@ public final class RNAlertController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
-        createBlurredContainerView()
+        createAlertContainer()
         createAlertBody()
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateAlert()
     }
     
 }
 
+// MARK: - Private methods
+
 fileprivate extension RNAlertController {
     
-    func createBlurredContainerView() {
-        containerView = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        containerView.layer.cornerRadius = 10
-        containerView.clipsToBounds = true
+    func createAlertContainer() {
+        containerView = AlertContainerView()
+        containerView.layer.opacity = 0.0
         view.addSubview(containerView)
+        var containerWidth: CGFloat = 0.0
+        if UIDevice.current.orientation.isPortrait {
+            containerWidth = UIScreen.main.bounds.width * 0.7
+        } else {
+            containerWidth = UIScreen.main.bounds.height * 0.7
+        }
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            containerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
+            containerView.widthAnchor.constraint(equalToConstant: containerWidth),
+            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
             ]
         )
     }
@@ -76,15 +86,38 @@ fileprivate extension RNAlertController {
         return messageLabel
     }
     
-    func createImageView() {
-        
+    func createImageView() -> AlertImageView? {
+        guard let image = image else { return nil }
+        let imageView = AlertImageView(image: image)
+        return imageView
     }
     
-    func createPickerView() {
-        
+    func createPickerView() -> AlertPickerView? {
+        guard let pickerData = pickerData,
+            pickerData.count > 0 else {
+                return nil
+        }
+        let alertPicker = AlertPickerView(items: pickerData,
+                                          selectedIndex: selectedPickerRow ?? 0,
+                                          action: pickerAction)
+        return alertPicker
     }
     
-    func createAlertStackView() -> UIStackView {
+    func createExtraStackView() -> AlertStackView {
+        var extraStackItems = [UIView]()
+        let imageView = createImageView()
+        let pickerView = createPickerView()
+        if imageView != nil {
+            extraStackItems.append(imageView!)
+        }
+        if pickerView != nil {
+            extraStackItems.append(pickerView!)
+        }
+        let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
+        return extraStackView
+    }
+    
+    func createAlertStackView() -> AlertStackView {
         var alertStackItems = [UIView]()
         let titleLabel = createTitleLabel()
         let messageLabel = createMessageLabel()
@@ -94,13 +127,7 @@ fileprivate extension RNAlertController {
         if messageLabel != nil {
             alertStackItems.append(messageLabel!)
         }
-        let alertStackView = UIStackView(arrangedSubviews: alertStackItems)
-        alertStackView.translatesAutoresizingMaskIntoConstraints = false
-        alertStackView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        alertStackView.axis = .vertical
-        alertStackView.alignment = .fill
-        alertStackView.distribution = .fill
-        alertStackView.spacing = 8
+        let alertStackView = AlertStackView(arrangedSubviews: alertStackItems)
         return alertStackView
     }
     
@@ -108,23 +135,32 @@ fileprivate extension RNAlertController {
         let alertStack = createAlertStackView()
         containerView.contentView.addSubview(alertStack)
         NSLayoutConstraint.activate([
-            alertStack.topAnchor.constraint(equalTo: containerView.contentView.topAnchor, constant: 16),
+            alertStack.topAnchor.constraint(equalTo: containerView.contentView.topAnchor, constant: 20),
             alertStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
             alertStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.8)
+            ]
+        )
+        
+        let extraStack = createExtraStackView()
+        containerView.contentView.addSubview(extraStack)
+        NSLayoutConstraint.activate([
+            extraStack.topAnchor.constraint(equalTo: alertStack.bottomAnchor, constant: 8),
+            extraStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
+            extraStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.85)
             ]
         )
         
         let separator = HorizontalSeparator()
         containerView.contentView.addSubview(separator)
         NSLayoutConstraint.activate([
-            separator.topAnchor.constraint(equalTo: alertStack.bottomAnchor, constant: 16),
+            separator.topAnchor.constraint(equalTo: extraStack.bottomAnchor, constant: 12),
             separator.leadingAnchor.constraint(equalTo: containerView.contentView.leadingAnchor),
             separator.trailingAnchor.constraint(equalTo: containerView.contentView.trailingAnchor)
             ]
         )
         
         if let buttons = buttons, buttons.count > 0 {
-            let buttonStack = ButtonStackView(alertButtons: buttons)
+            let buttonStack = AlertButtonStackView(alertButtons: buttons)
             containerView.contentView.addSubview(buttonStack)
             NSLayoutConstraint.activate([
                 buttonStack.topAnchor.constraint(equalTo: separator.bottomAnchor),
@@ -142,38 +178,14 @@ fileprivate extension RNAlertController {
         }
     }
     
-}
-
-public extension RNAlertController {
     
-    func present(on viewController: UIViewController, completion: (() -> Void)? = nil) {
-        viewController.present(self, animated: true, completion: completion)
-    }
-    
-    @discardableResult
-    func addButton(title: String, type: AlertButtonType = .normal , action: AlertAction? = nil) -> RNAlertController {
-        if let buttonAction = action {
-            let button = AlertButton(text: title, type: type, action: buttonAction)
-            buttons?.append(button)
-        } else {
-            let defaultAction = { self.dismiss(animated: false, completion: nil) }
-            let button = AlertButton(text: title, type: type, action: defaultAction)
-            buttons?.append(button)
-        }
-        
-        return self
-    }
-    
-    @discardableResult
-    func setImage(_ image: UIImage) -> RNAlertController {
-        self.image = image
-        return self
-    }
-    
-    @discardableResult
-    func setPickerData(items: [String]) -> RNAlertController {
-        pickerData = items
-        return self
+    func animateAlert() {
+        containerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
+            self.containerView.transform = .identity
+            self.containerView.layer.opacity = 1.0
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
+        }, completion: nil)
     }
     
 }
