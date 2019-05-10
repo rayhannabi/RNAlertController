@@ -37,7 +37,8 @@ class ViewController: UIViewController {
             .addOkButton { [weak self] in
                 self?.customAlertFull(message)
             }
-            .addCancelButton()
+//            .addCancelButton()
+            .addButton(title: "Very long text sample")
             .present(on: self)
     }
     
