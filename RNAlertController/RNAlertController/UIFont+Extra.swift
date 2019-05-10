@@ -1,6 +1,6 @@
 //
 //  UIFont+Extra.swift
-//  alert-trial
+//  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/25/19.
 //  Copyright © 2019 Rayhan. All rights reserved.
@@ -11,7 +11,7 @@ import UIKit
 extension UIFont {
     
     class var alertTitleFont: UIFont {
-        return self.systemFont(ofSize: 16, weight: .bold)
+        return self.systemFont(ofSize: 17, weight: .semibold)
     }
     
     class var alertMessageFont: UIFont {
