@@ -13,7 +13,6 @@ class AlertStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        autoresizingMask = [.flexibleHeight, .flexibleWidth]
         axis = .vertical
         alignment = .fill
         distribution = .fill

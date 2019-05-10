@@ -20,7 +20,6 @@ class AlertPickerView: UIPickerView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        autoresizingMask = [.flexibleHeight, .flexibleWidth]
         dataSource = self
         delegate = self
     }

@@ -18,7 +18,6 @@ class AlertLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        autoresizingMask = [.flexibleHeight, .flexibleWidth]
         textColor = UIColor.black
         textAlignment = .center
         numberOfLines = 0
