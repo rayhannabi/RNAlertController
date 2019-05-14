@@ -22,6 +22,5 @@ Pod::Spec.new do |spec|
   spec.source_files  = "RNAlertController/**/*.swift"
   spec.framework = "UIKit"
   spec.requires_arc = true
-  spec.swift_version = "5.0"
 
 end
