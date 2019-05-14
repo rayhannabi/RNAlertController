@@ -20,7 +20,6 @@ Pod::Spec.new do |spec|
                         :tag => "#{spec.version}" }
 
   spec.source_files  = "RNAlertController/**/*.swift"
-  spec.public_header_files = "RNAlertController/**/*.h"
   spec.framework = "UIKit"
   spec.requires_arc = true
   spec.swift_version = "5.0"
