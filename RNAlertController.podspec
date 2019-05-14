@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.ios.deployment_target = '9.0'
   spec.source       = { :git => "https://github.com/rayhannabi/RNAlertController.git", 
-                        :tag => "#{spec.version}" }
+                        :tag => "v#{spec.version}" }
 
   spec.source_files  = "RNAlertController/**/*.swift"
   spec.framework = "UIKit"
