@@ -1,5 +1,7 @@
 
-
+![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
+![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
+![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)
 
 # RNAlertController
 
@@ -13,13 +15,24 @@ An easy-to-use alert library for iOS written purely in Swift. With native look-n
 * Header Image (coming soon)
 * Fixed header image for situation based alert such as *error*, *warning*, *information*, *done* etc. (coming soon)
 * Multiple buttons with closure action
-* Picker view (coming soon)
+* Picker view
 
 ## Requirements
 
 * iOS 9.0+
 * Xcode 10+
 * Swift 5
+
+## Installation
+
+### Via Cocoapods
+**RNAlertController** is available through [CocoaPods](https://cocoapods.org/pods/RNAlertController). To install it, simply add the following line to your Podfile:
+
+```ruby
+# Swift 5.0 or later
+pod 'RNAlertController'
+```
+and run `pod install`
 
 ## Usage
 
@@ -39,8 +52,8 @@ The following example shows how to create an alert with message and image.
 RNAlertController(title: "Message", message: "This is a demo")
 	.addButton(title: "Cancel", type: .cancel, action: nil)
 	.addButton(title: "Delete", type: .destructive, action: { [weak self] in
-    self?.performSomeAction()
-  })
+    		self?.performSomeAction()
+  	})
 	.setImage(UIImage(named: "Flag")!)
 	.present(on: self)
 ```
