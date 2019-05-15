@@ -1,7 +1,9 @@
+
+
+
 # RNAlertController
 
-An easy-to-use alert library for iOS with native look and feel. You can replace UIAlertController and extend the capabilities of it with various features.
-
+An easy-to-use alert library for iOS written purely in Swift. With native look-n-feel and animations, you get some more functionalties added to your alert.
 
 ## Feature
 
