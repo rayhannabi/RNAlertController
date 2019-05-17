@@ -26,10 +26,9 @@ final class HorizontalSeparator: Separator {
     
     convenience init() {
         self.init(frame: .zero)
-        NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 0.5)
-            ]
-        )
+        let heightConstraint = heightAnchor.constraint(equalToConstant: 0.5)
+        heightConstraint.priority = .required
+        NSLayoutConstraint.activate([heightConstraint])
     }
     
 }
