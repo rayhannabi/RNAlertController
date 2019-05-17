@@ -13,7 +13,7 @@ class AlertContainerView: UIVisualEffectView {
     override init(effect: UIVisualEffect?) {
         super.init(effect: effect)
         translatesAutoresizingMaskIntoConstraints = false
-        autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        autoresizingMask =  [.flexibleHeight]
         layer.cornerRadius = 10
         clipsToBounds = true
     }
