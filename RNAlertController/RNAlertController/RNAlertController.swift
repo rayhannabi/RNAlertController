@@ -59,16 +59,18 @@ fileprivate extension RNAlertController {
         containerView.layer.opacity = 0.0
         view.addSubview(containerView)
         var containerWidth: CGFloat = 0.0
-        if UIDevice.current.orientation.isPortrait {
-            containerWidth = UIScreen.main.bounds.width * 0.7
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        if screenWidth < screenHeight {
+            containerWidth = screenWidth * 0.7
         } else {
-            containerWidth = UIScreen.main.bounds.height * 0.7
+            containerWidth = screenHeight * 0.7
         }
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: containerWidth),
-            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
+//            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
             ]
         )
     }

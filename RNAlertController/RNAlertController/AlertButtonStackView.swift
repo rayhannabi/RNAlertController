@@ -59,10 +59,12 @@ fileprivate func createAttributes(for type: AlertButtonType) -> [NSAttributedStr
 }
 
 fileprivate func getDeviceWidthOrHeight(multiplier: CGFloat = 1.0) -> CGFloat {
-    if UIDevice.current.orientation.isPortrait {
-        return UIScreen.main.bounds.width * multiplier
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    if screenWidth < screenHeight {
+        return screenWidth * multiplier
     } else {
-        return UIScreen.main.bounds.height * multiplier
+        return screenHeight * multiplier
     }
 }
 
