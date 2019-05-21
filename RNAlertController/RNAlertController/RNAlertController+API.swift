@@ -83,4 +83,11 @@ public extension RNAlertController {
         return self
     }
     
+    @discardableResult
+    func setURL(urlString: String, text: String) -> RNAlertController {
+        let url = URL(string: urlString)
+        alertURL = AlertURL(url: url, text: text)
+        return self
+    }
+    
 }
