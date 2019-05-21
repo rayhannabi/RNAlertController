@@ -17,6 +17,7 @@ public final class RNAlertController: UIViewController {
     var pickerData:         [String]?
     var pickerAction:       AlertPickerAction?
     var selectedPickerRow:  Int?
+    var url:                URL?
     
     fileprivate var containerView: UIVisualEffectView!
     
@@ -70,7 +71,7 @@ fileprivate extension RNAlertController {
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: containerWidth),
-//            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
+            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
             ]
         )
     }
