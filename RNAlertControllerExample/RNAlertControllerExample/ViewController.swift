@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     
     fileprivate func customAlertLess(_ message: String) {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
+            .setURL(string: "https://www.apple.com")
             .addOkButton { [weak self] in
                 self?.customAlertFull(message)
             }

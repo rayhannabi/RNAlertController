@@ -106,15 +106,33 @@ fileprivate extension RNAlertController {
         return alertPicker
     }
     
+    func createURLView() -> UIButton? {
+        guard let url = url else { return nil }
+        let urlButton = UIButton(type: .system)
+        urlButton.setTitle(url.absoluteString, for: .normal)
+        urlButton.addAction(for: .touchUpInside) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+        return urlButton
+    }
+    
     func createExtraStackView() -> AlertStackView {
         var extraStackItems = [UIView]()
         let imageView = createImageView()
         let pickerView = createPickerView()
+        let urlView = createURLView()
         if imageView != nil {
             extraStackItems.append(imageView!)
         }
         if pickerView != nil {
             extraStackItems.append(pickerView!)
+        }
+        if urlView != nil {
+            extraStackItems.append(urlView!)
         }
         let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
         return extraStackView
