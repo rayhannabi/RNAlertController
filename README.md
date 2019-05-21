@@ -16,6 +16,7 @@ An easy-to-use alert library for iOS written purely in Swift. With native look-n
 * Fixed header image for situation based alert such as *error*, *warning*, *information*, *done* etc. (coming soon)
 * Multiple buttons with closure action
 * Picker view
+* URL Button
 
 ## Requirements
 

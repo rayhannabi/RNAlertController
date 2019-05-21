@@ -17,6 +17,7 @@ public final class RNAlertController: UIViewController {
     var pickerData:         [String]?
     var pickerAction:       AlertPickerAction?
     var selectedPickerRow:  Int?
+    var alertURL:           AlertURL?
     
     fileprivate var containerView: UIVisualEffectView!
     
@@ -70,7 +71,7 @@ fileprivate extension RNAlertController {
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: containerWidth),
-//            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
+            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
             ]
         )
     }
@@ -105,15 +106,25 @@ fileprivate extension RNAlertController {
         return alertPicker
     }
     
+    func createURLView() -> AlertURLButton? {
+        guard let alertURL = alertURL else { return nil }
+        let alertURLButton = AlertURLButton(alertURL)
+        return alertURLButton
+    }
+    
     func createExtraStackView() -> AlertStackView {
         var extraStackItems = [UIView]()
         let imageView = createImageView()
         let pickerView = createPickerView()
+        let urlView = createURLView()
         if imageView != nil {
             extraStackItems.append(imageView!)
         }
         if pickerView != nil {
             extraStackItems.append(pickerView!)
+        }
+        if urlView != nil {
+            extraStackItems.append(urlView!)
         }
         let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
         return extraStackView
