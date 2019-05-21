@@ -17,7 +17,7 @@ public final class RNAlertController: UIViewController {
     var pickerData:         [String]?
     var pickerAction:       AlertPickerAction?
     var selectedPickerRow:  Int?
-    var url:                URL?
+    var alertURL:           AlertURL?
     
     fileprivate var containerView: UIVisualEffectView!
     
@@ -106,18 +106,10 @@ fileprivate extension RNAlertController {
         return alertPicker
     }
     
-    func createURLView() -> UIButton? {
-        guard let url = url else { return nil }
-        let urlButton = UIButton(type: .system)
-        urlButton.setTitle(url.absoluteString, for: .normal)
-        urlButton.addAction(for: .touchUpInside) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
-        return urlButton
+    func createURLView() -> AlertURLButton? {
+        guard let alertURL = alertURL else { return nil }
+        let alertURLButton = AlertURLButton(alertURL)
+        return alertURLButton
     }
     
     func createExtraStackView() -> AlertStackView {
