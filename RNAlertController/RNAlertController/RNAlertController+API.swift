@@ -20,6 +20,18 @@ public extension RNAlertController {
         viewController.present(self, animated: false, completion: completion)
     }
     
+    func show(animated: Bool = true, completion: (() -> Void)? = nil) {
+        alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow?.rootViewController = UIViewController()
+        let appDelegate = UIApplication.shared.delegate
+        if let window = appDelegate?.window, window != nil {
+            alertWindow?.tintColor = window?.tintColor
+        }
+        alertWindow?.windowLevel = .alert
+        alertWindow?.makeKeyAndVisible()
+        alertWindow?.rootViewController?.present(self, animated: animated, completion: completion)
+    }
+    
     /// Adds a button to alert
     ///
     /// - Parameters:

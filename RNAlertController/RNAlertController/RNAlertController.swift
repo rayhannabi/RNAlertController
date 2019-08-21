@@ -10,18 +10,19 @@ import UIKit
 
 public final class RNAlertController: UIViewController {
         
-    var titleText:          String?
-    var messageText:        String?
-    var buttons:            [AlertButton]?
-    var image:              UIImage?
-    var pickerData:         [String]?
-    var pickerAction:       AlertPickerAction?
-    var selectedPickerRow:  Int?
-    var alertURL:           AlertURL?
+    var titleText           : String?
+    var messageText         : String?
+    var buttons             : [AlertButton]?
+    var image               : UIImage?
+    var pickerData          : [String]?
+    var pickerAction        : AlertPickerAction?
+    var selectedPickerRow   : Int?
+    var alertURL            : AlertURL?
+    var alertWindow         : UIWindow?
     
-    fileprivate var containerView: UIVisualEffectView!
+    private var containerView   : UIVisualEffectView!
     
-    fileprivate override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
@@ -49,11 +50,17 @@ public final class RNAlertController: UIViewController {
         animateAlert()
     }
     
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        alertWindow?.isHidden = true
+        alertWindow = nil
+    }
+    
 }
 
 // MARK: - Private methods
 
-fileprivate extension RNAlertController {
+private extension RNAlertController {
     
     func createAlertContainer() {
         containerView = AlertContainerView()
@@ -150,7 +157,7 @@ fileprivate extension RNAlertController {
         NSLayoutConstraint.activate([
             alertStack.topAnchor.constraint(equalTo: containerView.contentView.topAnchor, constant: 20),
             alertStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
-            alertStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.8)
+            alertStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.85)
             ]
         )
         

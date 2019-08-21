@@ -129,7 +129,7 @@
 		E8ECFAC222772ED000D4BA3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Rayhan Nabi";
 				TargetAttributes = {
 					E8ECFACA22772ED000D4BA3F = {
@@ -144,6 +144,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E8ECFAC122772ED000D4BA3F;
 			productRefGroup = E8ECFACC22772ED000D4BA3F /* Products */;
@@ -315,7 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
@@ -344,7 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
