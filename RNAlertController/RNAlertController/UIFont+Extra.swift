@@ -11,11 +11,11 @@ import UIKit
 extension UIFont {
     
     class var alertTitleFont: UIFont {
-        return self.systemFont(ofSize: 17, weight: .semibold)
+        return self.systemFont(ofSize: 18, weight: .semibold)
     }
     
     class var alertMessageFont: UIFont {
-        return self.systemFont(ofSize: 13, weight: .regular)
+        return self.systemFont(ofSize: 14, weight: .regular)
     }
     
 }
