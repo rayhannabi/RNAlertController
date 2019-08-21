@@ -46,12 +46,12 @@ fileprivate func createAttributes(for type: AlertButtonType) -> [NSAttributedStr
     var attributes = [NSAttributedString.Key: Any]()
     switch type {
     case .cancel:
-        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .semibold)
     case .destructive:
-        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .regular)
+        attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .regular)
         attributes[.foregroundColor] = UIColor.red
     default:
-        attributes[.font] = UIFont.systemFont(ofSize: 16, weight: .regular)
+        attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .regular)
         break
     }
     
