@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             }
 //            .addCancelButton()
             .addButton(title: "Very long text sample")
-            .present(on: self)
+            .show()
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {
