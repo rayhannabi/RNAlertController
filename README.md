@@ -27,7 +27,7 @@ An easy-to-use alert library for iOS written purely in Swift. With native look-n
 ## Installation
 
 ### Via Cocoapods
-**RNAlertController** is available through [CocoaPods](https://cocoapods.org/pods/RNAlertController). To install it, simply add the following line to your Podfile:
+**RNAlertController** is available through [CocoaPods](https://cocoapods.org/pods/RNAlertController). To install the latest version, simply add the following line to your Podfile:
 
 ```ruby
 # Swift 5.0 or later
@@ -41,8 +41,8 @@ RNAlertController is simple to use. The following example shows how to create a 
 
 ```swift
 let alertController = RNAlertController(title: "Message", message: "This is a demo")
-alertController.addButton(title: "OK")
-alertController.present(on: self)
+alertController.addButton(title: "Got It", type: .default)
+alertController.show()
 ```
 
 You can also specify button styles when adding them.
@@ -56,7 +56,7 @@ RNAlertController(title: "Message", message: "This is a demo")
     		self?.performSomeAction()
   	})
 	.setImage(UIImage(named: "Flag")!)
-	.present(on: self)
+	.show()
 ```
 
 
