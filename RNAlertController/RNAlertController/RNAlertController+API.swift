@@ -45,7 +45,7 @@ public extension RNAlertController {
     ///   - action: Block to run when the button is pressed (i.e. touchUpInside: action)
     /// - Returns: *RNAlertController* instance
     @discardableResult
-    func addButton(title: String, type: AlertButtonType = .normal , action: AlertAction? = nil) -> RNAlertController {
+    func addButton(title: String, type: AlertButtonType = .default , action: AlertAction? = nil) -> RNAlertController {
         let action = {
             self.dismiss(animated: true, completion: action)
         }
@@ -61,7 +61,7 @@ public extension RNAlertController {
     /// - Returns: *RNAlertController* instance
     @discardableResult
     func addOkButton(action: AlertAction? = nil) -> RNAlertController {
-        return addButton(title: "OK", type: .normal, action: action)
+        return addButton(title: "OK", type: .default, action: action)
     }
     
     /// Adds a Cancel button to alert
