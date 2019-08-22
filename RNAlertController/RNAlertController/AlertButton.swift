@@ -10,11 +10,11 @@ import UIKit
 
 /// Alert button type
 ///
-/// - normal: Regular button with standard text
+/// - default: Regular button with standard text
 /// - cancel: Bold button text
 /// - destructive: Regular button with red colored text
 public enum AlertButtonType {
-    case normal
+    case `default`
     case cancel
     case destructive
 }
