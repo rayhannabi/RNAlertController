@@ -19,11 +19,11 @@ extension UIColor {
     }
     
     static var defaultBackground: UIColor {
-        return UIColor(white: 1, alpha: 0.6)
+        return UIColor(white: 1, alpha: 0.65)
     }
     
     static var highlightedBackground: UIColor {
-        return UIColor(white: 1, alpha: 0.3)
+        return UIColor(white: 1, alpha: 0.325)
     }
     
 }

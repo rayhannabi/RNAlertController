@@ -31,7 +31,7 @@ class AlertActionButton: UIButton {
         setAttributedTitle(attributedTitle, for: .normal)
     }
     
-    func createAttributes(for type: AlertButtonType) -> [NSAttributedString.Key: Any] {
+    private func createAttributes(for type: AlertButtonType) -> [NSAttributedString.Key: Any] {
         var attributes = [NSAttributedString.Key: Any]()
         switch type {
         case .cancel:

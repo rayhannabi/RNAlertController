@@ -10,15 +10,24 @@ import UIKit
 import RNAlertController
 
 class ViewController: UIViewController {
+    
+    let message = """
+        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that
+        runs code.
+        
+        Tap "OK" to see magic.
+        """
 
-    fileprivate func regularAlert(_ message: String) {
-        let alertController = UIAlertController(title: "Test", message: message, preferredStyle: .alert)
+    fileprivate func nativeAlert() {
+        let alertController = UIAlertController(title: "Indira Memorial Tulip Garden, Kashmir",
+                                                message: message,
+                                                preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
     
-    fileprivate func customAlertFull(_ message: String) {
+    fileprivate func customAlertFull() {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
             .addOkButton()
             .addCancelButton()
@@ -33,32 +42,12 @@ class ViewController: UIViewController {
     }
     
     fileprivate func customAlertLess() {
-        let message = """
-        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers,
-        or
-        anything else that runs code.
-        
-        Tap "OK" to see magic.
-        """
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
             .addOkButton(action: {
-                self.customAlertFull(message)
+                self.customAlertFull()
             })
             .addCancelButton()
             .show()
-    }
-    
-    private func nativeAlert() {
-        let message = """
-        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that
-        runs code.
-        
-        Tap "OK" to see magic.
-        """
-        let alert = UIAlertController(title: "Swiftly", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Fuck This", style: .destructive, handler: nil))
-         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {
