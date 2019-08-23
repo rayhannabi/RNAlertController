@@ -18,4 +18,12 @@ extension UIFont {
         return self.systemFont(ofSize: 14, weight: .regular)
     }
     
+    class var alertButtonFontRegular: UIFont {
+        return self.systemFont(ofSize: 17, weight: .regular)
+    }
+    
+    class var alertButtonFontBold: UIFont {
+        return self.systemFont(ofSize: 17, weight: .semibold)
+    }
+    
 }

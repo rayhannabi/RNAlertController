@@ -48,8 +48,21 @@ class ViewController: UIViewController {
             .show()
     }
     
+    private func nativeAlert() {
+        let message = """
+        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that
+        runs code.
+        
+        Tap "OK" to see magic.
+        """
+        let alert = UIAlertController(title: "Swiftly", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Fuck This", style: .destructive, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func didTapShowAlert(_ sender: UIButton) {
         customAlertLess()
+//        nativeAlert()
     }
     
 }

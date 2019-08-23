@@ -153,8 +153,7 @@ private extension RNAlertController {
     
     func createAlertBody() {
         let background = UIView(frame: .zero)
-        background.backgroundColor = .white
-        background.layer.opacity = 0.6
+        background.backgroundColor = .defaultBackground
         background.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         background.translatesAutoresizingMaskIntoConstraints = false
         

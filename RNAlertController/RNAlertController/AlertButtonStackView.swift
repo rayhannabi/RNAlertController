@@ -49,7 +49,7 @@ fileprivate func createAttributes(for type: AlertButtonType) -> [NSAttributedStr
         attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .semibold)
     case .destructive:
         attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .regular)
-        attributes[.foregroundColor] = UIColor.red
+        attributes[.foregroundColor] = UIColor(red: 255, green: 59, blue: 48, alpha: 1.0)
     default:
         attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .regular)
         break
@@ -72,16 +72,9 @@ fileprivate func createButtonCollection(from alertButtons: [AlertButton]) -> [UI
     var stackItems = [UIView]()
     for index in 0..<alertButtons.count {
         let alertButton = alertButtons[index]
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(white: 1, alpha: 0.6)
-        let attributes = createAttributes(for: alertButton.type)
-        let attributedString = NSAttributedString(string: alertButton.text, attributes: attributes)
-        button.setAttributedTitle(attributedString, for: .normal)
+        let button = AlertActionButton()
+        button.setTitle(alertButton.text, for: alertButton.type)
         button.addAction(for: .touchUpInside, action: alertButton.action)
-        NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalToConstant: 44)
-            ]
-        )
         stackItems.append(button)
         if index != alertButtons.count - 1 {
             if alertButtons.count == 2  {
@@ -109,14 +102,4 @@ fileprivate func adjustForOversizedText(buttonCollection: inout [UIView]) -> Boo
         }
     }
     return shouldUseVerticalAxis
-}
-
-extension UIButton {
-
-    override open var isHighlighted: Bool {
-        didSet {
-            layer.opacity = isHighlighted ? 0.65 : 1.0
-        }
-    }
-
 }
