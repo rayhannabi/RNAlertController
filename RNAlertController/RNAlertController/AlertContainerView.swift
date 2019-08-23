@@ -23,7 +23,7 @@ class AlertContainerView: UIVisualEffectView {
     }
     
     convenience init() {
-        self.init(effect: UIBlurEffect(style: .extraLight))
+        self.init(effect: UIBlurEffect(style: .light))
     }
     
 }

@@ -23,9 +23,9 @@ public typealias AlertAction = () -> Void
 
 class AlertButton: NSObject {
     
-    let text:       String
-    let action:     AlertAction
-    let type:       AlertButtonType
+    let text        : String
+    let action      : AlertAction
+    let type        : AlertButtonType
     
     init(text: String, type: AlertButtonType, action: @escaping AlertAction) {
         self.text = text

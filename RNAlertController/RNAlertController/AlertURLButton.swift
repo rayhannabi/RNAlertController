@@ -9,7 +9,7 @@
 import UIKit
 
 struct AlertURL {
-    let url: URL?
+    let url : URL?
     let text: String?
 }
 

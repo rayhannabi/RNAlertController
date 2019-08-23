@@ -10,15 +10,24 @@ import UIKit
 import RNAlertController
 
 class ViewController: UIViewController {
+    
+    let message = """
+        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that
+        runs code.
+        
+        Tap "OK" to see magic.
+        """
 
-    fileprivate func regularAlert(_ message: String) {
-        let alertController = UIAlertController(title: "Test", message: message, preferredStyle: .alert)
+    fileprivate func nativeAlert() {
+        let alertController = UIAlertController(title: "Indira Memorial Tulip Garden, Kashmir",
+                                                message: message,
+                                                preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
     
-    fileprivate func customAlertFull(_ message: String) {
+    fileprivate func customAlertFull() {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
             .addOkButton()
             .addCancelButton()
@@ -32,25 +41,18 @@ class ViewController: UIViewController {
             .present(on: self)
     }
     
-    fileprivate func customAlertLess(_ message: String) {
+    fileprivate func customAlertLess() {
         RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
-            .setURL(urlString: "https://github.com/rayhannabi/RNAlertController", text: "RNAlertController on GitHub")
-            .addOkButton { [weak self] in
-                self?.customAlertFull(message)
-            }
-            .addButton(title: "Very long text sample", type: .default)
+            .addOkButton(action: {
+                self.customAlertFull()
+            })
+            .addButton(title: "Cancel")
             .show()
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {
-        let message = """
-        Swift is a fantastic way to write software, whether it’s for phones, desktops, servers,
-        or
-        anything else that runs code.
-        
-        Tap "OK" to see magic.
-        """
-        customAlertLess(message)
+        customAlertLess()
+//        nativeAlert()
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 
 public extension RNAlertController {
     
-    /// Presents alert on specified View Controller
+    /// Presents the alert on the specified View Controller
     ///
     /// Always use this method to present *RNAlertController* alert
     /// - Parameters:
@@ -20,7 +20,7 @@ public extension RNAlertController {
         viewController.present(self, animated: false, completion: completion)
     }
     
-    /// Shows alert over current window
+    /// Shows the alert over current window
     ///
     /// - Parameters:
     ///   - animated: Indicates whether alert should be presented with animation
@@ -37,7 +37,7 @@ public extension RNAlertController {
         alertWindow?.rootViewController?.present(self, animated: animated, completion: completion)
     }
     
-    /// Adds a button to alert
+    /// Adds a button to the alert
     ///
     /// - Parameters:
     ///   - title: Title for the button
@@ -55,7 +55,7 @@ public extension RNAlertController {
         return self
     }
     
-    /// Adds an OK button to alert
+    /// Adds an **OK** button to the alert
     ///
     /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside: action)
     /// - Returns: *RNAlertController* instance
@@ -64,7 +64,7 @@ public extension RNAlertController {
         return addButton(title: "OK", type: .default, action: action)
     }
     
-    /// Adds a Cancel button to alert
+    /// Adds a **Cancel** button to the alert
     ///
     /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside: action)
     /// - Returns: *RNAlertController* instance
