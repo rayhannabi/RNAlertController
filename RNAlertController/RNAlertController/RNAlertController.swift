@@ -41,6 +41,7 @@ public final class RNAlertController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.clear
         createAlertContainer()
         createAlertBody()
     }
