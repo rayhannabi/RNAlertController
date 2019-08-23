@@ -26,6 +26,7 @@ public final class RNAlertController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
+        modalPresentationCapturesStatusBarAppearance = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -215,11 +216,14 @@ private extension RNAlertController {
     
     func animateAlert() {
         container.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
-            self.container.transform = .identity
+        self.container.isHidden = false
+        UIView.animate(withDuration: 0.18, delay: 0.0, options: .curveEaseOut, animations: {
             self.container.layer.opacity = 1.0
-            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
+            self.container.transform = .identity
         }, completion: nil)
+        UIView.animate(withDuration: 0.18, animations: {
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        })
     }
     
 }
