@@ -13,8 +13,10 @@ final class AlertButtonStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        distribution = .fill
+        distribution = .fillEqually
         alignment = .fill
+        axis = .horizontal
+        spacing = 0.5
     }
     
     required init(coder: NSCoder) {
@@ -22,84 +24,50 @@ final class AlertButtonStackView: UIStackView {
     }
     
     convenience init(alertButtons: [AlertButton]) {
-        var stackItems = createButtonCollection(from: alertButtons)
-        let shouldUseVerticalAxis = adjustForOversizedText(buttonCollection: &stackItems)
-        self.init(arrangedSubviews: stackItems)
+        self.init(frame: .zero)
+        let stackItems = createButtonCollection(from: alertButtons)
+        let shouldUseVerticalAxis = adjustForOversizedText(buttonCollection: stackItems)
         axis = (alertButtons.count == 2 && !shouldUseVerticalAxis) ? .horizontal : .vertical
-        if alertButtons.count == 2 {
-            setVerticalAxisButtonsConstraint()
+        for button in stackItems {
+            addArrangedSubview(button)
         }
     }
     
-    fileprivate func setVerticalAxisButtonsConstraint() {
-        let firstItem = arrangedSubviews.first!
-        let lastItem = arrangedSubviews.last!
-        NSLayoutConstraint.activate([
-            firstItem.widthAnchor.constraint(equalTo: lastItem.widthAnchor, multiplier: 1)
-            ]
-        )
-    }
-    
-}
-
-fileprivate func createAttributes(for type: AlertButtonType) -> [NSAttributedString.Key: Any] {
-    var attributes = [NSAttributedString.Key: Any]()
-    switch type {
-    case .cancel:
-        attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .semibold)
-    case .destructive:
-        attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .regular)
-        attributes[.foregroundColor] = UIColor(red: 255, green: 59, blue: 48, alpha: 1.0)
-    default:
-        attributes[.font] = UIFont.systemFont(ofSize: 17, weight: .regular)
-        break
-    }
-    
-    return attributes
-}
-
-fileprivate func getDeviceWidthOrHeight(multiplier: CGFloat = 1.0) -> CGFloat {
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
-    if screenWidth < screenHeight {
-        return screenWidth * multiplier
-    } else {
-        return screenHeight * multiplier
-    }
-}
-
-fileprivate func createButtonCollection(from alertButtons: [AlertButton]) -> [UIView] {
-    var stackItems = [UIView]()
-    for index in 0..<alertButtons.count {
-        let alertButton = alertButtons[index]
-        let button = AlertActionButton()
-        button.setTitle(alertButton.text, for: alertButton.type)
-        button.addAction(for: .touchUpInside, action: alertButton.action)
-        stackItems.append(button)
-        if index != alertButtons.count - 1 {
-            if alertButtons.count == 2  {
-                stackItems.append(VerticalSeparator())
-            } else {
-                stackItems.append(HorizontalSeparator())
-            }
+    fileprivate func createButtonCollection(from alertButtons: [AlertButton]) -> [UIView] {
+        var stackItems = [UIView]()
+        for index in 0..<alertButtons.count {
+            let alertButton = alertButtons[index]
+            let button = AlertActionButton()
+            button.setTitle(alertButton.text, for: alertButton.type)
+            button.addAction(for: .touchUpInside, action: alertButton.action)
+            stackItems.append(button)
         }
+        return stackItems
     }
-    return stackItems
-}
-
-fileprivate func adjustForOversizedText(buttonCollection: inout [UIView]) -> Bool {
-    let widthFactor = getDeviceWidthOrHeight(multiplier: 0.35)
-    var shouldUseVerticalAxis = false
-    if buttonCollection.count == 3 {
-        for view in buttonCollection {
-            if let textIntrinsicSize = (view as? UIButton)?.titleLabel?.intrinsicContentSize {
-                if textIntrinsicSize.width > widthFactor {
-                    buttonCollection.remove(at: 1)
-                    buttonCollection.insert(HorizontalSeparator(), at: 1)
-                    shouldUseVerticalAxis = true
+    
+    fileprivate func adjustForOversizedText(buttonCollection: [UIView]) -> Bool {
+        let widthFactor = getDeviceWidthOrHeight(multiplier: 0.35)
+        var shouldUseVerticalAxis = false
+        if buttonCollection.count >= 2 {
+            for view in buttonCollection {
+                if let textIntrinsicSize = (view as? UIButton)?.titleLabel?.intrinsicContentSize {
+                    if textIntrinsicSize.width > widthFactor {
+                        shouldUseVerticalAxis = true
+                    }
                 }
             }
         }
+        return shouldUseVerticalAxis
     }
-    return shouldUseVerticalAxis
+    
+    fileprivate func getDeviceWidthOrHeight(multiplier: CGFloat = 1.0) -> CGFloat {
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        if screenWidth < screenHeight {
+            return screenWidth * multiplier
+        } else {
+            return screenHeight * multiplier
+        }
+    }
+
 }

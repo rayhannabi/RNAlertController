@@ -46,7 +46,7 @@ class ViewController: UIViewController {
             .addOkButton(action: {
                 self.customAlertFull()
             })
-            .addCancelButton()
+            .addButton(title: "Cancel")
             .show()
     }
     
