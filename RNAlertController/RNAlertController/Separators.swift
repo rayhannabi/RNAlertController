@@ -12,7 +12,7 @@ class Separator: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.gray
+        backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
     }
     

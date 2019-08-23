@@ -73,6 +73,7 @@ fileprivate func createButtonCollection(from alertButtons: [AlertButton]) -> [UI
     for index in 0..<alertButtons.count {
         let alertButton = alertButtons[index]
         let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(white: 1, alpha: 0.6)
         let attributes = createAttributes(for: alertButton.type)
         let attributedString = NSAttributedString(string: alertButton.text, attributes: attributes)
         button.setAttributedTitle(attributedString, for: .normal)
@@ -108,4 +109,14 @@ fileprivate func adjustForOversizedText(buttonCollection: inout [UIView]) -> Boo
         }
     }
     return shouldUseVerticalAxis
+}
+
+extension UIButton {
+
+    override open var isHighlighted: Bool {
+        didSet {
+            layer.opacity = isHighlighted ? 0.65 : 1.0
+        }
+    }
+
 }

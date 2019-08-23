@@ -32,17 +32,7 @@ class ViewController: UIViewController {
             .present(on: self)
     }
     
-    fileprivate func customAlertLess(_ message: String) {
-        RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
-            .setURL(urlString: "https://github.com/rayhannabi/RNAlertController", text: "RNAlertController on GitHub")
-            .addOkButton { [weak self] in
-                self?.customAlertFull(message)
-            }
-            .addButton(title: "Very long text sample", type: .default)
-            .show()
-    }
-    
-    @IBAction func didTapShowAlert(_ sender: UIButton) {
+    fileprivate func customAlertLess() {
         let message = """
         Swift is a fantastic way to write software, whether it’s for phones, desktops, servers,
         or
@@ -50,7 +40,16 @@ class ViewController: UIViewController {
         
         Tap "OK" to see magic.
         """
-        customAlertLess(message)
+        RNAlertController(title: "Indira Memorial Tulip Garden, Kashmir", message: message)
+            .addOkButton(action: {
+                self.customAlertFull(message)
+            })
+            .addCancelButton()
+            .show()
+    }
+    
+    @IBAction func didTapShowAlert(_ sender: UIButton) {
+        customAlertLess()
     }
     
 }
