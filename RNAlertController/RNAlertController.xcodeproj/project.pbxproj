@@ -17,9 +17,10 @@
 		E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */; };
 		E8ECFAE322772EFC00D4BA3F /* AlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */; };
 		E8ECFAE422772EFC00D4BA3F /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */; };
-		E8ECFAE522772EFC00D4BA3F /* Separators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADD22772EFB00D4BA3F /* Separators.swift */; };
 		E8ECFAE622772EFC00D4BA3F /* AlertButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */; };
 		E8ECFAE722772EFC00D4BA3F /* RNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */; };
+		E8FEEE242310409200A155E2 /* AlertActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEE232310409200A155E2 /* AlertActionButton.swift */; };
+		E8FEEE2623104A9F00A155E2 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */; };
 		E8FF167F2282B48C00CC8807 /* RNAlertController+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +37,10 @@
 		E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extra.swift"; sourceTree = "<group>"; };
 		E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertLabel.swift; sourceTree = "<group>"; };
 		E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
-		E8ECFADD22772EFB00D4BA3F /* Separators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Separators.swift; sourceTree = "<group>"; };
 		E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButtonStackView.swift; sourceTree = "<group>"; };
 		E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNAlertController.swift; sourceTree = "<group>"; };
+		E8FEEE232310409200A155E2 /* AlertActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionButton.swift; sourceTree = "<group>"; };
+		E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNAlertController+API.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +76,7 @@
 			children = (
 				E8ECFACE22772ED000D4BA3F /* RNAlertController.h */,
 				E8ECFACF22772ED000D4BA3F /* Info.plist */,
-				E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */,
-				E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */,
+				E8FEEE232310409200A155E2 /* AlertActionButton.swift */,
 				E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */,
 				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
 				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
@@ -84,8 +85,10 @@
 				E8CE5294227C506000466CAF /* AlertPickerView.swift */,
 				E8CE5290227B092400466CAF /* AlertStackView.swift */,
 				E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */,
-				E8ECFADD22772EFB00D4BA3F /* Separators.swift */,
+				E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */,
+				E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */,
 				E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */,
+				E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */,
 				E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */,
 			);
 			path = RNAlertController;
@@ -175,15 +178,16 @@
 				E8ECFAE422772EFC00D4BA3F /* AlertButton.swift in Sources */,
 				E8ECFAE122772EFC00D4BA3F /* UIButton+Action.swift in Sources */,
 				E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */,
+				E8FEEE2623104A9F00A155E2 /* UIColor+Extra.swift in Sources */,
 				E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */,
 				E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */,
 				E8CE5295227C506000466CAF /* AlertPickerView.swift in Sources */,
 				E8ECFAE622772EFC00D4BA3F /* AlertButtonStackView.swift in Sources */,
 				E8FF167F2282B48C00CC8807 /* RNAlertController+API.swift in Sources */,
 				E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */,
+				E8FEEE242310409200A155E2 /* AlertActionButton.swift in Sources */,
 				E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */,
 				E8ECFAE322772EFC00D4BA3F /* AlertLabel.swift in Sources */,
-				E8ECFAE522772EFC00D4BA3F /* Separators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

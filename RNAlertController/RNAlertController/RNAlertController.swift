@@ -20,12 +20,13 @@ public final class RNAlertController: UIViewController {
     var alertURL            : AlertURL?
     var alertWindow         : UIWindow?
     
-    private var containerView   : UIVisualEffectView!
+    private var container   : UIVisualEffectView!
     
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
+        modalPresentationCapturesStatusBarAppearance = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,6 +42,7 @@ public final class RNAlertController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.clear
         createAlertContainer()
         createAlertBody()
     }
@@ -63,9 +65,9 @@ public final class RNAlertController: UIViewController {
 private extension RNAlertController {
     
     func createAlertContainer() {
-        containerView = AlertContainerView()
-        containerView.layer.opacity = 0.0
-        view.addSubview(containerView)
+        container = AlertContainerView()
+        container.layer.opacity = 0.0
+        view.addSubview(container)
         var containerWidth: CGFloat = 0.0
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
@@ -75,10 +77,10 @@ private extension RNAlertController {
             containerWidth = screenHeight * 0.7
         }
         NSLayoutConstraint.activate([
-            containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            containerView.widthAnchor.constraint(equalToConstant: containerWidth),
-            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
+            container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            container.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            container.widthAnchor.constraint(equalToConstant: containerWidth),
+            container.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
             ]
         )
     }
@@ -152,60 +154,63 @@ private extension RNAlertController {
     }
     
     func createAlertBody() {
-        let alertStack = createAlertStackView()
-        containerView.contentView.addSubview(alertStack)
+        let alertBody = UIStackView(frame: .zero)
+        alertBody.translatesAutoresizingMaskIntoConstraints = false
+        alertBody.axis = .vertical
+        alertBody.distribution = .fill
+        alertBody.alignment = .fill
+        alertBody.spacing = 0.5
+        
+        container.contentView.addSubview(alertBody)
         NSLayoutConstraint.activate([
-            alertStack.topAnchor.constraint(equalTo: containerView.contentView.topAnchor, constant: 20),
-            alertStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
-            alertStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.85)
+            alertBody.topAnchor.constraint(equalTo: container.contentView.topAnchor),
+            alertBody.leadingAnchor.constraint(equalTo: container.contentView.leadingAnchor),
+            alertBody.trailingAnchor.constraint(equalTo: container.contentView.trailingAnchor),
+            alertBody.bottomAnchor.constraint(equalTo: container.contentView.bottomAnchor)
+            ]
+        )
+        
+        let background = UIView(frame: .zero)
+        background.backgroundColor = .defaultBackground
+        background.translatesAutoresizingMaskIntoConstraints = false
+        
+        let alertStack = createAlertStackView()
+        background.addSubview(alertStack)
+        NSLayoutConstraint.activate([
+            alertStack.topAnchor.constraint(equalTo: background.topAnchor, constant: 20),
+            alertStack.centerXAnchor.constraint(equalTo: background.centerXAnchor),
+            alertStack.widthAnchor.constraint(equalTo: background.widthAnchor, multiplier: 0.85)
             ]
         )
         
         let extraStack = createExtraStackView()
-        containerView.contentView.addSubview(extraStack)
+        background.addSubview(extraStack)
         NSLayoutConstraint.activate([
             extraStack.topAnchor.constraint(equalTo: alertStack.bottomAnchor, constant: 8),
-            extraStack.centerXAnchor.constraint(equalTo: containerView.contentView.centerXAnchor),
-            extraStack.widthAnchor.constraint(equalTo: containerView.contentView.widthAnchor, multiplier: 0.85)
+            extraStack.centerXAnchor.constraint(equalTo: background.centerXAnchor),
+            extraStack.widthAnchor.constraint(equalTo: background.widthAnchor, multiplier: 0.85),
+            extraStack.bottomAnchor.constraint(equalTo: background.bottomAnchor, constant: -12)
             ]
         )
         
-        let separator = HorizontalSeparator()
-        containerView.contentView.addSubview(separator)
-        NSLayoutConstraint.activate([
-            separator.topAnchor.constraint(equalTo: extraStack.bottomAnchor, constant: 12),
-            separator.leadingAnchor.constraint(equalTo: containerView.contentView.leadingAnchor),
-            separator.trailingAnchor.constraint(equalTo: containerView.contentView.trailingAnchor)
-            ]
-        )
-        
+        alertBody.addArrangedSubview(background)
         if let buttons = buttons, buttons.count > 0 {
             let buttonStack = AlertButtonStackView(alertButtons: buttons)
-            containerView.contentView.addSubview(buttonStack)
-            NSLayoutConstraint.activate([
-                buttonStack.topAnchor.constraint(equalTo: separator.bottomAnchor),
-                buttonStack.leadingAnchor.constraint(equalTo: containerView.contentView.leadingAnchor),
-                buttonStack.trailingAnchor.constraint(equalTo: containerView.contentView.trailingAnchor),
-                buttonStack.bottomAnchor.constraint(equalTo: containerView.contentView.bottomAnchor)
-                ]
-            )
-        } else {
-            NSLayoutConstraint.activate([
-                separator.bottomAnchor.constraint(equalTo: containerView.contentView.bottomAnchor)
-                ]
-            )
-            separator.isHidden = true
+            alertBody.addArrangedSubview(buttonStack)
         }
     }
     
     
     func animateAlert() {
-        containerView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseOut, animations: {
-            self.containerView.transform = .identity
-            self.containerView.layer.opacity = 1.0
-            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
+        container.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        self.container.isHidden = false
+        UIView.animate(withDuration: 0.18, delay: 0.0, options: .curveEaseOut, animations: {
+            self.container.layer.opacity = 1.0
+            self.container.transform = .identity
         }, completion: nil)
+        UIView.animate(withDuration: 0.18, animations: {
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
+        })
     }
     
 }
