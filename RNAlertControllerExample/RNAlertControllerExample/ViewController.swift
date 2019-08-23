@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         """
         let alert = UIAlertController(title: "Swiftly", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Fuck This", style: .destructive, handler: nil))
+         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     

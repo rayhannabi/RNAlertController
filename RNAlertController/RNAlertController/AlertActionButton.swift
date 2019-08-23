@@ -12,7 +12,7 @@ class AlertActionButton: UIButton {
     
     override open var isHighlighted: Bool {
         didSet {
-            layer.opacity = isHighlighted ? 0.75 : 1.0
+            backgroundColor = isHighlighted ? UIColor.highlightedBackground : UIColor.defaultBackground
         }
     }
     

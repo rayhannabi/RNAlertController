@@ -22,4 +22,8 @@ extension UIColor {
         return UIColor(white: 1, alpha: 0.6)
     }
     
+    static var highlightedBackground: UIColor {
+        return UIColor(white: 1, alpha: 0.3)
+    }
+    
 }
