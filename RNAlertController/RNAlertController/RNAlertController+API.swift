@@ -23,9 +23,8 @@ public extension RNAlertController {
     /// Shows the alert over current window
     ///
     /// - Parameters:
-    ///   - animated: Indicates whether alert should be presented with animation
     ///   - completion: Block to run after presenting the alert
-    func show(animated: Bool = true, completion: (() -> Void)? = nil) {
+    func show(completion: (() -> Void)? = nil) {
         alertWindow = UIWindow(frame: UIScreen.main.bounds)
         alertWindow?.rootViewController = UIViewController()
         let appDelegate = UIApplication.shared.delegate
