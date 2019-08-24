@@ -202,14 +202,14 @@ private extension RNAlertController {
     
     
     func animateAlert() {
-        container.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        container.transform = CGAffineTransform(scaleX: 1.22, y: 1.22)
         self.container.isHidden = false
-        UIView.animate(withDuration: 0.18, delay: 0.0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.20, delay: 0.0, options: .curveEaseOut, animations: {
             self.container.layer.opacity = 1.0
             self.container.transform = .identity
         }, completion: nil)
-        UIView.animate(withDuration: 0.18, animations: {
-            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.35)
+        UIView.animate(withDuration: 0.20, animations: {
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
         })
     }
     

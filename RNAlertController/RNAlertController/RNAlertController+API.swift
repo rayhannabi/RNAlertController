@@ -34,7 +34,7 @@ public extension RNAlertController {
         }
         alertWindow?.windowLevel = .alert
         alertWindow?.makeKeyAndVisible()
-        alertWindow?.rootViewController?.present(self, animated: animated, completion: completion)
+        alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
     }
     
     /// Adds a button to the alert
