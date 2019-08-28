@@ -58,7 +58,7 @@
 		E8ECFAC122772ED000D4BA3F = {
 			isa = PBXGroup;
 			children = (
-				E8ECFACD22772ED000D4BA3F /* RNAlertController */,
+				E8ECFACD22772ED000D4BA3F /* Source */,
 				E8ECFACC22772ED000D4BA3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +71,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8ECFACD22772ED000D4BA3F /* RNAlertController */ = {
+		E8ECFACD22772ED000D4BA3F /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				E8ECFACE22772ED000D4BA3F /* RNAlertController.h */,
@@ -91,7 +91,7 @@
 				E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */,
 				E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */,
 			);
-			path = RNAlertController;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
