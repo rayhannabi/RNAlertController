@@ -39,6 +39,7 @@ class ViewController: UIViewController {
                 print("Chose row: \(pickerRow.index) item: \(pickerRow.title)")
             }
             .present(on: self)
+        print(UIApplication.shared.keyWindow?.rootViewController ?? "NIL")
     }
     
     fileprivate func customAlertLess() {
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
             })
             .addButton(title: "Cancel")
             .show()
+        print(UIApplication.shared.keyWindow?.rootViewController ?? "NIL")
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {
