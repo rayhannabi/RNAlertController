@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8B753B02316E087001B5A4D /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B753AF2316E087001B5A4D /* UIView+Corner.swift */; };
+		E8B753B22316EFC8001B5A4D /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B753B12316EFC8001B5A4D /* OtherViewController.swift */; };
 		E8BBF553228C2DC3008546D2 /* RNAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFAD722772EE100D4BA3F /* RNAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8D5375122772D59002B4046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5375022772D59002B4046 /* AppDelegate.swift */; };
 		E8D5375322772D59002B4046 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5375222772D59002B4046 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		E8B753AF2316E087001B5A4D /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
+		E8B753B12316EFC8001B5A4D /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		E8D5374D22772D59002B4046 /* RNAlertControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNAlertControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5375022772D59002B4046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D5375222772D59002B4046 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				E8D5375022772D59002B4046 /* AppDelegate.swift */,
 				E8D5375222772D59002B4046 /* ViewController.swift */,
+				E8B753B12316EFC8001B5A4D /* OtherViewController.swift */,
 				E8D5375422772D59002B4046 /* Main.storyboard */,
 				E8D5375722772D59002B4046 /* Assets.xcassets */,
 				E8D5375922772D59002B4046 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D5375322772D59002B4046 /* ViewController.swift in Sources */,
+				E8B753B22316EFC8001B5A4D /* OtherViewController.swift in Sources */,
 				E8B753B02316E087001B5A4D /* UIView+Corner.swift in Sources */,
 				E8D5375122772D59002B4046 /* AppDelegate.swift in Sources */,
 			);

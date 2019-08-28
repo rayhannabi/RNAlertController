@@ -84,7 +84,7 @@
         <!--Kashmir-->
         <scene sceneID="ez9-mV-HUY">
             <objects>
-                <viewController id="05k-IV-M98" sceneMemberID="viewController">
+                <viewController id="05k-IV-M98" customClass="OtherViewController" customModule="RNAlertControllerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dr4-A4-ob6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +105,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
+                                                <action selector="didTapAlert:" destination="05k-IV-M98" eventType="touchUpInside" id="Nv4-nx-vEq"/>
                                                 <action selector="didTapShowAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbw-pl-iaM"/>
                                             </connections>
                                         </button>
