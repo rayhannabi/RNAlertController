@@ -1,4 +1,3 @@
-
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
 ![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
 ![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)

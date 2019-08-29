@@ -11,3 +11,4 @@ github_url: https://github.com/rayhannabi/RNAlertController
 min_acl: public
 hide_documentation_coverage: true
 theme: apple
+undocumented_text: ''

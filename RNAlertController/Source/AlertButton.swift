@@ -19,6 +19,7 @@ import UIKit
     case destructive
 }
 
+/// Action block to perform when a button is pressed
 public typealias AlertAction = () -> Void
 
 class AlertButton: NSObject {

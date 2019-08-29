@@ -22,38 +22,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertButton.swift",
-      "line": 22,
-      "symbol": "AlertAction",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertPickerView.swift",
       "line": 11,
       "symbol": "AlertPickerRow",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertPickerView.swift",
-      "line": 12,
-      "symbol": "AlertPickerRow.index",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertPickerView.swift",
-      "line": 13,
-      "symbol": "AlertPickerRow.title",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertPickerView.swift",
-      "line": 21,
-      "symbol": "AlertPickerAction",
-      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
