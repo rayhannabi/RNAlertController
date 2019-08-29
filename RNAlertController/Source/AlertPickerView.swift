@@ -8,9 +8,14 @@
 
 import UIKit
 
-public struct AlertPickerRow {
+public class AlertPickerRow: NSObject {
     public let index: Int
     public let title: String
+    
+    init(index: Int, title: String) {
+        self.index = index
+        self.title = title
+    }
 }
 
 public typealias AlertPickerAction = (AlertPickerRow) -> Void
