@@ -24,7 +24,6 @@ class ViewController: UIViewController {
                                                 preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
     }
     
     fileprivate func customAlertFull() {
@@ -39,7 +38,6 @@ class ViewController: UIViewController {
                 print("Chose row: \(pickerRow.index) item: \(pickerRow.title)")
             }
             .present(on: self)
-        print(UIApplication.shared.keyWindow?.rootViewController ?? "NIL")
     }
     
     fileprivate func customAlertLess() {
@@ -49,7 +47,6 @@ class ViewController: UIViewController {
             })
             .addButton(title: "Cancel")
             .show()
-        print(UIApplication.shared.keyWindow?.rootViewController ?? "NIL")
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {
