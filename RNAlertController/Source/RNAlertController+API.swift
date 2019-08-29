@@ -25,15 +25,8 @@ public extension RNAlertController {
     /// - Parameters:
     ///   - completion: Block to run after presenting the alert
     func show(completion: (() -> Void)? = nil) {
-        alertWindow = UIWindow(frame: UIScreen.main.bounds)
-        alertWindow?.rootViewController = UIViewController()
-        let appDelegate = UIApplication.shared.delegate
-        if let window = appDelegate?.window, window != nil {
-            alertWindow?.tintColor = window?.tintColor
-        }
-        alertWindow?.windowLevel = .alert
-        alertWindow?.makeKeyAndVisible()
-        alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
+        UIApplication.shared.keyWindow?
+            .rootViewController?.present(self, animated: false, completion: completion)
     }
     
     /// Adds a button to the alert
