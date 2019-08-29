@@ -13,12 +13,13 @@ import UIKit
 /// - default: Regular button with standard text
 /// - cancel: Bold button text
 /// - destructive: Regular button with red colored text
-public enum AlertButtonType {
-    case `default`
+@objc public enum AlertButtonType: Int {
+    case `default` = 0
     case cancel
     case destructive
 }
 
+/// Action block to perform when a button is pressed
 public typealias AlertAction = () -> Void
 
 class AlertButton: NSObject {

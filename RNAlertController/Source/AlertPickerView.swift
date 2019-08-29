@@ -8,11 +8,21 @@
 
 import UIKit
 
-public struct AlertPickerRow {
+public class AlertPickerRow: NSObject {
+    
+    /// Selected index starting from 0
     public let index: Int
+    
+    /// Selected title
     public let title: String
+    
+    init(index: Int, title: String) {
+        self.index = index
+        self.title = title
+    }
 }
 
+/// Action block when a picker item is selected
 public typealias AlertPickerAction = (AlertPickerRow) -> Void
 
 class AlertPickerView: UIPickerView {

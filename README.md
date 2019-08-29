@@ -1,11 +1,10 @@
-
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
 ![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
 ![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)
 
 # RNAlertController
 
-An easy-to-use alert library for iOS written purely in Swift. With native look-n-feel and animations, you get some more functionalties added to your alert.
+An easy-to-use alert library for iOS written purely in Swift. With native look-n-feel and animations, you can add more functionalities to your alerts. 
 
 ## Feature
 
@@ -23,6 +22,7 @@ An easy-to-use alert library for iOS written purely in Swift. With native look-n
 * iOS 9.0+
 * Xcode 10+
 * Swift 5
+* Objective-C 2.0 (ARC required)
 
 ## Installation
 
@@ -39,25 +39,55 @@ and run `pod install`
 
 RNAlertController is simple to use. The following example shows how to create a simple alert with an OK button within a view controller.
 
+### Swift
 ```swift
 let alertController = RNAlertController(title: "Message", message: "This is a demo")
 alertController.addButton(title: "Got It", type: .default)
 alertController.show()
 ```
 
+### Objective-C
+```objc
+RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Message" 
+                                                            message:@"This is a demo"];
+[alert addButtonWithTitle:@"Got It" type:AlertButtonTypeDefault action:nil];
+[alert showWithCompletion:nil];
+```
+
 You can also specify button styles when adding them.
 
 The following example shows how to create an alert with message and image.
 
+### Swift
+
 ```swift
 RNAlertController(title: "Message", message: "This is a demo")
-	.addButton(title: "Cancel", type: .cancel, action: nil)
-	.addButton(title: "Delete", type: .destructive, action: { [weak self] in
-    		self?.performSomeAction()
-  	})
-	.setImage(UIImage(named: "Flag")!)
-	.show()
+    .addButton(title: "Cancel", type: .cancel, action: nil)
+    .addButton(title: "Delete", type: .destructive, action: { [weak self] in
+        self?.performSomeAction()
+    })
+    .setBannerImage(UIImage(named: "Flag")!)
+    .show()
 ```
+
+### Objective-C
+
+```objc
+RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Message"
+                                                            message:@"This is a demo"];
+[alert addButtonWithTitle:@"Cancel" type:AlertButtonTypeCancel action:nil];
+[alert addButtonWithTitle:@"Delete" type:AlertButtonTypeDestructive action:^{
+    [self performSomeAction];
+}];
+[alert setBannerImage:[UIImage imageNamed:@"Flag"]];
+[alert showWithCompletion:nil];
+```
+
+
+
+## Documentation
+
+Documentation and references can be found at [rayhannabi.github.io/RNAlertController](https://rayhannabi.github.io/RNAlertController).
 
 
 
