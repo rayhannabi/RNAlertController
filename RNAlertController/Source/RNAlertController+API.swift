@@ -12,7 +12,7 @@ public extension RNAlertController {
     
     /// Presents the alert on the specified View Controller
     ///
-    /// Always use this method to present *RNAlertController* alert
+    /// Use this method to present *RNAlertController* alert on a specific view controller
     /// - Parameters:
     ///   - viewController: *UIViewController* where the alert is to be presented
     ///   - completion: Block to run after presenting the alert
@@ -20,8 +20,9 @@ public extension RNAlertController {
         viewController.present(self, animated: false, completion: completion)
     }
     
-    /// Shows the alert over current window
+    /// Presents the alert
     ///
+    /// This method can be used without any view controller reference
     /// - Parameters:
     ///   - completion: Block to run after presenting the alert
     func show(completion: (() -> Void)? = nil) {
@@ -37,7 +38,7 @@ public extension RNAlertController {
     ///   - action: Block to run when the button is pressed (i.e. touchUpInside: action)
     /// - Returns: *RNAlertController* instance
     @discardableResult
-    func addButton(title: String, type: AlertButtonType = .default , action: AlertAction? = nil) -> RNAlertController {
+    func addButton(title: String, type: AlertButtonType = .default, action: AlertAction? = nil) -> RNAlertController {
         let action = {
             self.dismiss(animated: true, completion: action)
         }
@@ -68,7 +69,7 @@ public extension RNAlertController {
     /// Sets image for the alert
     ///
     /// Multiple calls of this method will result in replacement of previously set image
-    /// - Parameter image: image to use in alert
+    /// - Parameter image: image to use in the alert
     /// - Returns: *RNAlertController* instance
     @discardableResult
     func setBannerImage(_ image: UIImage) -> RNAlertController {
@@ -80,8 +81,8 @@ public extension RNAlertController {
     ///
     /// Multiple calls of this method will result in replacement of previously set picker data
     /// - Parameters:
-    ///   - items: An array of *String* to represent picker data
-    ///   - selectedRow: Row to be selected, defaults to 0 (zero) indicating the first item from options
+    ///   - items: An array of *String* to represent picker data collection
+    ///   - selectedRow: Row to be selected, defaults to 0 (zero) indicating the first item in the collection
     ///   - selectionAction: Block to execute when an item is selected
     /// - Returns: *RNAlertController* instance
     @discardableResult

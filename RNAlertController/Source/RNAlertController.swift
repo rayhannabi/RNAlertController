@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// RNAlertController class
 @objcMembers public final class RNAlertController: UIViewController {
         
     var titleText           : String?
@@ -33,6 +34,11 @@ import UIKit
         super.init(coder: aDecoder)
     }
     
+    /// Initializes the alert
+    ///
+    /// - Parameters:
+    ///   - title: Title for the alert
+    ///   - message: Message body of the alert
     public convenience init(title: String?, message: String?) {
         self.init(nibName: nil, bundle: nil)
         buttons = [AlertButton]()
