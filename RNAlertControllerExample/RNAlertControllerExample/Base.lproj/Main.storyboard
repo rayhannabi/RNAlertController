@@ -140,11 +140,83 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3sU-Nl-Vz5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Kashmir" id="mca-6w-4WA"/>
+                    <navigationItem key="navigationItem" title="Kashmir" id="mca-6w-4WA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Fxe-4A-bBk"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="gVi-BL-82i">
+                            <connections>
+                                <segue destination="bK4-PT-Jia" kind="show" id="8Oe-bC-GcZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7o-Ca-Rjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1816" y="139"/>
+        </scene>
+        <!--Ladakh-->
+        <scene sceneID="lBy-ce-wrK">
+            <objects>
+                <viewController id="bK4-PT-Jia" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqd-bv-Fdo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ladakh" translatesAutoresizingMaskIntoConstraints="NO" id="ucc-Zb-wPB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-Bx-8hE">
+                                <rect key="frame" x="41.5" y="724" width="331" height="74"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D5i-Br-7HK">
+                                    <rect key="frame" x="0.0" y="0.0" width="331" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-Zu-lX9">
+                                            <rect key="frame" x="0.0" y="0.0" width="331" height="74"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <state key="normal" title="Show Alert">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="didTapAlert:" destination="05k-IV-M98" eventType="touchUpInside" id="AhH-It-RI9"/>
+                                                <action selector="didTapShowAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTU-77-lk0"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nI5-Zu-lX9" secondAttribute="trailing" id="17j-Q2-Ncl"/>
+                                        <constraint firstItem="nI5-Zu-lX9" firstAttribute="leading" secondItem="D5i-Br-7HK" secondAttribute="leading" id="2nC-zM-FGa"/>
+                                        <constraint firstItem="nI5-Zu-lX9" firstAttribute="top" secondItem="D5i-Br-7HK" secondAttribute="top" id="MF5-0i-1ki"/>
+                                        <constraint firstAttribute="bottom" secondItem="nI5-Zu-lX9" secondAttribute="bottom" id="sXM-xE-1a6"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="a2R-NJ-AGu"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ucc-Zb-wPB" firstAttribute="trailing" secondItem="3fu-Jy-GJQ" secondAttribute="trailing" id="7qp-e1-3cJ"/>
+                            <constraint firstItem="3fu-Jy-GJQ" firstAttribute="bottom" secondItem="XWR-Bx-8hE" secondAttribute="bottom" constant="64" id="JaN-Ya-xLs"/>
+                            <constraint firstItem="ucc-Zb-wPB" firstAttribute="top" secondItem="hqd-bv-Fdo" secondAttribute="top" id="UNl-ME-Sy9"/>
+                            <constraint firstItem="ucc-Zb-wPB" firstAttribute="leading" secondItem="3fu-Jy-GJQ" secondAttribute="leading" id="bdK-pv-WKC"/>
+                            <constraint firstItem="XWR-Bx-8hE" firstAttribute="centerX" secondItem="hqd-bv-Fdo" secondAttribute="centerX" id="cCS-2M-Yfe"/>
+                            <constraint firstAttribute="bottom" secondItem="ucc-Zb-wPB" secondAttribute="bottom" id="l4R-af-LRh"/>
+                            <constraint firstItem="XWR-Bx-8hE" firstAttribute="width" secondItem="hqd-bv-Fdo" secondAttribute="width" multiplier="0.8" id="pjv-TV-5VV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3fu-Jy-GJQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ladakh" id="elp-RX-g61"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IhU-mY-GHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Woo-Wh-7cT">
@@ -169,5 +241,6 @@
     <resources>
         <image name="bg" width="1643" height="3054"/>
         <image name="crop" width="720" height="1280"/>
+        <image name="ladakh" width="368" height="676"/>
     </resources>
 </document>

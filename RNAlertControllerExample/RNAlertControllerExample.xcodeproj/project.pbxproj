@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E89B60282317AA6C007F9290 /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89B60272317AA6C007F9290 /* AnotherViewController.m */; };
 		E8B753B02316E087001B5A4D /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B753AF2316E087001B5A4D /* UIView+Corner.swift */; };
 		E8B753B22316EFC8001B5A4D /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B753B12316EFC8001B5A4D /* OtherViewController.swift */; };
 		E8BBF553228C2DC3008546D2 /* RNAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFAD722772EE100D4BA3F /* RNAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,6 +33,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E89B60252317AA6C007F9290 /* RNAlertControllerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNAlertControllerExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		E89B60262317AA6C007F9290 /* AnotherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnotherViewController.h; sourceTree = "<group>"; };
+		E89B60272317AA6C007F9290 /* AnotherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
 		E8B753AF2316E087001B5A4D /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 		E8B753B12316EFC8001B5A4D /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		E8D5374D22772D59002B4046 /* RNAlertControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNAlertControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,13 +80,16 @@
 			isa = PBXGroup;
 			children = (
 				E8D5375022772D59002B4046 /* AppDelegate.swift */,
-				E8D5375222772D59002B4046 /* ViewController.swift */,
-				E8B753B12316EFC8001B5A4D /* OtherViewController.swift */,
-				E8D5375422772D59002B4046 /* Main.storyboard */,
 				E8D5375722772D59002B4046 /* Assets.xcassets */,
-				E8D5375922772D59002B4046 /* LaunchScreen.storyboard */,
 				E8D5375C22772D59002B4046 /* Info.plist */,
+				E8D5375922772D59002B4046 /* LaunchScreen.storyboard */,
+				E8D5375422772D59002B4046 /* Main.storyboard */,
+				E89B60262317AA6C007F9290 /* AnotherViewController.h */,
+				E89B60272317AA6C007F9290 /* AnotherViewController.m */,
+				E8B753B12316EFC8001B5A4D /* OtherViewController.swift */,
+				E89B60252317AA6C007F9290 /* RNAlertControllerExample-Bridging-Header.h */,
 				E8B753AF2316E087001B5A4D /* UIView+Corner.swift */,
+				E8D5375222772D59002B4046 /* ViewController.swift */,
 			);
 			path = RNAlertControllerExample;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 				TargetAttributes = {
 					E8D5374C22772D59002B4046 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -168,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D5375322772D59002B4046 /* ViewController.swift in Sources */,
+				E89B60282317AA6C007F9290 /* AnotherViewController.m in Sources */,
 				E8B753B22316EFC8001B5A4D /* OtherViewController.swift in Sources */,
 				E8B753B02316E087001B5A4D /* UIView+Corner.swift in Sources */,
 				E8D5375122772D59002B4046 /* AppDelegate.swift in Sources */,
@@ -316,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = RNAlertControllerExample/Info.plist;
@@ -325,6 +335,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNAlertControllerExample/RNAlertControllerExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = RNAlertControllerExample/Info.plist;
@@ -343,6 +356,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNAlertControllerExample/RNAlertControllerExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
