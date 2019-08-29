@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             .addButton(title: "Delete", type: .destructive) {
                 print("deleted")
             }
-            .setImage(UIImage(named: "mag-small")!)
+            .setBannerImage(UIImage(named: "mag-small")!)
             .setPickerData(items: ["Item", "World", "Sun", "Milky Way"], selectedRow: 1) { pickerRow in
                 print("Chose row: \(pickerRow.index) item: \(pickerRow.title)")
             }

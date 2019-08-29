@@ -71,7 +71,7 @@ public extension RNAlertController {
     /// - Parameter image: image to use in alert
     /// - Returns: *RNAlertController* instance
     @discardableResult
-    func setImage(_ image: UIImage) -> RNAlertController {
+    func setBannerImage(_ image: UIImage) -> RNAlertController {
         self.image = image
         return self
     }

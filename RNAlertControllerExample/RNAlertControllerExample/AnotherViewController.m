@@ -25,6 +25,8 @@
 
 - (void)didTapAlert:(id)sender {
     NSLog(@"Did tap alert");
+    RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Ladakh" message:@"To go back to Kashmir tap Home else tap cancel"];
+    alert addButt
 }
 
 @end
