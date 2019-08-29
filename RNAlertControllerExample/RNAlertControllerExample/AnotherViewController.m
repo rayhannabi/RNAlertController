@@ -8,7 +8,11 @@
 
 #import "AnotherViewController.h"
 
+@import RNAlertController;
+
 @interface AnotherViewController ()
+
+- (IBAction)didTapAlert:(id)sender;
 
 @end
 
@@ -16,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (void)didTapAlert:(id)sender {
+    NSLog(@"Did tap alert");
 }
 
 @end

@@ -156,7 +156,7 @@
         <!--Ladakh-->
         <scene sceneID="lBy-ce-wrK">
             <objects>
-                <viewController id="bK4-PT-Jia" sceneMemberID="viewController">
+                <viewController id="bK4-PT-Jia" customClass="AnotherViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqd-bv-Fdo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,6 +177,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
+                                                <action selector="didTapAlert:" destination="bK4-PT-Jia" eventType="touchUpInside" id="3lg-jd-lwz"/>
                                                 <action selector="didTapAlert:" destination="05k-IV-M98" eventType="touchUpInside" id="AhH-It-RI9"/>
                                                 <action selector="didTapShowAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTU-77-lk0"/>
                                             </connections>
