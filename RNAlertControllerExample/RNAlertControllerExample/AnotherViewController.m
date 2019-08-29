@@ -24,7 +24,15 @@
 }
 
 - (void)didTapAlert:(id)sender {
-    NSLog(@"Did tap alert");
+    RNAlertController *alert = [[RNAlertController alloc]
+                                initWithTitle:@"Ladakh"
+                                message:@"To go back to Kashmir tap Home else tap cancel"];
+    [alert setURLWithUrlString:@"https://www.google.com/search?q=ladakh" text:@"Search Google"];
+    [alert addCancelButtonWithAction:nil];
+    [alert addButtonWithTitle:@"Home" type:AlertButtonTypeDefault action:^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }];
+    [alert showWithCompletion:nil];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class RNAlertController: UIViewController {
+@objcMembers public final class RNAlertController: UIViewController {
         
     var titleText           : String?
     var messageText         : String?
