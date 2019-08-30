@@ -20,6 +20,7 @@ import UIKit
     var selectedPickerRow   : Int?
     var alertURL            : AlertURL?
     var alertWindow         : UIWindow?
+    var originalWindow      : UIWindow?
     
     private var container   : UIVisualEffectView!
     
@@ -60,6 +61,7 @@ import UIKit
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        originalWindow?.makeKeyAndVisible()
         alertWindow?.isHidden = true
         alertWindow = nil
     }
