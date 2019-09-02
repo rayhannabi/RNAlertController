@@ -1,18 +1,17 @@
+![Banner](images/banner.png)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
 ![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
 ![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)
 
 # RNAlertController
 
-An easy-to-use alert library for iOS written purely in Swift. With native look-n-feel and animations, you can add more functionalities to your alerts. 
+An easy-to-use alert framework for iOS written purely in Swift. With native look-n-feel and animations, you can add more functionalities to your alerts. 
 
-## Feature
+## Features
 
 * Title
 * Description message
-* Image below the description message
-* Header Image (coming soon)
-* Fixed header image for situation based alert such as *error*, *warning*, *information*, *done* etc. (coming soon)
+* Banner image below the description message
 * Multiple buttons with closure action
 * Picker view
 * URL Button
@@ -37,13 +36,13 @@ and run `pod install`
 
 ## Usage
 
-RNAlertController is simple to use. The following example shows how to create a simple alert with an OK button within a view controller.
+RNAlertController is really simple to use. The following example shows how to create a simple alert with an OK button within a view controller.
 
 ### Swift
 ```swift
 let alertController = RNAlertController(title: "Message", message: "This is a demo")
 alertController.addButton(title: "Got It", type: .default)
-alertController.show()
+alertController.present()
 ```
 
 ### Objective-C
@@ -51,12 +50,12 @@ alertController.show()
 RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Message" 
                                                             message:@"This is a demo"];
 [alert addButtonWithTitle:@"Got It" type:AlertButtonTypeDefault action:nil];
-[alert showWithCompletion:nil];
+[alert presentOn:nil completion:nil];
 ```
 
 You can also specify button styles when adding them.
 
-The following example shows how to create an alert with message and image.
+The following example shows how to create an alert with a message and an image.
 
 ### Swift
 
@@ -67,7 +66,7 @@ RNAlertController(title: "Message", message: "This is a demo")
         self?.performSomeAction()
     })
     .setBannerImage(UIImage(named: "Flag")!)
-    .show()
+    .present()
 ```
 
 ### Objective-C
@@ -80,7 +79,7 @@ RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Message"
     [self performSomeAction];
 }];
 [alert setBannerImage:[UIImage imageNamed:@"Flag"]];
-[alert showWithCompletion:nil];
+[alert presentOn:self completion:nil];
 ```
 
 
@@ -101,4 +100,4 @@ Documentation and references can be found at [rayhannabi.github.io/RNAlertContro
 
 ## License
 
-This project is available under **MIT** License. See the LICENSE file for more info
+This project is available under **MIT** License. See the LICENSE file for more info.
