@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                 self.customAlertFull()
             })
             .addButton(title: "Cancel")
-            
+            .present()
     }
     
     @IBAction func didTapShowAlert(_ sender: UIButton) {

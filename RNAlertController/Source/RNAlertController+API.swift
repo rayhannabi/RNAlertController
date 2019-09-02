@@ -25,16 +25,6 @@ public extension RNAlertController {
         }
     }
     
-    /// Presents the alert on a custom window.
-    ///
-    /// Use this method without any view controller dependency.
-    ///
-    /// - note: This method has no completion block. To use completion block,
-    /// use the method `present(completion:)`
-    func present() {
-        presentOnWindow(completion: nil)
-    }
-    
     /// Presents the alert
     ///
     /// This method can be used without any view controller reference

@@ -31,7 +31,7 @@
     [alert addButtonWithTitle:@"Home" type:AlertButtonTypeDefault action:^{
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
-    [alert present];
+    [alert presentOn:self completion:nil];
 }
 
 @end
