@@ -221,4 +221,17 @@ private extension RNAlertController {
         })
     }
     
+    func presentOnViewController(_ viewController: UIViewController, completion: (() -> Void)?) {
+        viewController.present(self, animated: false, completion: completion)
+    }
+    
+    func presentOnWindow(completion: (() -> Void)?) {
+        originalWindow = UIApplication.shared.delegate?.window!
+        alertWindow = UIWindow(frame: originalWindow?.bounds ?? .zero)
+        alertWindow?.rootViewController = UIViewController()
+        alertWindow?.makeKeyAndVisible()
+        alertWindow?.windowLevel = .normal
+        alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
+    }
+    
 }
