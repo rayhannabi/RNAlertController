@@ -39,7 +39,7 @@ class AlertLabel: UILabel {
         setFont(for: type)
     }
     
-    fileprivate func setFont(for type: AlertLabelType) {
+    private func setFont(for type: AlertLabelType) {
         switch type {
         case .title:
             font = UIFont.alertTitleFont

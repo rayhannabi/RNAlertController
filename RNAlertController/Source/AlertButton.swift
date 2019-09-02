@@ -8,18 +8,18 @@
 
 import UIKit
 
-/// Alert button type
-///
-/// - default: Regular button with standard text
-/// - cancel: Bold button text
-/// - destructive: Regular button with red colored text
+/// Describes the appearances of the alert buttons.
 @objc public enum AlertButtonType: Int {
+    
+    /// Apply the default style to the button.
     case `default` = 0
+    /// Apply a style that indicates the action cancels the operation and leaves things unchanged.
     case cancel
+    /// Apply a style that indicates the action might change or delete data.
     case destructive
 }
 
-/// Action block to perform when a button is pressed
+/// Action block to perform when a button is pressed.
 public typealias AlertAction = () -> Void
 
 class AlertButton: NSObject {
