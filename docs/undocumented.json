@@ -1,50 +1,22 @@
 {
   "warnings": [
     {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertButton.swift",
-      "line": 17,
-      "symbol": "AlertButtonType.default",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertButton.swift",
-      "line": 18,
-      "symbol": "AlertButtonType.cancel",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertButton.swift",
-      "line": 19,
-      "symbol": "AlertButtonType.destructive",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/AlertPickerView.swift",
-      "line": 11,
-      "symbol": "AlertPickerRow",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/RNAlertController.swift",
-      "line": 49,
+      "line": 50,
       "symbol": "RNAlertController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/RNAlertController.swift",
-      "line": 56,
+      "line": 57,
       "symbol": "RNAlertController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/RNAlertController.swift",
-      "line": 61,
+      "line": 62,
       "symbol": "RNAlertController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
