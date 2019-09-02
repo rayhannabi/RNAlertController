@@ -8,12 +8,13 @@
 
 import UIKit
 
+/// An object which identifies the row of a picker view.
 public class AlertPickerRow: NSObject {
     
-    /// Selected index starting from 0
+    /// Selected index starting from 0.
     public let index: Int
     
-    /// Selected title
+    /// Title for the row.
     public let title: String
     
     init(index: Int, title: String) {
@@ -22,7 +23,7 @@ public class AlertPickerRow: NSObject {
     }
 }
 
-/// Action block when a picker item is selected
+/// Action block when a picker item is selected.
 public typealias AlertPickerAction = (AlertPickerRow) -> Void
 
 class AlertPickerView: UIPickerView {
