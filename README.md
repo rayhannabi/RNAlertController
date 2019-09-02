@@ -1,4 +1,4 @@
-![Banner](images/banner.png)
+![Banner](https://raw.githubusercontent.com/rayhannabi/RNAlertController/master/images/banner.png)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
 ![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
 ![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)
