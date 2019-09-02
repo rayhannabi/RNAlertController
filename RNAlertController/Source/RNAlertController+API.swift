@@ -10,37 +10,28 @@ import UIKit
 
 public extension RNAlertController {
     
-    /// Presents the alert on the specified View Controller
+    /// Presents the alert on the specified view controller or a window.
     ///
-    /// Use this method to present *RNAlertController* alert on a specific view controller
+    /// Use this method to present `RNAlertController` alert on a specific view controller. Passing `nil`
+    /// for view controller will present the alert on a custom window.
     /// - Parameters:
-    ///   - viewController: *UIViewController* where the alert is to be presented
-    ///   - completion: Block to run after presenting the alert
-    func present(on viewController: UIViewController, completion: (() -> Void)? = nil) {
-        viewController.present(self, animated: false, completion: completion)
+    ///   - viewController: `UIViewController` where the alert is to be presented.
+    ///   - completion: Block to run after presenting the alert.
+    func present(on viewController: UIViewController? = nil, completion: (() -> Void)? = nil) {
+        if let viewController = viewController {
+            presentOnViewController(viewController, completion: completion)
+        } else {
+            presentOnWindow(completion: completion)
+        }
     }
     
-    /// Presents the alert
-    ///
-    /// This method can be used without any view controller reference
-    /// - Parameters:
-    ///   - completion: Block to run after presenting the alert
-    func show(completion: (() -> Void)? = nil) {
-        originalWindow = UIApplication.shared.delegate?.window!
-        alertWindow = UIWindow(frame: originalWindow!.bounds)
-        alertWindow?.rootViewController = UIViewController()
-        alertWindow?.makeKeyAndVisible()
-        alertWindow?.windowLevel = .normal
-        alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
-    }
-    
-    /// Adds a button to the alert
+    /// Adds a button to the alert.
     ///
     /// - Parameters:
-    ///   - title: Title for the button
-    ///   - type: Choose `.normal` for regular button, `.cancel` for bold button, `.destructive` for red button
-    ///   - action: Block to run when the button is pressed (i.e. touchUpInside: action)
-    /// - Returns: *RNAlertController* instance
+    ///   - title: Title for the button.
+    ///   - type: Button style for the alert.
+    ///   - action: Block to run when the button is pressed (i.e. touchUpInside: action).
+    /// - Returns: `RNAlertController` instance.
     @discardableResult
     func addButton(title: String, type: AlertButtonType = .default, action: AlertAction? = nil) -> RNAlertController {
         let action = {
@@ -52,43 +43,45 @@ public extension RNAlertController {
         return self
     }
     
-    /// Adds an **OK** button to the alert
+    /// Adds an **OK** button to the alert.
     ///
-    /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside: action)
-    /// - Returns: *RNAlertController* instance
+    /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside event).
+    /// - Returns: `RNAlertController` instance.
     @discardableResult
     func addOkButton(action: AlertAction? = nil) -> RNAlertController {
         return addButton(title: "OK", type: .default, action: action)
     }
     
-    /// Adds a **Cancel** button to the alert
+    /// Adds a **Cancel** button to the alert.
     ///
-    /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside: action)
-    /// - Returns: *RNAlertController* instance
+    /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside event).
+    /// - Returns: `RNAlertController` instance.
     @discardableResult
     func addCancelButton(action: AlertAction? = nil) -> RNAlertController {
         return addButton(title: "Cancel", type: .cancel, action: action)
     }
     
-    /// Sets image for the alert
+    /// Sets the banner image for the alert.
     ///
-    /// Multiple calls of this method will result in replacement of previously set image
-    /// - Parameter image: image to use in the alert
-    /// - Returns: *RNAlertController* instance
+    /// Banner image is displayed under the message body. Consequent calls of this method will result
+    /// in replacement of previously set image.
+    /// - Parameter image: image to use in the alert.
+    /// - Returns: `RNAlertController` instance.
     @discardableResult
     func setBannerImage(_ image: UIImage) -> RNAlertController {
         self.image = image
         return self
     }
     
-    /// Sets picker view data for the alert
+    /// Sets picker view data for the alert.
     ///
-    /// Multiple calls of this method will result in replacement of previously set picker data
+    /// - Note: Consequent calls of this method will result in replacement of previously set picker data.
     /// - Parameters:
-    ///   - items: An array of *String* to represent picker data collection
-    ///   - selectedRow: Row to be selected, defaults to 0 (zero) indicating the first item in the collection
-    ///   - selectionAction: Block to execute when an item is selected
-    /// - Returns: *RNAlertController* instance
+    ///   - items: An array of `String` to represent picker data collection.
+    ///   - selectedRow: Row to be selected. The default value is 0 (zero)
+    ///     indicating the first item in the collection.
+    ///   - selectionAction: Block to execute when an item is selected.
+    /// - Returns: `RNAlertController` instance.
     @discardableResult
     func setPickerData(items: [String], selectedRow: Int = 0, selectionAction: AlertPickerAction?) -> RNAlertController {
         pickerData = items
@@ -97,16 +90,19 @@ public extension RNAlertController {
         return self
     }
     
-    /// Sets a button with URL
+    /// Sets a button with an URL.
     ///
+    /// A button is placed under the message body. Consequent calls of this method will result in
+    /// replacement of previously set URL.
     /// - Parameters:
-    ///   - urlString: *String* representation of the URL
-    ///   - text: Placeholder for the URL
-    /// - Returns: *RNAlertController* instance
+    ///   - urlString: `String` representation of the URL.
+    ///   - text: Placeholder for the URL. If `nil` is passed, original URL will be used.
+    /// - Returns: `RNAlertController` instance.
     @discardableResult
-    func setURL(urlString: String, text: String) -> RNAlertController {
+    func setURL(urlString: String, text: String? = nil) -> RNAlertController {
         let url = URL(string: urlString)
-        alertURL = AlertURL(url: url, text: text)
+        let altText = text != nil ? text! : urlString
+        alertURL = AlertURL(url: url, text: altText)
         return self
     }
     
