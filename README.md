@@ -32,7 +32,7 @@ An easy-to-use alert framework for iOS written purely in Swift. With native look
 # Swift 5.0 or later
 pod 'RNAlertController'
 ```
-and run `pod install`
+and run `pod install` and you are ready to use the framework.
 
 ## Usage
 
