@@ -63,20 +63,19 @@
         <section>
           <section class="section">
             
-            <p><img src="https://img.shields.io/cocoapods/p/RNAlertController.svg" alt="Cocoapods platforms">
+            <p><img src="https://raw.githubusercontent.com/rayhannabi/RNAlertController/master/images/banner.png" alt="Banner">
+<img src="https://img.shields.io/cocoapods/p/RNAlertController.svg" alt="Cocoapods platforms">
 <img src="https://img.shields.io/cocoapods/v/RNAlertController.svg" alt="Cocoapods">
 <img src="https://img.shields.io/github/release/rayhannabi/RNAlertController.svg" alt="GitHub release"></p>
 <h1 id='rnalertcontroller' class='heading'>RNAlertController</h1>
 
-<p>An easy-to-use alert library for iOS written purely in Swift. With native look-n-feel and animations, you can add more functionalities to your alerts. </p>
-<h2 id='feature' class='heading'>Feature</h2>
+<p>An easy-to-use alert framework for iOS written purely in Swift. With native look-n-feel and animations, you can add more functionalities to your alerts. </p>
+<h2 id='features' class='heading'>Features</h2>
 
 <ul>
 <li>Title</li>
 <li>Description message</li>
-<li>Image below the description message</li>
-<li>Header Image (coming soon)</li>
-<li>Fixed header image for situation based alert such as <em>error</em>, <em>warning</em>, <em>information</em>, <em>done</em> etc. (coming soon)</li>
+<li>Banner image below the description message</li>
 <li>Multiple buttons with closure action</li>
 <li>Picker view</li>
 <li>URL Button</li>
@@ -97,25 +96,25 @@
 <span class="n">pod</span> <span class="s1">'RNAlertController'</span>
 </code></pre>
 
-<p>and run <code>pod install</code></p>
+<p>and run <code>pod install</code> and you are ready to use the framework.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>RNAlertController is simple to use. The following example shows how to create a simple alert with an OK button within a view controller.</p>
+<p>RNAlertController is really simple to use. The following example shows how to create a simple alert with an OK button within a view controller.</p>
 <h3 id='swift' class='heading'>Swift</h3>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">alertController</span> <span class="o">=</span> <span class="kt">RNAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Message"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"This is a demo"</span><span class="p">)</span>
 <span class="n">alertController</span><span class="o">.</span><span class="nf">addButton</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Got It"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span>
-<span class="n">alertController</span><span class="o">.</span><span class="nf">show</span><span class="p">()</span>
+<span class="n">alertController</span><span class="o">.</span><span class="nf">present</span><span class="p">()</span>
 </code></pre>
 <h3 id='objective-c' class='heading'>Objective-C</h3>
 <pre class="highlight objective_c"><code><span class="n">RNAlertController</span> <span class="o">*</span><span class="n">alert</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RNAlertController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithTitle</span><span class="p">:</span><span class="s">@"Message"</span> 
                                                             <span class="nf">message</span><span class="p">:</span><span class="s">@"This is a demo"</span><span class="p">];</span>
 <span class="p">[</span><span class="n">alert</span> <span class="nf">addButtonWithTitle</span><span class="p">:</span><span class="s">@"Got It"</span> <span class="nf">type</span><span class="p">:</span><span class="n">AlertButtonTypeDefault</span> <span class="n">action</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
-<span class="p">[</span><span class="n">alert</span> <span class="nf">showWithCompletion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">[</span><span class="n">alert</span> <span class="nf">presentOn</span><span class="p">:</span><span class="nb">nil</span> <span class="nf">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 </code></pre>
 
 <p>You can also specify button styles when adding them.</p>
 
-<p>The following example shows how to create an alert with message and image.</p>
+<p>The following example shows how to create an alert with a message and an image.</p>
 <h3 id='swift' class='heading'>Swift</h3>
 <pre class="highlight swift"><code><span class="kt">RNAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Message"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"This is a demo"</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">addButton</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Cancel"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">cancel</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
@@ -123,7 +122,7 @@
         <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">performSomeAction</span><span class="p">()</span>
     <span class="p">})</span>
     <span class="o">.</span><span class="nf">setBannerImage</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Flag"</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
-    <span class="o">.</span><span class="nf">show</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">present</span><span class="p">()</span>
 </code></pre>
 <h3 id='objective-c' class='heading'>Objective-C</h3>
 <pre class="highlight objective_c"><code><span class="n">RNAlertController</span> <span class="o">*</span><span class="n">alert</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RNAlertController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithTitle</span><span class="p">:</span><span class="s">@"Message"</span>
@@ -133,7 +132,7 @@
     <span class="p">[</span><span class="n">self</span> <span class="nf">performSomeAction</span><span class="p">];</span>
 <span class="p">}];</span>
 <span class="p">[</span><span class="n">alert</span> <span class="nf">setBannerImage</span><span class="p">:[</span><span class="n">UIImage</span> <span class="nf">imageNamed</span><span class="p">:</span><span class="s">@"Flag"</span><span class="p">]];</span>
-<span class="p">[</span><span class="n">alert</span> <span class="nf">showWithCompletion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">[</span><span class="n">alert</span> <span class="nf">presentOn</span><span class="p">:</span><span class="n">self</span> <span class="nf">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
 </code></pre>
 <h2 id='documentation' class='heading'>Documentation</h2>
 
@@ -147,7 +146,7 @@
 </ul>
 <h2 id='license' class='heading'>License</h2>
 
-<p>This project is available under <strong>MIT</strong> License. See the LICENSE file for more info</p>
+<p>This project is available under <strong>MIT</strong> License. See the LICENSE file for more info.</p>
 
           </section>
         </section>

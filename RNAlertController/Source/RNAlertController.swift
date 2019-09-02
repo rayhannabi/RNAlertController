@@ -79,8 +79,9 @@ extension RNAlertController {
         originalWindow = UIApplication.shared.delegate?.window!
         alertWindow = UIWindow(frame: originalWindow?.bounds ?? .zero)
         alertWindow?.rootViewController = UIViewController()
+        let originalWindowLevel = originalWindow?.windowLevel.rawValue ?? 0.0
+        alertWindow?.windowLevel = UIWindow.Level(rawValue: originalWindowLevel + 1)
         alertWindow?.makeKeyAndVisible()
-        alertWindow?.windowLevel = .normal
         alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
     }
     
