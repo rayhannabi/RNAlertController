@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An object which identifies the row of a picker view
+/// An object which identifies the row of a picker view.
 public class AlertPickerRow: NSObject {
     
     /// Selected index starting from 0.
@@ -23,7 +23,7 @@ public class AlertPickerRow: NSObject {
     }
 }
 
-/// Action block when a picker item is selected
+/// Action block when a picker item is selected.
 public typealias AlertPickerAction = (AlertPickerRow) -> Void
 
 class AlertPickerView: UIPickerView {
