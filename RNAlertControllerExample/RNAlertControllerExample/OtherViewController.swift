@@ -18,7 +18,7 @@ class OtherViewController: UIViewController {
         RNAlertController(title: "Kashmir Valley", message: message)
             .setBannerImage(UIImage(named: "crop")!)
             .addOkButton()
-            .show()
+            .present()
     }
 
 }

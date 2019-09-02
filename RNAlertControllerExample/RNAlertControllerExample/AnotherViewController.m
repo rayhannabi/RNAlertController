@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (void)didTapAlert:(id)sender {
@@ -32,7 +31,7 @@
     [alert addButtonWithTitle:@"Home" type:AlertButtonTypeDefault action:^{
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
-    [alert showWithCompletion:nil];
+    [alert present];
 }
 
 @end

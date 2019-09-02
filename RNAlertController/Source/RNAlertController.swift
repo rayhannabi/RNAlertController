@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// RNAlertController class
+/// An object that provides RNAlertController.
 @objcMembers public final class RNAlertController: UIViewController {
         
     var titleText           : String?
@@ -68,8 +68,25 @@ import UIKit
     
 }
 
-// MARK: - Private methods
+// MARK: - Presentation methods
+extension RNAlertController {
+    
+    func presentOnViewController(_ viewController: UIViewController, completion: (() -> Void)?) {
+        viewController.present(self, animated: false, completion: completion)
+    }
+    
+    func presentOnWindow(completion: (() -> Void)?) {
+        originalWindow = UIApplication.shared.delegate?.window!
+        alertWindow = UIWindow(frame: originalWindow?.bounds ?? .zero)
+        alertWindow?.rootViewController = UIViewController()
+        alertWindow?.makeKeyAndVisible()
+        alertWindow?.windowLevel = .normal
+        alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
+    }
+    
+}
 
+// MARK: - Private methods
 private extension RNAlertController {
     
     func createAlertContainer() {
@@ -219,19 +236,6 @@ private extension RNAlertController {
         UIView.animate(withDuration: 0.18, animations: {
             self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.45)
         })
-    }
-    
-    func presentOnViewController(_ viewController: UIViewController, completion: (() -> Void)?) {
-        viewController.present(self, animated: false, completion: completion)
-    }
-    
-    func presentOnWindow(completion: (() -> Void)?) {
-        originalWindow = UIApplication.shared.delegate?.window!
-        alertWindow = UIWindow(frame: originalWindow?.bounds ?? .zero)
-        alertWindow?.rootViewController = UIViewController()
-        alertWindow?.makeKeyAndVisible()
-        alertWindow?.windowLevel = .normal
-        alertWindow?.rootViewController?.present(self, animated: false, completion: completion)
     }
     
 }
