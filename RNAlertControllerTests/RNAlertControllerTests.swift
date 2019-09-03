@@ -20,5 +20,20 @@ class RNAlertControllerTests: XCTestCase {
     func testInitialization() {
         XCTAssertNotNil(alertController, "RNAlertController should be properly initialzied")
     }
+    
+    func testOkButton() {
+        alertController = alertController?.addOkButton()
+        XCTAssertNotNil(alertController, "OK button should be added properly")
+    }
+    
+    func testCancelButton() {
+        alertController = alertController?.addCancelButton()
+        XCTAssertNotNil(alertController, "Cancel button should be added properly")
+    }
+    
+    func testCustomButton() {
+        alertController = alertController?.addButton(title: "Delete", type: .destructive, action: nil)
+        XCTAssertNotNil(alertController, "Delete button should added properly")
+    }
 
 }
