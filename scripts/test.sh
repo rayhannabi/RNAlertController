@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo '>> Test'
-echo `pwd`
+echo 'Testing'
+set -o pipefail | xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
