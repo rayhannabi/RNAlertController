@@ -20,3 +20,4 @@ deploy:
   on:
     repo: rayhannabi/RNAlertController
     tags: true
+
