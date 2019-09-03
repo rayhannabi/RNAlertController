@@ -12,6 +12,9 @@ branches:
     - "/release*/"
     - "/feature*/"
 
+script:
+  - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="platform=iOS Simulator,OS=12.4,name=iPhone Xs" build test
+
 deploy:
   provider: releases
   api_key:
