@@ -12,11 +12,24 @@ branches:
     - "/release*/"
     - "/feature*/"
 
-script:
-  # - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
-  - xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
-  - ls -al
-  - ls builds
+jobs:
+  include:
+    - stage: test
+      script: 
+        - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
+    - stage: export
+      script:
+        - xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
+    - stage: deploy
+        - ls builds
+
+
+# script:
+#   - echo "Testing"
+#   - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
+#   - xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
+#   - ls -al
+#   - ls builds
 
 
 deploy:
