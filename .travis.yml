@@ -16,12 +16,10 @@ jobs:
   include:
     - stage: test
       script: 
-        # - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
-        - ./scripts/test.sh
+        - "./scripts/test.sh"
     - stage: build
       script:
-        # - xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
-        - ./scripts/build.sh
+        - "./scripts/build.sh"
 
 deploy:
   provider: releases
@@ -34,3 +32,6 @@ deploy:
     repo: rayhannabi/RNAlertController
     tags: true
 
+
+# - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
+# - xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
