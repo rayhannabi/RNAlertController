@@ -14,6 +14,8 @@ branches:
 
 script:
   - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c && exit ${PIPESTATUS[0]}
+  - $ xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c && exit ${PIPESTATUS[0]}
+
 
 deploy:
   provider: releases
