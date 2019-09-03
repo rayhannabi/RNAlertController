@@ -13,7 +13,7 @@ branches:
     - "/feature*/"
 
 script:
-  - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty && exit ${PIPESTATUS[0]}
+  - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c && exit ${PIPESTATUS[0]}
 
 deploy:
   provider: releases
