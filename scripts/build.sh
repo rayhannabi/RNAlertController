@@ -9,6 +9,8 @@ ARTIFACT=builds/RNAlertController.framework
 if test -f $ARTIFACT; then
     echo $ARTIFACT
     echo 'Compressing'
+    zip -vr RNAlertController.framework.zip RNAlertController.framework/ -x "*.DS_Store"
+    ls -al builds
 else
-    exit(1)
+    exit()
 fi
