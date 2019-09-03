@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8508678231E5F2100F0D6B3 /* RNAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */; };
+		E850867A231E5F2100F0D6B3 /* RNAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */; };
 		E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */; };
 		E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE528E227B07D200466CAF /* AlertImageView.swift */; };
 		E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5290227B092400466CAF /* AlertStackView.swift */; };
@@ -24,7 +26,20 @@
 		E8FF167F2282B48C00CC8807 /* RNAlertController+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E850867B231E5F2100F0D6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8ECFAC222772ED000D4BA3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8ECFACA22772ED000D4BA3F;
+			remoteInfo = RNAlertController;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAlertControllerTests.swift; sourceTree = "<group>"; };
+		E8508679231E5F2100F0D6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertURLButton.swift; sourceTree = "<group>"; };
 		E8CE528E227B07D200466CAF /* AlertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImageView.swift; sourceTree = "<group>"; };
 		E8CE5290227B092400466CAF /* AlertStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStackView.swift; sourceTree = "<group>"; };
@@ -45,6 +60,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E8508672231E5F2100F0D6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E850867A231E5F2100F0D6B3 /* RNAlertController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8ECFAC822772ED000D4BA3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8508676231E5F2100F0D6B3 /* RNAlertControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */,
+				E8508679231E5F2100F0D6B3 /* Info.plist */,
+			);
+			path = RNAlertControllerTests;
+			sourceTree = "<group>";
+		};
 		E8ECFAC122772ED000D4BA3F = {
 			isa = PBXGroup;
 			children = (
 				E8ECFACD22772ED000D4BA3F /* Source */,
+				E8508676231E5F2100F0D6B3 /* RNAlertControllerTests */,
 				E8ECFACC22772ED000D4BA3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */,
+				E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +142,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E8508674231E5F2100F0D6B3 /* RNAlertControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E850867F231E5F2100F0D6B3 /* Build configuration list for PBXNativeTarget "RNAlertControllerTests" */;
+			buildPhases = (
+				E8508671231E5F2100F0D6B3 /* Sources */,
+				E8508672231E5F2100F0D6B3 /* Frameworks */,
+				E8508673231E5F2100F0D6B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E850867C231E5F2100F0D6B3 /* PBXTargetDependency */,
+			);
+			name = RNAlertControllerTests;
+			productName = RNAlertControllerTests;
+			productReference = E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E8ECFACA22772ED000D4BA3F /* RNAlertController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8ECFAD322772ED000D4BA3F /* Build configuration list for PBXNativeTarget "RNAlertController" */;
@@ -132,9 +184,13 @@
 		E8ECFAC222772ED000D4BA3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Rayhan Nabi";
 				TargetAttributes = {
+					E8508674231E5F2100F0D6B3 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					E8ECFACA22772ED000D4BA3F = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
@@ -155,11 +211,19 @@
 			projectRoot = "";
 			targets = (
 				E8ECFACA22772ED000D4BA3F /* RNAlertController */,
+				E8508674231E5F2100F0D6B3 /* RNAlertControllerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E8508673231E5F2100F0D6B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8ECFAC922772ED000D4BA3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +234,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E8508671231E5F2100F0D6B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8508678231E5F2100F0D6B3 /* RNAlertControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8ECFAC722772ED000D4BA3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,7 +265,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E850867C231E5F2100F0D6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8ECFACA22772ED000D4BA3F /* RNAlertController */;
+			targetProxy = E850867B231E5F2100F0D6B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E850867D231E5F2100F0D6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCH85ZHVFN;
+				INFOPLIST_FILE = RNAlertControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmedgloballtd.lab.RNAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E850867E231E5F2100F0D6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCH85ZHVFN;
+				INFOPLIST_FILE = RNAlertControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartmedgloballtd.lab.RNAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E8ECFAD122772ED000D4BA3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -378,6 +496,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E850867F231E5F2100F0D6B3 /* Build configuration list for PBXNativeTarget "RNAlertControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E850867D231E5F2100F0D6B3 /* Debug */,
+				E850867E231E5F2100F0D6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E8ECFAC522772ED000D4BA3F /* Build configuration list for PBXProject "RNAlertController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
