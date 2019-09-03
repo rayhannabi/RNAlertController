@@ -1,7 +1,7 @@
 os: osx
 language: objective-c
 osx_image: xcode10.3
-xcode_workspace: RNAlertController.xcworkspace
+xcode_project: RNAlertController.xcodeproj
 xcode_scheme: RNAlertController
 xcode_sdk: iphonesimulator
 branches:

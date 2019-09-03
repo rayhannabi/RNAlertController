@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		E8508678231E5F2100F0D6B3 /* RNAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */; };
 		E850867A231E5F2100F0D6B3 /* RNAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */; };
+		E85086BB231E649800F0D6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85086B6231E649700F0D6B3 /* AppDelegate.swift */; };
+		E85086BC231E649800F0D6B3 /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85086B2231E649700F0D6B3 /* AnotherViewController.m */; };
+		E85086BD231E649800F0D6B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85086B9231E649700F0D6B3 /* ViewController.swift */; };
+		E85086BE231E649800F0D6B3 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85086BA231E649700F0D6B3 /* UIView+Corner.swift */; };
+		E85086BF231E649800F0D6B3 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85086B3231E649700F0D6B3 /* OtherViewController.swift */; };
+		E85086C0231E656B00F0D6B3 /* RNAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */; };
+		E85086C1231E656B00F0D6B3 /* RNAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E85086C5231E65F600F0D6B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85086B1231E649700F0D6B3 /* LaunchScreen.storyboard */; };
+		E85086C6231E65F800F0D6B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85086AF231E649700F0D6B3 /* Main.storyboard */; };
+		E85086C7231E670200F0D6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85086B7231E649700F0D6B3 /* Assets.xcassets */; };
 		E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */; };
 		E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE528E227B07D200466CAF /* AlertImageView.swift */; };
 		E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5290227B092400466CAF /* AlertStackView.swift */; };
@@ -34,12 +44,52 @@
 			remoteGlobalIDString = E8ECFACA22772ED000D4BA3F;
 			remoteInfo = RNAlertController;
 		};
+		E85086AC231E648B00F0D6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8ECFAC222772ED000D4BA3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8508699231E647600F0D6B3;
+			remoteInfo = RNAlertControllerExample;
+		};
+		E85086C2231E656B00F0D6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8ECFAC222772ED000D4BA3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8ECFACA22772ED000D4BA3F;
+			remoteInfo = RNAlertController;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E85086C4231E656C00F0D6B3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E85086C1231E656B00F0D6B3 /* RNAlertController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAlertControllerTests.swift; sourceTree = "<group>"; };
 		E8508679231E5F2100F0D6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E850869A231E647600F0D6B3 /* RNAlertControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNAlertControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85086AE231E649700F0D6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E85086B0231E649700F0D6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E85086B2231E649700F0D6B3 /* AnotherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
+		E85086B3231E649700F0D6B3 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		E85086B4231E649700F0D6B3 /* AnotherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnotherViewController.h; sourceTree = "<group>"; };
+		E85086B5231E649700F0D6B3 /* RNAlertControllerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNAlertControllerExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		E85086B6231E649700F0D6B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E85086B7231E649700F0D6B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E85086B9231E649700F0D6B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E85086BA231E649700F0D6B3 /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
+		E85086CC231E6BBA00F0D6B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertURLButton.swift; sourceTree = "<group>"; };
 		E8CE528E227B07D200466CAF /* AlertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImageView.swift; sourceTree = "<group>"; };
 		E8CE5290227B092400466CAF /* AlertStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStackView.swift; sourceTree = "<group>"; };
@@ -68,6 +118,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8508697231E647600F0D6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85086C0231E656B00F0D6B3 /* RNAlertController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8ECFAC822772ED000D4BA3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +136,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E813210C231E7313007BD8F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */,
+				E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */,
+				E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E813210D231E7343007BD8F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */,
+				E8FEEE232310409200A155E2 /* AlertActionButton.swift */,
+				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
+				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
+				E8CE528E227B07D200466CAF /* AlertImageView.swift */,
+				E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */,
+				E8CE5294227C506000466CAF /* AlertPickerView.swift */,
+				E8CE5290227B092400466CAF /* AlertStackView.swift */,
+				E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E8508676231E5F2100F0D6B3 /* RNAlertControllerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,11 +171,62 @@
 			path = RNAlertControllerTests;
 			sourceTree = "<group>";
 		};
+		E850869B231E647600F0D6B3 /* RNAlertControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				E85086CC231E6BBA00F0D6B3 /* Info.plist */,
+				E85086B7231E649700F0D6B3 /* Assets.xcassets */,
+				E85086C9231E677000F0D6B3 /* Controllers */,
+				E85086CA231E679300F0D6B3 /* Extensions */,
+				E85086CB231E67A700F0D6B3 /* Storyboards */,
+				E85086C8231E675300F0D6B3 /* Support */,
+			);
+			path = RNAlertControllerExample;
+			sourceTree = "<group>";
+		};
+		E85086C8231E675300F0D6B3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E85086B6231E649700F0D6B3 /* AppDelegate.swift */,
+				E85086B5231E649700F0D6B3 /* RNAlertControllerExample-Bridging-Header.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E85086C9231E677000F0D6B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E85086B4231E649700F0D6B3 /* AnotherViewController.h */,
+				E85086B2231E649700F0D6B3 /* AnotherViewController.m */,
+				E85086B3231E649700F0D6B3 /* OtherViewController.swift */,
+				E85086B9231E649700F0D6B3 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E85086CA231E679300F0D6B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E85086BA231E649700F0D6B3 /* UIView+Corner.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E85086CB231E67A700F0D6B3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E85086B1231E649700F0D6B3 /* LaunchScreen.storyboard */,
+				E85086AF231E649700F0D6B3 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		E8ECFAC122772ED000D4BA3F = {
 			isa = PBXGroup;
 			children = (
 				E8ECFACD22772ED000D4BA3F /* Source */,
 				E8508676231E5F2100F0D6B3 /* RNAlertControllerTests */,
+				E850869B231E647600F0D6B3 /* RNAlertControllerExample */,
 				E8ECFACC22772ED000D4BA3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +236,7 @@
 			children = (
 				E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */,
 				E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */,
+				E850869A231E647600F0D6B3 /* RNAlertControllerExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,20 +246,10 @@
 			children = (
 				E8ECFACE22772ED000D4BA3F /* RNAlertController.h */,
 				E8ECFACF22772ED000D4BA3F /* Info.plist */,
-				E8FEEE232310409200A155E2 /* AlertActionButton.swift */,
-				E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */,
-				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
-				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
-				E8CE528E227B07D200466CAF /* AlertImageView.swift */,
-				E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */,
-				E8CE5294227C506000466CAF /* AlertPickerView.swift */,
-				E8CE5290227B092400466CAF /* AlertStackView.swift */,
-				E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */,
 				E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */,
 				E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */,
-				E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */,
-				E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */,
-				E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */,
+				E813210C231E7313007BD8F7 /* Extensions */,
+				E813210D231E7343007BD8F7 /* Views */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -154,11 +280,31 @@
 			);
 			dependencies = (
 				E850867C231E5F2100F0D6B3 /* PBXTargetDependency */,
+				E85086AD231E648B00F0D6B3 /* PBXTargetDependency */,
 			);
 			name = RNAlertControllerTests;
 			productName = RNAlertControllerTests;
 			productReference = E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8508699231E647600F0D6B3 /* RNAlertControllerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E85086A9231E647600F0D6B3 /* Build configuration list for PBXNativeTarget "RNAlertControllerExample" */;
+			buildPhases = (
+				E8508696231E647600F0D6B3 /* Sources */,
+				E8508697231E647600F0D6B3 /* Frameworks */,
+				E8508698231E647600F0D6B3 /* Resources */,
+				E85086C4231E656C00F0D6B3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E85086C3231E656B00F0D6B3 /* PBXTargetDependency */,
+			);
+			name = RNAlertControllerExample;
+			productName = RNAlertControllerExample;
+			productReference = E850869A231E647600F0D6B3 /* RNAlertControllerExample.app */;
+			productType = "com.apple.product-type.application";
 		};
 		E8ECFACA22772ED000D4BA3F /* RNAlertController */ = {
 			isa = PBXNativeTarget;
@@ -190,6 +336,10 @@
 				TargetAttributes = {
 					E8508674231E5F2100F0D6B3 = {
 						CreatedOnToolsVersion = 10.3;
+						TestTargetID = E8508699231E647600F0D6B3;
+					};
+					E8508699231E647600F0D6B3 = {
+						CreatedOnToolsVersion = 10.3;
 					};
 					E8ECFACA22772ED000D4BA3F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -204,6 +354,7 @@
 			knownRegions = (
 				en,
 				Base,
+				global,
 			);
 			mainGroup = E8ECFAC122772ED000D4BA3F;
 			productRefGroup = E8ECFACC22772ED000D4BA3F /* Products */;
@@ -212,6 +363,7 @@
 			targets = (
 				E8ECFACA22772ED000D4BA3F /* RNAlertController */,
 				E8508674231E5F2100F0D6B3 /* RNAlertControllerTests */,
+				E8508699231E647600F0D6B3 /* RNAlertControllerExample */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +373,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8508698231E647600F0D6B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85086C5231E65F600F0D6B3 /* LaunchScreen.storyboard in Resources */,
+				E85086C7231E670200F0D6B3 /* Assets.xcassets in Resources */,
+				E85086C6231E65F800F0D6B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +401,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8508678231E5F2100F0D6B3 /* RNAlertControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8508696231E647600F0D6B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85086BD231E649800F0D6B3 /* ViewController.swift in Sources */,
+				E85086BE231E649800F0D6B3 /* UIView+Corner.swift in Sources */,
+				E85086BF231E649800F0D6B3 /* OtherViewController.swift in Sources */,
+				E85086BB231E649800F0D6B3 /* AppDelegate.swift in Sources */,
+				E85086BC231E649800F0D6B3 /* AnotherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +445,42 @@
 			target = E8ECFACA22772ED000D4BA3F /* RNAlertController */;
 			targetProxy = E850867B231E5F2100F0D6B3 /* PBXContainerItemProxy */;
 		};
+		E85086AD231E648B00F0D6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8508699231E647600F0D6B3 /* RNAlertControllerExample */;
+			targetProxy = E85086AC231E648B00F0D6B3 /* PBXContainerItemProxy */;
+		};
+		E85086C3231E656B00F0D6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8ECFACA22772ED000D4BA3F /* RNAlertController */;
+			targetProxy = E85086C2231E656B00F0D6B3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E85086AF231E649700F0D6B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E85086AE231E649700F0D6B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E85086B1231E649700F0D6B3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E85086B0231E649700F0D6B3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E850867D231E5F2100F0D6B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = RNAlertControllerTests/Info.plist;
@@ -290,12 +494,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNAlertControllerExample.app/RNAlertControllerExample";
 			};
 			name = Debug;
 		};
 		E850867E231E5F2100F0D6B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = RNAlertControllerTests/Info.plist;
@@ -306,6 +512,47 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartmedgloballtd.lab.RNAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNAlertControllerExample.app/RNAlertControllerExample";
+			};
+			name = Release;
+		};
+		E85086AA231E647600F0D6B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCH85ZHVFN;
+				INFOPLIST_FILE = "$(SRCROOT)/RNAlertControllerExample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertControllerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E85086AB231E647600F0D6B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCH85ZHVFN;
+				INFOPLIST_FILE = "$(SRCROOT)/RNAlertControllerExample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,6 +748,15 @@
 			buildConfigurations = (
 				E850867D231E5F2100F0D6B3 /* Debug */,
 				E850867E231E5F2100F0D6B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E85086A9231E647600F0D6B3 /* Build configuration list for PBXNativeTarget "RNAlertControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85086AA231E647600F0D6B3 /* Debug */,
+				E85086AB231E647600F0D6B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
