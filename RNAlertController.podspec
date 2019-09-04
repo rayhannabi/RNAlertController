@@ -5,8 +5,8 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = "RNAlertController"
-  spec.version                = "0.6.3"
-  spec.summary                = "Custom Alert Controller for iOS"
+  spec.version                = "0.6.4"
+  spec.summary                = "Custom Alert Framework for iOS"
 
   spec.description            = <<-DESC
                                 An UIAlertController alternative for iOS written purely in Swift
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target  = '9.0'
   spec.source                 = { 
                                   :git => "https://github.com/rayhannabi/RNAlertController.git", 
-                                  :tag => "#{spec.version}"
+                                  :tag => "v#{spec.version}"
                                 }
   spec.swift_version          = '5.0'
   spec.source_files           = "Source/**/*.swift"
