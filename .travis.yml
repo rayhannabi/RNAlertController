@@ -9,37 +9,22 @@ xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone Xs
 branches:
   only:
     - master
-    - "/release*/"
-    - "/feature*/"
+    - develop
 
 jobs:
   include:
     - stage: test
-      if: branch = master
       script: ./scripts/test.sh
     - stage: build
+      if: branch = master
       script: ./scripts/build.sh
       deploy:
         provider: releases
-        api_key: 
+        api_key:
           secure: $GITHUB_RELEASE_TOKEN
         file:
           - builds/RNAlertController.framework.zip
           - builds/RNAlertController.framework.zip.sha1
         on:
           repo: rayhannabi/RNAlertController
-
-# deploy:
-#   provider: releases
-#   api_key:
-#     secure: L+TPlQKVd7jZl9mJNqNhkvRLYxSzk0oEFXdZC8HkaChbr3RSlZFannSWZ625a4nNrW/xDwbxDLWjEEOgPURQ6Gw9cpBiShyZ+MONlKTzf+DsDqZDZnJW/SZ7paKMF+FDb1qo3jjN6IooREvE4o9DgggeDd0nuAnIj4XWUQqYDu1izcBucbUVZwGTkcYXGkSLcLUaKK2BQb3Fy0uIM5XrNxNKwlxDDtN9P3445R2561WPY8wme355rtxcKGtNWtOHbvEDXAOcr0I6rFzDI8KcEChiGDlF5sXEO1hbCdLZG5ME0PgOxRnwE15YCTA53ZyMDtItE/6JJ0eHWYzo9G6UaqKTJMDGrfJdcOUs4sAVByYCzKx26oEdBmLEHxqU9dUaCIdW5s5QaCjC5L9B4SkMqaRKYAhzEQXOyZBsS9VVuDYVDPF93zBHAerVrGws+ztOjtnwV/T2LlWszmDv66Wn8JpkLE6bM6leg3OuApATDBGyrgxEdSuR/hRRJ0sxDqX/BPDcUE/MEeIrGkoE4DrTOYhPLKah5VNMqTyq+kBEgALwf2wvLpYYOvxlkd/BeBuajkJSsir/P+WKlGS/o+RqtKprT7iKuhzZg87GaeYFdzYv4pUrJF6ogDLsrMz+YMuZUH8R+DGWhdFfFOFrlpCrylpgJXSEYdBZHDmMYKuZuMY=
-#   file:
-#     - deploy/RNAlertController.framework.zip
-#     - deploy/RNAlertController.sha256
-#   on:
-#     repo: rayhannabi/RNAlertController
-#     tags: true
-
-
-# - xcodebuild -scheme RNAlertController -sdk iphonesimulator -destination name="iPhone Xs" build test | xcpretty -c
-# - xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
+          tags: true
