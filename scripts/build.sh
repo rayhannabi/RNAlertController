@@ -14,4 +14,4 @@ ls builds
 
 # Calculate SHA1 Checksum
 echo 'Generating checksum'
-shasum -a 1 builds/RNAlertController.framework
+shasum -ba 1 builds/RNAlertController.framework.zip > builds/RNAlertController.framework.zip.sha1
