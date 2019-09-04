@@ -7,9 +7,9 @@ xcode_sdk: iphonesimulator12.4
 xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone Xs
 
 branches:
-  only:
-    - master
-    - develop
+  except:
+    - /release*/
+    - /feature*/
 
 jobs:
   include:
