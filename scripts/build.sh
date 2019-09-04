@@ -1,20 +1,17 @@
 #!/bin/bash
 
+# Xcode Build
 echo 'Building'
-
 set -o pipefail | xcodebuild -project RNAlertController.xcodeproj -scheme RNAlertController -configuration Release -sdk iphonesimulator CONFIGURATION_BUILD_DIR=builds clean build | xcpretty -c
 
+# Zip The Framework
+echo 'Compressing Artifact'
 zip -vr builds/RNAlertController.framework.zip builds/RNAlertController.framework/ -x "*.DS_Store"
 
-ls -al builds
+# Show Build Artifacts
+echo 'Artifacts'
+ls builds
 
-# ARTIFACT=./builds/RNAlertController.framework
-
-# if test -f $ARTIFACT; then
-#     echo $ARTIFACT
-#     echo 'Compressing'
-#     zip -vr RNAlertController.framework.zip RNAlertController.framework/ -x "*.DS_Store"
-#     ls -al builds
-# else
-#     exit 1
-# fi
+# Calculate SHA1 Checksum
+echo 'Generating checksum'
+shasum -a 1 builds/RNAlertController.framework
