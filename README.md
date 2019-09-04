@@ -90,7 +90,7 @@ RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Message"
 
 ## Documentation
 
-Documentation and references can be found at [rayhannabi.github.io/RNAlertController](https://rayhannabi.github.io/RNAlertController).
+Documentation and API references can be found at [rayhannabi.github.io/RNAlertController](https://rayhannabi.github.io/RNAlertController). Also check out the wiki for detailed usage.
 
 
 
