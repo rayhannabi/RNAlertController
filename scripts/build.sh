@@ -18,4 +18,4 @@ shasum -ba 1 builds/RNAlertController.framework.zip > builds/RNAlertController.f
 # Show Build Artifacts
 echo
 echo 'Artifacts'
-ls --color=AUTO builds
+ls -G builds
