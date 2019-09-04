@@ -1,0 +1,30 @@
+os: osx
+language: objective-c
+osx_image: xcode10.3
+xcode_project: RNAlertController.xcodeproj
+xcode_scheme: RNAlertController
+xcode_sdk: iphonesimulator12.4
+xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone Xs
+
+branches:
+  only:
+    - master
+    - develop
+
+jobs:
+  include:
+    - stage: test
+      script: ./scripts/test.sh
+    - stage: build
+      if: branch = master
+      script: ./scripts/build.sh
+      deploy:
+        provider: releases
+        api_key:
+          secure: $GITHUB_RELEASE_TOKEN
+        file:
+          - builds/RNAlertController.framework.zip
+          - builds/RNAlertController.framework.zip.sha1
+        on:
+          repo: rayhannabi/RNAlertController
+          tags: true

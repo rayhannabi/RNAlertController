@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8D5374C22772D59002B4046"
-               BuildableName = "RNAlertControllerExample.app"
-               BlueprintName = "RNAlertControllerExample"
-               ReferencedContainer = "container:RNAlertControllerExample.xcodeproj">
+               BlueprintIdentifier = "E8ECFACA22772ED000D4BA3F"
+               BuildableName = "RNAlertController.framework"
+               BlueprintName = "RNAlertController"
+               ReferencedContainer = "container:RNAlertController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E8508674231E5F2100F0D6B3"
+               BuildableName = "RNAlertControllerTests.xctest"
+               BlueprintName = "RNAlertControllerTests"
+               ReferencedContainer = "container:RNAlertController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8D5374C22772D59002B4046"
-            BuildableName = "RNAlertControllerExample.app"
-            BlueprintName = "RNAlertControllerExample"
-            ReferencedContainer = "container:RNAlertControllerExample.xcodeproj">
+            BlueprintIdentifier = "E8ECFACA22772ED000D4BA3F"
+            BuildableName = "RNAlertController.framework"
+            BlueprintName = "RNAlertController"
+            ReferencedContainer = "container:RNAlertController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -51,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8D5374C22772D59002B4046"
-            BuildableName = "RNAlertControllerExample.app"
-            BlueprintName = "RNAlertControllerExample"
-            ReferencedContainer = "container:RNAlertControllerExample.xcodeproj">
+            BlueprintIdentifier = "E8ECFACA22772ED000D4BA3F"
+            BuildableName = "RNAlertController.framework"
+            BlueprintName = "RNAlertController"
+            ReferencedContainer = "container:RNAlertController.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8D5374C22772D59002B4046"
-            BuildableName = "RNAlertControllerExample.app"
-            BlueprintName = "RNAlertControllerExample"
-            ReferencedContainer = "container:RNAlertControllerExample.xcodeproj">
+            BlueprintIdentifier = "E8ECFACA22772ED000D4BA3F"
+            BuildableName = "RNAlertController.framework"
+            BlueprintName = "RNAlertController"
+            ReferencedContainer = "container:RNAlertController.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

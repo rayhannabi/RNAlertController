@@ -1,26 +1,26 @@
 {
   "warnings": [
     {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/RNAlertController.swift",
+      "file": "/Users/rayhan/Dropbox/Developments/RNAlertController/Source/RNAlertController.swift",
       "line": 50,
       "symbol": "RNAlertController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/RNAlertController.swift",
+      "file": "/Users/rayhan/Dropbox/Developments/RNAlertController/Source/RNAlertController.swift",
       "line": 57,
       "symbol": "RNAlertController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController/Source/RNAlertController.swift",
+      "file": "/Users/rayhan/Dropbox/Developments/RNAlertController/Source/RNAlertController.swift",
       "line": 62,
       "symbol": "RNAlertController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/rayhan/Documents/Reactor/RNAlertController/RNAlertController"
+  "source_directory": "/Users/rayhan/Dropbox/Developments/RNAlertController/Source"
 }
