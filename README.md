@@ -1,7 +1,11 @@
-![Banner](https://raw.githubusercontent.com/rayhannabi/RNAlertController/master/images/banner.png)
-![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
-![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
-![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)
+![Banner](https://raw.githubusercontent.com/rayhannabi/RNAlertController/master/images/banner.png) 
+
+[![Build Status](https://img.shields.io/travis/rayhannabi/RNAlertController/master?logo=travis%20ci&logoColor=white&style=flat-square)](https://travis-ci.org/rayhannabi/RNAlertController)
+![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController?color=blue&style=flat-square)
+![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController?style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/rayhannabi/RNAlertController?logo=github&style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/rayhannabi/RNAlertController?style=flat-square&logo=github)
+![GitHub](https://img.shields.io/github/license/rayhannabi/RNAlertController?style=flat-square)
 
 # RNAlertController
 
