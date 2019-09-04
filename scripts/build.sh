@@ -12,5 +12,5 @@ if test -f $ARTIFACT; then
     zip -vr RNAlertController.framework.zip RNAlertController.framework/ -x "*.DS_Store"
     ls -al builds
 else
-    exit()
+    exit 1
 fi
