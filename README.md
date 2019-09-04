@@ -1,7 +1,11 @@
-![Banner](https://raw.githubusercontent.com/rayhannabi/RNAlertController/master/images/banner.png)
-![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController.svg)
-![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController.svg)
-![GitHub release](https://img.shields.io/github/release/rayhannabi/RNAlertController.svg)
+![Banner](https://raw.githubusercontent.com/rayhannabi/RNAlertController/master/images/banner.png) 
+
+[![Build Status](https://img.shields.io/travis/rayhannabi/RNAlertController/master?logo=travis%20ci&logoColor=white&style=flat)](https://travis-ci.org/rayhannabi/RNAlertController)
+![Cocoapods platforms](https://img.shields.io/cocoapods/p/RNAlertController?color=blue&style=flat)
+![Cocoapods](https://img.shields.io/cocoapods/v/RNAlertController?style=flat)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/rayhannabi/RNAlertController?logo=github&style=flat)
+![GitHub issues](https://img.shields.io/github/issues/rayhannabi/RNAlertController?style=flat&logo=github)
+![GitHub](https://img.shields.io/github/license/rayhannabi/RNAlertController?style=flat)
 
 # RNAlertController
 
@@ -86,7 +90,7 @@ RNAlertController *alert = [[RNAlertController alloc] initWithTitle:@"Message"
 
 ## Documentation
 
-Documentation and references can be found at [rayhannabi.github.io/RNAlertController](https://rayhannabi.github.io/RNAlertController).
+Documentation and API references can be found at [rayhannabi.github.io/RNAlertController](https://rayhannabi.github.io/RNAlertController). Also check out the wiki for detailed usage.
 
 
 

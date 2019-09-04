@@ -2,11 +2,14 @@ output                      : docs
 clean                       : true
 
 sdk                         : iphonesimulator
-source_directory            : RNAlertController/
+source_directory            : Source
 module                      : RNAlertController
 
 author                      : 'Rayhan Nabi'
-copyright                   : 'Copyright © Rayhan Nabi 2019, published under [MIT License](https://github.com/rayhannabi/RNAlertController/blob/master/LICENSE)'
+copyright                   : >
+                            Copyright © Rayhan Nabi 2019, 
+                            published under 
+                            [MIT License](https://github.com/rayhannabi/RNAlertController/blob/master/LICENSE)
 readme                      : README.md
 podspec                     : RNAlertController.podspec
 github_url                  : https://github.com/rayhannabi/RNAlertController
@@ -15,3 +18,4 @@ min_acl                     : public
 hide_documentation_coverage : true
 undocumented_text           : ''
 theme                       : apple
+
