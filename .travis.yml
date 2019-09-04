@@ -16,7 +16,7 @@ jobs:
     - stage: test
       script: ./scripts/test.sh
     - stage: build
-      if: branch = master
+      if: tag IS present
       script: ./scripts/build.sh
       deploy:
         provider: releases
