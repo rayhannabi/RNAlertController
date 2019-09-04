@@ -19,6 +19,15 @@ jobs:
       script: ./scripts/test.sh
     - stage: build
       script: ./scripts/build.sh
+      deploy:
+        provider: releases
+        api_key: 
+          secure: $GITHUB_RELEASE_TOKEN
+        file:
+          - builds/RNAlertController.framework.zip
+          - builds/RNAlertController.framework.zip.sha1
+        on:
+          repo: rayhannabi/RNAlertController
 
 # deploy:
 #   provider: releases
