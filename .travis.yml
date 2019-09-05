@@ -6,6 +6,9 @@ xcode_scheme: RNAlertController
 xcode_sdk: iphonesimulator12.4
 xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone Xs
 
+git:
+  depth: 1
+
 branches:
   except:
     - /release*/
@@ -20,8 +23,7 @@ jobs:
       script: ./scripts/build.sh
       deploy:
         provider: releases
-        api_key:
-          secure: $GITHUB_RELEASE_TOKEN
+        api_key: $GITHUB_RELEASE_PAT
         file:
           - builds/RNAlertController.framework.zip
           - builds/RNAlertController.framework.zip.sha1
