@@ -20,8 +20,7 @@ jobs:
       script: ./scripts/build.sh
       deploy:
         provider: releases
-        api_key:
-          secure: $GITHUB_RELEASE_TOKEN
+        api_key: $GITHUB_RELEASE_PAT
         file:
           - builds/RNAlertController.framework.zip
           - builds/RNAlertController.framework.zip.sha1
