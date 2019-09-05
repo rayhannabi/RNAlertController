@@ -13,6 +13,7 @@ branches:
   except:
     - /release*/
     - /feature*/
+    - /hotfix*/
 
 jobs:
   include:
