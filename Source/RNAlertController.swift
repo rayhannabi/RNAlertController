@@ -22,7 +22,7 @@ import UIKit
     
     private var alertWindow         : UIWindow?
     private var originalWindow      : UIWindow?
-    private var container           : UIVisualEffectView!
+    private var container           : AlertContainerView!
     private var alertBodyBackground : UIView!
     
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
