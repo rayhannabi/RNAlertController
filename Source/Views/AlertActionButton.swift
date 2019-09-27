@@ -70,15 +70,3 @@ class AlertActionButton: UIButton {
     }
     
 }
-
-extension UIView {
-    
-    var isDarkInterfaceStyle: Bool {
-        if #available(iOS 12.0, *) {
-            return traitCollection.userInterfaceStyle == .dark
-        } else {
-            return false
-        }
-    }
-    
-}
