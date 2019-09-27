@@ -16,7 +16,7 @@ class AlertStackView: UIStackView {
         axis = .vertical
         alignment = .fill
         distribution = .fill
-        spacing = 8
+        spacing = 12
     }
     
     required init(coder: NSCoder) {

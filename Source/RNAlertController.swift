@@ -100,15 +100,14 @@ private extension RNAlertController {
     
     func createAlertContainer() {
         container = AlertContainerView()
-        container.layer.opacity = 0.0
         view.addSubview(container)
         var containerWidth: CGFloat = 0.0
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         if screenWidth < screenHeight {
-            containerWidth = screenWidth * 0.7
+            containerWidth = screenWidth * 0.725
         } else {
-            containerWidth = screenHeight * 0.7
+            containerWidth = screenHeight * 0.725
         }
         NSLayoutConstraint.activate([
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
