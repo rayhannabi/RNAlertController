@@ -13,6 +13,7 @@ An easy-to-use alert framework for iOS written purely in Swift. With native look
 
 ## Features
 
+* iOS 13 compatible, supports Dark Mode.
 * Title
 * Description message
 * Banner image below the description message
@@ -23,8 +24,8 @@ An easy-to-use alert framework for iOS written purely in Swift. With native look
 ## Requirements
 
 * iOS 9.0+
-* Xcode 10+
-* Swift 5
+* Xcode 11.0+
+* Swift 5.0
 * Objective-C 2.0 (ARC required)
 
 ## Installation

@@ -18,12 +18,20 @@ extension UIColor {
         return UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1.0)
     }
     
-    static var defaultBackground: UIColor {
+    static var defaultLightBackground: UIColor {
         return UIColor(white: 1, alpha: 0.75)
     }
     
-    static var highlightedBackground: UIColor {
+    static var defaultDarkBackground: UIColor {
+        return UIColor(white: 0, alpha: 0.40)
+    }
+    
+    static var highlightedLightBackground: UIColor {
         return UIColor(white: 1, alpha: 0.35)
+    }
+    
+    static var highlightedDarkBackground: UIColor {
+        return UIColor(white: 0, alpha: 0.0)
     }
     
 }

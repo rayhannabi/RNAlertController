@@ -18,7 +18,7 @@ class AlertLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        textColor = UIColor.black
+        textColor = isDarkInterfaceStyle ?  UIColor.white : UIColor.black
         textAlignment = .center
         numberOfLines = 0
     }
@@ -37,6 +37,11 @@ class AlertLabel: UILabel {
         self.init(frame: .zero)
         self.attributedText = attributedText
         setFont(for: type)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        textColor = isDarkInterfaceStyle ?  UIColor.white : UIColor.black
     }
     
     private func setFont(for type: AlertLabelType) {
