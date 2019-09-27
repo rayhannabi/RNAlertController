@@ -19,10 +19,11 @@ import UIKit
     var pickerAction        : AlertPickerAction?
     var selectedPickerRow   : Int?
     var alertURL            : AlertURL?
-    var alertWindow         : UIWindow?
-    var originalWindow      : UIWindow?
     
-    private var container   : UIVisualEffectView!
+    private var alertWindow         : UIWindow?
+    private var originalWindow      : UIWindow?
+    private var container           : UIVisualEffectView!
+    private var alertBodyBackground : UIView!
     
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -64,6 +65,13 @@ import UIKit
         originalWindow?.makeKeyAndVisible()
         alertWindow?.isHidden = true
         alertWindow = nil
+    }
+    
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        alertBodyBackground.backgroundColor = alertBodyBackground.isDarkInterfaceStyle ?
+            UIColor.defaultDarkBackground :
+            UIColor.defaultLightBackground
     }
     
 }
@@ -196,30 +204,32 @@ private extension RNAlertController {
             ]
         )
         
-        let background = UIView(frame: .zero)
-        background.backgroundColor = .defaultBackground
-        background.translatesAutoresizingMaskIntoConstraints = false
+        alertBodyBackground = UIView(frame: .zero)
+        alertBodyBackground.backgroundColor = alertBodyBackground.isDarkInterfaceStyle ?
+            UIColor.defaultDarkBackground :
+            UIColor.defaultLightBackground
+        alertBodyBackground.translatesAutoresizingMaskIntoConstraints = false
         
         let alertStack = createAlertStackView()
-        background.addSubview(alertStack)
+        alertBodyBackground.addSubview(alertStack)
         NSLayoutConstraint.activate([
-            alertStack.topAnchor.constraint(equalTo: background.topAnchor, constant: 20),
-            alertStack.centerXAnchor.constraint(equalTo: background.centerXAnchor),
-            alertStack.widthAnchor.constraint(equalTo: background.widthAnchor, multiplier: 0.85)
+            alertStack.topAnchor.constraint(equalTo: alertBodyBackground.topAnchor, constant: 20),
+            alertStack.centerXAnchor.constraint(equalTo: alertBodyBackground.centerXAnchor),
+            alertStack.widthAnchor.constraint(equalTo: alertBodyBackground.widthAnchor, multiplier: 0.85)
             ]
         )
         
         let extraStack = createExtraStackView()
-        background.addSubview(extraStack)
+        alertBodyBackground.addSubview(extraStack)
         NSLayoutConstraint.activate([
             extraStack.topAnchor.constraint(equalTo: alertStack.bottomAnchor, constant: 8),
-            extraStack.centerXAnchor.constraint(equalTo: background.centerXAnchor),
-            extraStack.widthAnchor.constraint(equalTo: background.widthAnchor, multiplier: 0.85),
-            extraStack.bottomAnchor.constraint(equalTo: background.bottomAnchor, constant: -12)
+            extraStack.centerXAnchor.constraint(equalTo: alertBodyBackground.centerXAnchor),
+            extraStack.widthAnchor.constraint(equalTo: alertBodyBackground.widthAnchor, multiplier: 0.85),
+            extraStack.bottomAnchor.constraint(equalTo: alertBodyBackground.bottomAnchor, constant: -12)
             ]
         )
         
-        alertBody.addArrangedSubview(background)
+        alertBody.addArrangedSubview(alertBodyBackground)
         if let buttons = buttons, buttons.count > 0 {
             let buttonStack = AlertButtonStackView(alertButtons: buttons)
             alertBody.addArrangedSubview(buttonStack)

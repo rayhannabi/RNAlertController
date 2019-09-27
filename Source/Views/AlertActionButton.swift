@@ -12,13 +12,13 @@ class AlertActionButton: UIButton {
     
     override open var isHighlighted: Bool {
         didSet {
-            backgroundColor = isHighlighted ? UIColor.highlightedBackground : UIColor.defaultBackground
+            setHighlightedColor()
         }
     }
     
     convenience init() {
         self.init(type: .custom)
-        backgroundColor = UIColor.defaultBackground
+        backgroundColor = UIColor.defaultLightBackground
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 44)
             ]
@@ -29,6 +29,12 @@ class AlertActionButton: UIButton {
         let textAttributes = createAttributes(for: type)
         let attributedTitle = NSAttributedString(string: title, attributes: textAttributes)
         setAttributedTitle(attributedTitle, for: .normal)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setBackgroundColor()
+        setHighlightedColor()
     }
     
     private func createAttributes(for type: AlertButtonType) -> [NSAttributedString.Key: Any] {
@@ -45,6 +51,34 @@ class AlertActionButton: UIButton {
             attributes[.foregroundColor] = UIColor.alertButtonTextRegular
         }
         return attributes
+    }
+    
+    private func setBackgroundColor() {
+        backgroundColor = isDarkInterfaceStyle ? UIColor.defaultDarkBackground : UIColor.defaultLightBackground
+    }
+    
+    private func setHighlightedColor() {
+        if isHighlighted {
+            backgroundColor = isDarkInterfaceStyle ?
+                UIColor.highlightedDarkBackground :
+                UIColor.highlightedLightBackground
+        } else {
+            backgroundColor = isDarkInterfaceStyle ?
+                UIColor.defaultDarkBackground :
+                UIColor.defaultLightBackground
+        }
+    }
+    
+}
+
+extension UIView {
+    
+    var isDarkInterfaceStyle: Bool {
+        if #available(iOS 12.0, *) {
+            return traitCollection.userInterfaceStyle == .dark
+        } else {
+            return false
+        }
     }
     
 }

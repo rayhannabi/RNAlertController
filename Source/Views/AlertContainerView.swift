@@ -23,7 +23,13 @@ class AlertContainerView: UIVisualEffectView {
     }
     
     convenience init() {
-        self.init(effect: UIBlurEffect(style: .light))
+        self.init(effect: nil)
+        effect = UIBlurEffect(style: isDarkInterfaceStyle ? .dark : .light)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        effect = UIBlurEffect(style: isDarkInterfaceStyle ? .dark : .light)
     }
     
 }
