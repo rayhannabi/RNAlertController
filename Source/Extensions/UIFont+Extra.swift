@@ -11,7 +11,7 @@ import UIKit
 extension UIFont {
     
     class var alertTitleFont: UIFont {
-        return self.systemFont(ofSize: 18, weight: .semibold)
+        return self.systemFont(ofSize: 18, weight: .bold)
     }
     
     class var alertMessageFont: UIFont {

@@ -31,6 +31,7 @@
 		E8ECFAE422772EFC00D4BA3F /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */; };
 		E8ECFAE622772EFC00D4BA3F /* AlertButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */; };
 		E8ECFAE722772EFC00D4BA3F /* RNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */; };
+		E8F6B2E9233E32E0006A03F4 /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F6B2E8233E32E0006A03F4 /* UIView+Appearance.swift */; };
 		E8FEEE242310409200A155E2 /* AlertActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEE232310409200A155E2 /* AlertActionButton.swift */; };
 		E8FEEE2623104A9F00A155E2 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */; };
 		E8FF167F2282B48C00CC8807 /* RNAlertController+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */; };
@@ -104,6 +105,7 @@
 		E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
 		E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButtonStackView.swift; sourceTree = "<group>"; };
 		E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNAlertController.swift; sourceTree = "<group>"; };
+		E8F6B2E8233E32E0006A03F4 /* UIView+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Appearance.swift"; sourceTree = "<group>"; };
 		E8FEEE232310409200A155E2 /* AlertActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionButton.swift; sourceTree = "<group>"; };
 		E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		E8FF167E2282B48C00CC8807 /* RNAlertController+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RNAlertController+API.swift"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */,
 				E8FEEE2523104A9F00A155E2 /* UIColor+Extra.swift */,
 				E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */,
+				E8F6B2E8233E32E0006A03F4 /* UIView+Appearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,7 +334,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Rayhan Nabi";
 				TargetAttributes = {
 					E8508674231E5F2100F0D6B3 = {
@@ -433,6 +436,7 @@
 				E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */,
 				E8FEEE242310409200A155E2 /* AlertActionButton.swift in Sources */,
 				E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */,
+				E8F6B2E9233E32E0006A03F4 /* UIView+Appearance.swift in Sources */,
 				E8ECFAE322772EFC00D4BA3F /* AlertLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -627,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
