@@ -298,6 +298,7 @@
 				E8508697231E647600F0D6B3 /* Frameworks */,
 				E8508698231E647600F0D6B3 /* Resources */,
 				E85086C4231E656C00F0D6B3 /* Embed Frameworks */,
+				E8F6B2EB233E4C8F006A03F4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,6 +318,7 @@
 				E8ECFAC722772ED000D4BA3F /* Sources */,
 				E8ECFAC822772ED000D4BA3F /* Frameworks */,
 				E8ECFAC922772ED000D4BA3F /* Resources */,
+				E8F6B2EA233E4C77006A03F4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -397,6 +399,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E8F6B2EA233E4C77006A03F4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
+		};
+		E8F6B2EB233E4C8F006A03F4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8508671231E5F2100F0D6B3 /* Sources */ = {
@@ -536,6 +575,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.6.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -556,6 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.6.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -694,6 +735,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1001;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -707,6 +749,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.6.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -724,6 +767,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1001;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -737,6 +781,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.6.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rayhan.ios.RNAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
