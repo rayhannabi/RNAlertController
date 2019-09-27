@@ -18,11 +18,8 @@ class AlertActionButton: UIButton {
     
     convenience init() {
         self.init(type: .custom)
-        backgroundColor = UIColor.defaultLightBackground
-        NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 44)
-            ]
-        )
+        setBackgroundColor()
+        setConstraint()
     }
     
     func setTitle(_ title: String, for type: AlertButtonType) {
@@ -51,6 +48,13 @@ class AlertActionButton: UIButton {
             attributes[.foregroundColor] = UIColor.alertButtonTextRegular
         }
         return attributes
+    }
+    
+    private func setConstraint() {
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: 44)
+            ]
+        )
     }
     
     private func setBackgroundColor() {
