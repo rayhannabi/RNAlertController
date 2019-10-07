@@ -20,6 +20,7 @@
 		E85086C6231E65F800F0D6B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85086AF231E649700F0D6B3 /* Main.storyboard */; };
 		E85086C7231E670200F0D6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85086B7231E649700F0D6B3 /* Assets.xcassets */; };
 		E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */; };
+		E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8722542234B14E10054A937 /* AlertDatePicker.swift */; };
 		E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE528E227B07D200466CAF /* AlertImageView.swift */; };
 		E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5290227B092400466CAF /* AlertStackView.swift */; };
 		E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5292227B0FD400466CAF /* AlertContainerView.swift */; };
@@ -92,6 +93,7 @@
 		E85086BA231E649700F0D6B3 /* UIView+Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
 		E85086CC231E6BBA00F0D6B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertURLButton.swift; sourceTree = "<group>"; };
+		E8722542234B14E10054A937 /* AlertDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDatePicker.swift; sourceTree = "<group>"; };
 		E8CE528E227B07D200466CAF /* AlertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImageView.swift; sourceTree = "<group>"; };
 		E8CE5290227B092400466CAF /* AlertStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStackView.swift; sourceTree = "<group>"; };
 		E8CE5292227B0FD400466CAF /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
@@ -152,10 +154,11 @@
 		E813210D231E7343007BD8F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */,
 				E8FEEE232310409200A155E2 /* AlertActionButton.swift */,
+				E8ECFADC22772EFB00D4BA3F /* AlertButton.swift */,
 				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
 				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
+				E8722542234B14E10054A937 /* AlertDatePicker.swift */,
 				E8CE528E227B07D200466CAF /* AlertImageView.swift */,
 				E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */,
 				E8CE5294227C506000466CAF /* AlertPickerView.swift */,
@@ -298,7 +301,6 @@
 				E8508697231E647600F0D6B3 /* Frameworks */,
 				E8508698231E647600F0D6B3 /* Resources */,
 				E85086C4231E656C00F0D6B3 /* Embed Frameworks */,
-				E8F6B2EB233E4C8F006A03F4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -318,7 +320,6 @@
 				E8ECFAC722772ED000D4BA3F /* Sources */,
 				E8ECFAC822772ED000D4BA3F /* Frameworks */,
 				E8ECFAC922772ED000D4BA3F /* Resources */,
-				E8F6B2EA233E4C77006A03F4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -400,43 +401,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E8F6B2EA233E4C77006A03F4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
-		};
-		E8F6B2EB233E4C8F006A03F4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${INFOPLIST_FILE}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E8508671231E5F2100F0D6B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -466,6 +430,7 @@
 				E8ECFAE422772EFC00D4BA3F /* AlertButton.swift in Sources */,
 				E8ECFAE122772EFC00D4BA3F /* UIButton+Action.swift in Sources */,
 				E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */,
+				E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */,
 				E8FEEE2623104A9F00A155E2 /* UIColor+Extra.swift in Sources */,
 				E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */,
 				E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */,
@@ -568,6 +533,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 676;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = "$(SRCROOT)/RNAlertControllerExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -589,6 +555,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 676;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = "$(SRCROOT)/RNAlertControllerExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -735,7 +702,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1001;
+				CURRENT_PROJECT_VERSION = 1002;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -767,7 +734,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1001;
+				CURRENT_PROJECT_VERSION = 1002;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				DYLIB_COMPATIBILITY_VERSION = 1;

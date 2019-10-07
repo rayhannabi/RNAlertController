@@ -106,4 +106,13 @@ public extension RNAlertController {
         return self
     }
     
+    @discardableResult
+    func setDatePicker(mode: UIDatePicker.Mode,
+                       date: Date? = nil,
+                       selectionAction: AlertDatePickerAction? = nil) -> RNAlertController {
+        alertDatePicker = AlertDatePicker(datePickerMode: mode, selectedDate: date)
+        alertDatePicker?.action = selectionAction
+        return self
+    }
+    
 }

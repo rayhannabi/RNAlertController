@@ -19,6 +19,7 @@ import UIKit
     var pickerAction        : AlertPickerAction?
     var selectedPickerRow   : Int?
     var alertURL            : AlertURL?
+    var alertDatePicker     : AlertDatePicker?
     
     private var alertWindow         : UIWindow?
     private var originalWindow      : UIWindow?
@@ -62,6 +63,9 @@ import UIKit
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        if (alertDatePicker != nil) {
+            alertDatePicker!.action?(alertDatePicker!.date)
+        }
         originalWindow?.makeKeyAndVisible()
         alertWindow?.isHidden = true
         alertWindow = nil
@@ -105,9 +109,9 @@ private extension RNAlertController {
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         if screenWidth < screenHeight {
-            containerWidth = screenWidth * 0.725
+            containerWidth = screenWidth * (alertDatePicker == nil ? 0.725 : 0.8)
         } else {
-            containerWidth = screenHeight * 0.725
+            containerWidth = screenHeight * (alertDatePicker == nil ? 0.725 : 0.8)
         }
         NSLayoutConstraint.activate([
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -167,6 +171,9 @@ private extension RNAlertController {
         }
         if urlView != nil {
             extraStackItems.append(urlView!)
+        }
+        if alertDatePicker != nil {
+            extraStackItems.append(alertDatePicker!)
         }
         let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
         return extraStackView
