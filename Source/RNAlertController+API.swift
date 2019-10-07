@@ -106,4 +106,21 @@ public extension RNAlertController {
         return self
     }
     
+    /// Sets a date picker with a selected date.
+    ///
+    /// A date picker is placed under the message body.
+    /// - Parameters:
+    ///     - mode: `UIDatePicker.Mode` describing the mode displayed the date picker.
+    ///     - date: `Date` to set. If passed `nil`, current date is used.
+    ///     - selectionAction: Block to execute when date is selected.
+    /// - Returns: `RNAlertController` instance.
+    @discardableResult
+    func setDatePicker(mode: UIDatePicker.Mode,
+                       date: Date? = nil,
+                       selectionAction: AlertDatePickerAction? = nil) -> RNAlertController {
+        alertDatePicker = AlertDatePicker(datePickerMode: mode, selectedDate: date)
+        alertDatePicker?.action = selectionAction
+        return self
+    }
+    
 }
