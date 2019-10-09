@@ -61,13 +61,19 @@ import UIKit
         animateAlert()
     }
     
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        DispatchQueue.main.async {
+            if (self.alertDatePicker != nil) {
+                self.alertDatePicker!.action?(self.alertDatePicker!.date)
+            }
+        }
+    }
+    
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        if (alertDatePicker != nil) {
-            alertDatePicker!.action?(alertDatePicker!.date)
-        }
         originalWindow?.makeKeyAndVisible()
-        alertWindow?.isHidden = true
+//        alertWindow?.isHidden = true
         alertWindow = nil
     }
     

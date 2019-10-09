@@ -90,6 +90,40 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crop" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-xA-B1d">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-IZ-AWF">
+                                <rect key="frame" x="42" y="626" width="330" height="74"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OJL-VE-ccI">
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-fZ-lsl">
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="74"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <state key="normal" title="Choose Date">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="didTapChooseDate:" destination="05k-IV-M98" eventType="touchUpInside" id="Eod-6X-W8L"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="0U9-fZ-lsl" secondAttribute="bottom" id="UGu-Ya-1dQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="0U9-fZ-lsl" secondAttribute="trailing" id="kgF-0g-fJZ"/>
+                                        <constraint firstItem="0U9-fZ-lsl" firstAttribute="top" secondItem="OJL-VE-ccI" secondAttribute="top" id="vU9-6C-lhh"/>
+                                        <constraint firstItem="0U9-fZ-lsl" firstAttribute="leading" secondItem="OJL-VE-ccI" secondAttribute="leading" id="wvp-7L-C7D"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="YLU-eq-3a3"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-OM-mcU">
                                 <rect key="frame" x="41.5" y="724" width="331" height="74"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vpr-fY-yd2">
@@ -128,13 +162,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3sU-Nl-Vz5" firstAttribute="trailing" secondItem="NVv-IZ-AWF" secondAttribute="trailing" constant="42" id="3tn-rl-CnT"/>
                             <constraint firstAttribute="bottom" secondItem="lV0-xA-B1d" secondAttribute="bottom" id="6hV-Qi-n2C"/>
                             <constraint firstItem="3sU-Nl-Vz5" firstAttribute="bottom" secondItem="Ehh-OM-mcU" secondAttribute="bottom" constant="64" id="DIe-o0-xXa"/>
                             <constraint firstItem="Ehh-OM-mcU" firstAttribute="centerX" secondItem="Dr4-A4-ob6" secondAttribute="centerX" id="M9r-g2-6tW"/>
                             <constraint firstItem="lV0-xA-B1d" firstAttribute="leading" secondItem="Dr4-A4-ob6" secondAttribute="leading" id="SRA-EK-BSI"/>
                             <constraint firstItem="Ehh-OM-mcU" firstAttribute="width" secondItem="Dr4-A4-ob6" secondAttribute="width" multiplier="0.8" id="a7Q-p4-tEG"/>
+                            <constraint firstItem="Ehh-OM-mcU" firstAttribute="top" secondItem="NVv-IZ-AWF" secondAttribute="bottom" constant="24" id="bQj-OT-Jb7"/>
                             <constraint firstItem="lV0-xA-B1d" firstAttribute="top" secondItem="Dr4-A4-ob6" secondAttribute="top" id="cKD-E6-fvB"/>
                             <constraint firstAttribute="trailing" secondItem="lV0-xA-B1d" secondAttribute="trailing" id="eqX-dg-E6j"/>
+                            <constraint firstItem="NVv-IZ-AWF" firstAttribute="leading" secondItem="3sU-Nl-Vz5" secondAttribute="leading" constant="42" id="meE-DV-qQc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3sU-Nl-Vz5"/>
                     </view>
