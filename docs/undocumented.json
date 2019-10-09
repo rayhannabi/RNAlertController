@@ -17,13 +17,20 @@
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
       "line": 64,
+      "symbol": "RNAlertController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
+      "line": 73,
       "symbol": "RNAlertController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
-      "line": 74,
+      "line": 79,
       "symbol": "RNAlertController.traitCollectionDidChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

@@ -73,7 +73,6 @@ import UIKit
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         originalWindow?.makeKeyAndVisible()
-//        alertWindow?.isHidden = true
         alertWindow = nil
     }
     
