@@ -714,9 +714,9 @@ replacement of previously set URL.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setDatePickerWithMode:date:selectionAction:"></a>
-                    <a name="//apple_ref/swift/Method/setDatePicker(mode:date:selectionAction:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setDatePickerWithMode:date:selectionAction:">setDatePicker(mode:date:selectionAction:)</a>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setDatePickerWithMode:selectedDate:maximumDate:minimumDate:selectionAction:"></a>
+                    <a name="//apple_ref/swift/Method/setDatePicker(mode:selectedDate:maximumDate:minimumDate:selectionAction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setDatePickerWithMode:selectedDate:maximumDate:minimumDate:selectionAction:">setDatePicker(mode:selectedDate:maximumDate:minimumDate:selectionAction:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -735,7 +735,9 @@ replacement of previously set URL.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">func</span> <span class="nf">setDatePicker</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt">UIDatePicker</span><span class="o">.</span><span class="kt">Mode</span><span class="p">,</span>
-                   <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                   <span class="nv">selectedDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                   <span class="nv">maximumDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                   <span class="nv">minimumDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                    <span class="nv">selectionAction</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:17RNAlertController21AlertDatePickerActiona">AlertDatePickerAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
 
                         </div>
@@ -759,12 +761,36 @@ replacement of previously set URL.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>date</em>
+                                <em>selectedDate</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p><code>Date</code> to set. If passed <code>nil</code>, current date is used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximumDate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum date that a date picker can show.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimumDate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Minimum date that a date picker can show.</p>
                                 </div>
                               </td>
                             </tr>
