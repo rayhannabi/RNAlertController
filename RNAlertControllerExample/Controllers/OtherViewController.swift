@@ -26,7 +26,9 @@ class OtherViewController: UIViewController {
     @IBAction func didTapChooseDate(_ sender: UIButton) {
         RNAlertController(title: "Pick a date",
                           message: "This date will be selected when you tap Done")
-            .setDatePicker(mode: .date, date: selectedDate) { date in
+            .setDatePicker(mode: .date,
+                           selectedDate: selectedDate,
+                           maximumDate: Date()) { date in
                 self.selectedDate = date
                 let formatter = DateFormatter()
                 formatter.dateFormat = "dd MMMM yyyy"

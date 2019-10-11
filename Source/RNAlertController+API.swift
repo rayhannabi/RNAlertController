@@ -111,14 +111,20 @@ public extension RNAlertController {
     /// A date picker is placed under the message body.
     /// - Parameters:
     ///     - mode: `UIDatePicker.Mode` describing the mode displayed the date picker.
-    ///     - date: `Date` to set. If passed `nil`, current date is used.
+    ///     - selectedDate: `Date` to set. If passed `nil`, current date is used.
+    ///     - maximumDate: Maximum date that a date picker can show.
+    ///     - minimumDate: Minimum date that a date picker can show.
     ///     - selectionAction: Block to execute when date is selected.
     /// - Returns: `RNAlertController` instance.
     @discardableResult
     func setDatePicker(mode: UIDatePicker.Mode,
-                       date: Date? = nil,
+                       selectedDate: Date? = nil,
+                       maximumDate: Date? = nil,
+                       minimumDate: Date? = nil,
                        selectionAction: AlertDatePickerAction? = nil) -> RNAlertController {
-        alertDatePicker = AlertDatePicker(datePickerMode: mode, selectedDate: date)
+        alertDatePicker = AlertDatePicker(datePickerMode: mode, selectedDate: selectedDate)
+        alertDatePicker?.maximumDate = maximumDate
+        alertDatePicker?.minimumDate = minimumDate
         alertDatePicker?.action = selectionAction
         return self
     }
