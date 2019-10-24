@@ -43,6 +43,15 @@ public extension RNAlertController {
         return self
     }
     
+    /// Sets attributed text for the message.
+    ///
+    /// When set, message text will use attributed text instead of regular text.
+    /// - Parameter attributedText: Attributed string to set.
+    @discardableResult func setAttributedMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
+        self.attributedMessageText = attributedText
+        return self
+    }
+    
     /// Adds an **OK** button to the alert.
     ///
     /// - Parameter action: Block to run when the button is pressed (i.e. touchUpInside event).

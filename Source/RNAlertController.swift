@@ -11,15 +11,16 @@ import UIKit
 /// An object that provides RNAlertController.
 @objcMembers public final class RNAlertController: UIViewController {
         
-    var titleText           : String?
-    var messageText         : String?
-    var buttons             : [AlertButton]?
-    var image               : UIImage?
-    var pickerData          : [String]?
-    var pickerAction        : AlertPickerAction?
-    var selectedPickerRow   : Int?
-    var alertURL            : AlertURL?
-    var alertDatePicker     : AlertDatePicker?
+    var titleText               : String?
+    var messageText             : String?
+    var attributedMessageText   : NSAttributedString?
+    var buttons                 : [AlertButton]?
+    var image                   : UIImage?
+    var pickerData              : [String]?
+    var pickerAction            : AlertPickerAction?
+    var selectedPickerRow       : Int?
+    var alertURL                : AlertURL?
+    var alertDatePicker         : AlertDatePicker?
     
     private var alertWindow         : UIWindow?
     private var originalWindow      : UIWindow?
