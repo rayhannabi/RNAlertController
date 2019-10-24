@@ -114,9 +114,9 @@ private extension RNAlertController {
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         if screenWidth < screenHeight {
-            containerWidth = screenWidth * (alertDatePicker == nil ? 0.725 : 0.8)
+            containerWidth = screenWidth * (alertDatePicker == nil ? 0.73 : 0.8)
         } else {
-            containerWidth = screenHeight * (alertDatePicker == nil ? 0.725 : 0.8)
+            containerWidth = screenHeight * (alertDatePicker == nil ? 0.73 : 0.8)
         }
         NSLayoutConstraint.activate([
             container.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -209,7 +209,7 @@ private extension RNAlertController {
         alertBody.axis = .vertical
         alertBody.distribution = .fill
         alertBody.alignment = .fill
-        alertBody.spacing = 0.5
+        alertBody.spacing = 0.25
         
         container.contentView.addSubview(alertBody)
         NSLayoutConstraint.activate([
