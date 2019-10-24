@@ -16,7 +16,7 @@ final class AlertButtonStackView: UIStackView {
         distribution = .fillEqually
         alignment = .fill
         axis = .horizontal
-        spacing = 0.5
+        spacing = 0.25
     }
     
     required init(coder: NSCoder) {

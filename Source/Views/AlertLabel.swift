@@ -33,10 +33,9 @@ class AlertLabel: UILabel {
         setFont(for: type)
     }
     
-    convenience init(attributedText: NSAttributedString, type: AlertLabelType) {
+    convenience init(attributedText: NSAttributedString) {
         self.init(frame: .zero)
         self.attributedText = attributedText
-        setFont(for: type)
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
