@@ -14,10 +14,21 @@ class OtherViewController: UIViewController {
     private var selectedDate: Date?
     
     @IBAction private func didTapAlert(_ sender: Any) {
-        let message = """
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        """
-        RNAlertController(title: "Kashmir Valley", message: message)
+        let text = "The word Kashmir was derived from the ancient Sanskrit language and was referred to as káśmīra."
+        let attText = NSMutableAttributedString(string: text,
+                                                attributes: [.font : UIFont.alertMessageFont ])
+        attText.addAttribute(.font,
+                             value: UIFont.alertMessageFontBold,
+                             range: NSRange(text.range(of: "Kashmir")!, in: text))
+        attText.addAttribute(.font,
+                             value: UIFont.alertMessageFontItalic,
+                             range: NSRange(text.range(of: "Sanskrit")!, in: text))
+        attText.addAttribute(.font,
+                             value: UIFont.alertMessageFontBold,
+                             range: NSRange(text.range(of: "káśmīra")!, in: text))
+        
+        RNAlertController(title: "Kashmir Valley", message: nil)
+            .setAttributedTextForMessage(attText)
             .setBannerImage(UIImage(named: "crop")!)
             .addOkButton()
             .present()

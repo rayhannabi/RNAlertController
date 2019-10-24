@@ -8,22 +8,30 @@
 
 import UIKit
 
-extension UIFont {
+public extension UIFont {
     
-    class var alertTitleFont: UIFont {
+    static var alertTitleFont: UIFont {
         return self.systemFont(ofSize: 18, weight: .semibold)
     }
     
-    class var alertMessageFont: UIFont {
+    static var alertMessageFont: UIFont {
         return self.systemFont(ofSize: 14, weight: .regular)
     }
     
-    class var alertButtonFontRegular: UIFont {
-        return self.systemFont(ofSize: 17, weight: .regular)
+    static var alertMessageFontBold: UIFont {
+        return self.systemFont(ofSize: 14, weight: .bold)
     }
     
-    class var alertButtonFontBold: UIFont {
-        return self.systemFont(ofSize: 17, weight: .semibold)
+    static var alertMessageFontItalic: UIFont {
+        return self.italicSystemFont(ofSize: 14)
+    }
+    
+    static var alertButtonFontRegular: UIFont {
+        return self.systemFont(ofSize: 16, weight: .regular)
+    }
+    
+    static var alertButtonFontBold: UIFont {
+        return self.systemFont(ofSize: 16, weight: .semibold)
     }
     
 }
