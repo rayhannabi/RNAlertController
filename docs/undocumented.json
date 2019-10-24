@@ -1,6 +1,48 @@
 {
   "warnings": [
     {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "line": 13,
+      "symbol": "UIFont.alertTitleFont",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "line": 17,
+      "symbol": "UIFont.alertMessageFont",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "line": 21,
+      "symbol": "UIFont.alertMessageFontBold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "line": 25,
+      "symbol": "UIFont.alertMessageFontItalic",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "line": 29,
+      "symbol": "UIFont.alertButtonFontRegular",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/Documents/work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "line": 33,
+      "symbol": "UIFont.alertButtonFontBold",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
       "line": 52,
       "symbol": "RNAlertController.viewDidLoad()",
