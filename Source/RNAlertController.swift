@@ -11,9 +11,8 @@ import UIKit
 /// An object that provides RNAlertController.
 @objcMembers public final class RNAlertController: UIViewController {
         
-    var titleText               : String?
-    var messageText             : String?
-    var attributedMessageText   : NSAttributedString?
+    var message                 : String?
+    var attributedMessage       : NSAttributedString?
     var buttons                 : [AlertButton]?
     var image                   : UIImage?
     var pickerData              : [String]?
@@ -24,8 +23,8 @@ import UIKit
     
     private var alertWindow         : UIWindow?
     private var originalWindow      : UIWindow?
-    private var container           : AlertContainerView!
     private var alertBodyBackground : UIView!
+    private var container           : AlertContainerView!
     
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -45,9 +44,9 @@ import UIKit
     ///   - message: Message body of the alert
     public convenience init(title: String?, message: String?) {
         self.init(nibName: nil, bundle: nil)
-        buttons = [AlertButton]()
-        titleText = title
-        messageText = message
+        self.title = title
+        self.message = message
+        buttons = []
     }
     
     public override func viewDidLoad() {
@@ -129,15 +128,20 @@ private extension RNAlertController {
     }
     
     func createTitleLabel() -> AlertLabel? {
-        guard let title = titleText else { return nil }
+        guard let title = title else { return nil }
         let titleLabel = AlertLabel(text: title, type: .title)
         return titleLabel
     }
     
     func createMessageLabel() -> AlertLabel? {
-        guard let message = messageText else { return nil }
-        let labelType: AlertLabelType = titleText == nil ? .title : .message
-        let messageLabel = AlertLabel(text: message, type: labelType)
+        let labelType: AlertLabelType = title == nil ? .title : .message
+        var messageLabel = AlertLabel()
+        if let message = message {
+            messageLabel = AlertLabel(text: message, type: labelType)
+        }
+        if let attributedMessage = attributedMessage {
+            messageLabel = AlertLabel(attributedText: attributedMessage)
+        }
         return messageLabel
     }
     

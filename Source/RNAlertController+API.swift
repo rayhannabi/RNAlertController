@@ -47,8 +47,8 @@ public extension RNAlertController {
     ///
     /// When set, message text will use attributed text instead of regular text.
     /// - Parameter attributedText: Attributed string to set.
-    @discardableResult func setAttributedMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
-        self.attributedMessageText = attributedText
+    @discardableResult func setAttributedTextForMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
+        self.attributedMessage = attributedText
         return self
     }
     
