@@ -15,6 +15,7 @@ import UIKit
     var attributedMessage       : NSAttributedString?
     var buttons                 : [Button]?
     var image                   : UIImage?
+    var imagePosition           : AlertBannerPosition?
     var pickerData              : [String]?
     var pickerAction            : AlertPickerAction?
     var selectedPickerRow       : Int?

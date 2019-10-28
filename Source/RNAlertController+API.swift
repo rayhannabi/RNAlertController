@@ -72,13 +72,15 @@ public extension RNAlertController {
     
     /// Sets the banner image for the alert.
     ///
-    /// Banner image is displayed under the message body. Consequent calls of this method will result
-    /// in replacement of previously set image.
+    /// Banner image is displayed under the message body.
+    /// Consequent calls of this method will result in replacement of previously set image.
     /// - Parameter image: image to use in the alert.
-    /// - Returns: `RNAlertController` instance.
+    /// - Parameter position: determines the position of the image.
+    /// - Returns: RNAlertController` instance.
     @discardableResult
-    func setBannerImage(_ image: UIImage) -> RNAlertController {
+    func setBannerImage(_ image: UIImage, position: AlertBannerPosition = .afterBody) -> RNAlertController {
         self.image = image
+        self.imagePosition = position
         return self
     }
     
