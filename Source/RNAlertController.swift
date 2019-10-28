@@ -13,7 +13,7 @@ import UIKit
         
     var message                 : String?
     var attributedMessage       : NSAttributedString?
-    var buttons                 : [AlertButton]?
+    var buttons                 : [Button]?
     var image                   : UIImage?
     var pickerData              : [String]?
     var pickerAction            : AlertPickerAction?

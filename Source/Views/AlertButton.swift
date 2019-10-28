@@ -2,36 +2,75 @@
 //  AlertButton.swift
 //  RNAlertController
 //
-//  Created by Rayhan Nabi on 4/24/19.
-//  Copyright © 2019 Rayhan. All rights reserved.
+//  Created by Rayhan Nabi on 8/23/19.
+//  Copyright © 2019 Rayhan Nabi. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-/// Describes the appearances of the alert buttons.
-@objc public enum AlertButtonType: Int {
+class AlertButton: UIButton {
     
-    /// Apply the default style to the button.
-    case `default` = 0
-    /// Apply a style that indicates the action cancels the operation and leaves things unchanged.
-    case cancel
-    /// Apply a style that indicates the action might change or delete data.
-    case destructive
-}
-
-/// Action block to perform when a button is pressed.
-public typealias AlertAction = () -> Void
-
-class AlertButton: NSObject {
+    override open var isHighlighted: Bool {
+        didSet {
+            setHighlightedColor()
+        }
+    }
     
-    let text        : String
-    let action      : AlertAction
-    let type        : AlertButtonType
+    convenience init() {
+        self.init(type: .custom)
+        setBackgroundColor()
+        setConstraint()
+    }
     
-    init(text: String, type: AlertButtonType, action: @escaping AlertAction) {
-        self.text = text
-        self.action = action
-        self.type = type
+    func setTitle(_ title: String, for type: AlertButtonType) {
+        let textAttributes = createAttributes(for: type)
+        let attributedTitle = NSAttributedString(string: title, attributes: textAttributes)
+        setAttributedTitle(attributedTitle, for: .normal)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setBackgroundColor()
+        setHighlightedColor()
+    }
+    
+    private func createAttributes(for type: AlertButtonType) -> [NSAttributedString.Key: Any] {
+        var attributes = [NSAttributedString.Key: Any]()
+        switch type {
+        case .cancel:
+            attributes[.font] = UIFont.alertButtonFontBold
+            attributes[.foregroundColor] = UIColor.alertButtonTextRegular
+        case .destructive:
+            attributes[.font] = UIFont.alertButtonFontRegular
+            attributes[.foregroundColor] = UIColor.alertButtonTextDestructive
+        case .default:
+            attributes[.font] = UIFont.alertButtonFontRegular
+            attributes[.foregroundColor] = UIColor.alertButtonTextRegular
+        }
+        return attributes
+    }
+    
+    private func setConstraint() {
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: 44)
+            ]
+        )
+    }
+    
+    private func setBackgroundColor() {
+        backgroundColor = isDarkInterfaceStyle ? UIColor.defaultDarkBackground : UIColor.defaultLightBackground
+    }
+    
+    private func setHighlightedColor() {
+        if isHighlighted {
+            backgroundColor = isDarkInterfaceStyle ?
+                UIColor.highlightedDarkBackground :
+                UIColor.highlightedLightBackground
+        } else {
+            backgroundColor = isDarkInterfaceStyle ?
+                UIColor.defaultDarkBackground :
+                UIColor.defaultLightBackground
+        }
     }
     
 }

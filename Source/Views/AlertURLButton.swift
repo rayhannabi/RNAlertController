@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct AlertURL {
-    let url : URL?
-    let text: String?
-}
-
 class AlertURLButton: UIButton {
 
     convenience init(_ alertURL: AlertURL) {
