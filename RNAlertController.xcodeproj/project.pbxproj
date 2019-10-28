@@ -27,6 +27,7 @@
 		E85086C7231E670200F0D6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85086B7231E649700F0D6B3 /* Assets.xcassets */; };
 		E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */; };
 		E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8722542234B14E10054A937 /* AlertDatePicker.swift */; };
+		E88841062366F90E00CFF2AA /* AlertBannerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */; };
 		E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE528E227B07D200466CAF /* AlertImageView.swift */; };
 		E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5290227B092400466CAF /* AlertStackView.swift */; };
 		E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5292227B0FD400466CAF /* AlertContainerView.swift */; };
@@ -106,6 +107,7 @@
 		E85086CC231E6BBA00F0D6B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertURLButton.swift; sourceTree = "<group>"; };
 		E8722542234B14E10054A937 /* AlertDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDatePicker.swift; sourceTree = "<group>"; };
+		E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBannerPosition.swift; sourceTree = "<group>"; };
 		E8CE528E227B07D200466CAF /* AlertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImageView.swift; sourceTree = "<group>"; };
 		E8CE5290227B092400466CAF /* AlertStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStackView.swift; sourceTree = "<group>"; };
 		E8CE5292227B0FD400466CAF /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E82A05352366F50B00DF9E74 /* AlertActionWrapper.swift */,
+				E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */,
 				E82A05372366F57900DF9E74 /* AlertButtonType.swift */,
 				E82A05392366F5AD00DF9E74 /* AlertLabelType.swift */,
 				E82A053B2366F5E900DF9E74 /* AlertPickerRow.swift */,
@@ -460,6 +463,7 @@
 				E82A053C2366F5E900DF9E74 /* AlertPickerRow.swift in Sources */,
 				E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */,
 				E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */,
+				E88841062366F90E00CFF2AA /* AlertBannerPosition.swift in Sources */,
 				E8FEEE2623104A9F00A155E2 /* UIColor+Extra.swift in Sources */,
 				E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */,
 				E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */,
