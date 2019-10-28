@@ -47,7 +47,8 @@ public extension RNAlertController {
     ///
     /// When set, message text will use attributed text instead of regular text.
     /// - Parameter attributedText: Attributed string to set.
-    @discardableResult func setAttributedTextForMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
+    @discardableResult
+    func setAttributedTextForMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
         self.attributedMessage = attributedText
         return self
     }
@@ -74,8 +75,9 @@ public extension RNAlertController {
     ///
     /// Banner image is displayed under the message body.
     /// Consequent calls of this method will result in replacement of previously set image.
-    /// - Parameter image: image to use in the alert.
-    /// - Parameter position: determines the position of the image.
+    /// - Parameters:
+    ///     - image: image to use in the alert.
+    ///     - position: determines the position of the image.
     /// - Returns: RNAlertController` instance.
     @discardableResult
     func setBannerImage(_ image: UIImage, position: AlertBannerPosition = .afterBody) -> RNAlertController {

@@ -29,7 +29,7 @@ class OtherViewController: UIViewController {
         
         RNAlertController(title: "Kashmir Valley", message: nil)
             .setAttributedTextForMessage(attText)
-            .setBannerImage(UIImage(named: "crop")!)
+            .setBannerImage(UIImage(named: "crop")!, position: .beforeBody)
             .addOkButton()
             .present()
     }
