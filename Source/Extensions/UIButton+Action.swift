@@ -8,21 +8,6 @@
 
 import UIKit
 
-@objc class AlertActionWrapper: NSObject {
-    
-    let alertAction: AlertAction
-    
-    init(_ action: @escaping AlertAction) {
-        alertAction = action
-        super.init()
-    }
-    
-    @objc func invoke() {
-        alertAction()
-    }
-    
-}
-
 extension UIButton {
     
     func addAction(for controlState: UIControl.Event, action: @escaping AlertAction) {
