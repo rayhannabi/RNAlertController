@@ -43,6 +43,9 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/AlertBannerPosition.html">AlertBannerPosition</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/AlertButtonType.html">AlertButtonType</a>
               </li>
             </ul>
@@ -570,9 +573,9 @@ for view controller will present the alert on a custom window.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setBannerImage:"></a>
-                    <a name="//apple_ref/swift/Method/setBannerImage(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setBannerImage:">setBannerImage(_:)</a>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setBannerImage:position:"></a>
+                    <a name="//apple_ref/swift/Method/setBannerImage(_:position:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setBannerImage:position:">setBannerImage(_:position:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -582,8 +585,8 @@ for view controller will present the alert on a custom window.</p>
                       <div class="abstract">
                         <p>Sets the banner image for the alert.</p>
 
-<p>Banner image is displayed under the message body. Consequent calls of this method will result
-in replacement of previously set image.</p>
+<p>Banner image is displayed under the message body.
+Consequent calls of this method will result in replacement of previously set image.</p>
 
                       </div>
                       <div class="declaration">
@@ -591,7 +594,7 @@ in replacement of previously set image.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">setBannerImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
+<span class="kd">func</span> <span class="nf">setBannerImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Enums/AlertBannerPosition.html">AlertBannerPosition</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">afterBody</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
 
                         </div>
                       </div>
@@ -611,12 +614,24 @@ in replacement of previously set image.</p>
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determines the position of the image.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>RNAlertController</code> instance.</p>
+                        <p>RNAlertController` instance.</p>
                       </div>
                     </section>
                   </div>

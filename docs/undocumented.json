@@ -44,35 +44,35 @@
     },
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "RNAlertController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
-      "line": 59,
+      "line": 60,
       "symbol": "RNAlertController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
-      "line": 64,
+      "line": 65,
       "symbol": "RNAlertController.viewWillDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
-      "line": 73,
+      "line": 74,
       "symbol": "RNAlertController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/rayhan/Documents/work/RNAlertController/Source/RNAlertController.swift",
-      "line": 79,
+      "line": 80,
       "symbol": "RNAlertController.traitCollectionDidChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
