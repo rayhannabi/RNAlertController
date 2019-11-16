@@ -51,7 +51,7 @@ final class AlertButtonStackView: UIStackView {
         if buttonCollection.count >= 2 {
             for view in buttonCollection {
                 if let textIntrinsicSize = (view as? UIButton)?.titleLabel?.intrinsicContentSize {
-                    if textIntrinsicSize.width > widthFactor {
+                    if textIntrinsicSize.width > widthFactor - 8 {
                         shouldUseVerticalAxis = true
                     }
                 }
