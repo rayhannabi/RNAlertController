@@ -37,7 +37,7 @@ public extension RNAlertController {
         let action = {
             self.dismiss(animated: true, completion: action)
         }
-        let button = AlertButton(text: title, type: type, action: action)
+        let button = Button(text: title, type: type, action: action)
         buttons?.append(button)
         
         return self
@@ -47,7 +47,8 @@ public extension RNAlertController {
     ///
     /// When set, message text will use attributed text instead of regular text.
     /// - Parameter attributedText: Attributed string to set.
-    @discardableResult func setAttributedTextForMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
+    @discardableResult
+    func setAttributedTextForMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
         self.attributedMessage = attributedText
         return self
     }
@@ -72,13 +73,16 @@ public extension RNAlertController {
     
     /// Sets the banner image for the alert.
     ///
-    /// Banner image is displayed under the message body. Consequent calls of this method will result
-    /// in replacement of previously set image.
-    /// - Parameter image: image to use in the alert.
-    /// - Returns: `RNAlertController` instance.
+    /// Banner image is displayed under the message body.
+    /// Consequent calls of this method will result in replacement of previously set image.
+    /// - Parameters:
+    ///     - image: image to use in the alert.
+    ///     - position: determines the position of the image.
+    /// - Returns: RNAlertController` instance.
     @discardableResult
-    func setBannerImage(_ image: UIImage) -> RNAlertController {
+    func setBannerImage(_ image: UIImage, position: AlertBannerPosition = .afterBody) -> RNAlertController {
         self.image = image
+        self.imagePosition = position
         return self
     }
     

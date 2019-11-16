@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum AlertLabelType {
-    case title
-    case message
-}
-
 class AlertLabel: UILabel {
     
     override init(frame: CGRect) {

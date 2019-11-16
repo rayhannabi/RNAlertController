@@ -8,9 +8,6 @@
 
 import UIKit
 
-/// Action block to perform when a date is selected.
-public typealias AlertDatePickerAction = (Date) -> Void
-
 class AlertDatePicker: UIDatePicker {
 
     var action: AlertDatePickerAction?

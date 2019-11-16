@@ -13,8 +13,9 @@ import UIKit
         
     var message                 : String?
     var attributedMessage       : NSAttributedString?
-    var buttons                 : [AlertButton]?
+    var buttons                 : [Button]?
     var image                   : UIImage?
+    var imagePosition           : AlertBannerPosition?
     var pickerData              : [String]?
     var pickerAction            : AlertPickerAction?
     var selectedPickerRow       : Int?
@@ -147,7 +148,10 @@ private extension RNAlertController {
     
     func createImageView() -> AlertImageView? {
         guard let image = image else { return nil }
+        guard let position = imagePosition else { return nil }
         let imageView = AlertImageView(image: image)
+        imageView.contentMode = position == .beforeBody ? .scaleAspectFill: .scaleAspectFit
+        imageView.clipsToBounds = true
         return imageView
     }
     
@@ -174,7 +178,9 @@ private extension RNAlertController {
         let pickerView = createPickerView()
         let urlView = createURLView()
         if imageView != nil {
-            extraStackItems.append(imageView!)
+            if let position = imagePosition, position == .afterBody {
+                extraStackItems.append(imageView!)
+            }
         }
         if pickerView != nil {
             extraStackItems.append(pickerView!)
@@ -244,6 +250,13 @@ private extension RNAlertController {
             extraStack.bottomAnchor.constraint(equalTo: alertBodyBackground.bottomAnchor, constant: -12)
             ]
         )
+        
+        if let bannerPosition = imagePosition, image != nil, bannerPosition == .beforeBody {
+             let imageView = createImageView()
+            if imageView != nil {
+                alertBody.addArrangedSubview(imageView!)
+            }
+        }
         
         alertBody.addArrangedSubview(alertBodyBackground)
         if let buttons = buttons, buttons.count > 0 {
