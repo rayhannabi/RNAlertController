@@ -17,8 +17,8 @@ class OtherViewController: UIViewController {
         let text = "The word Kashmir was derived from the ancient Sanskrit language and was referred to as káśmīra."
         let attText = NSMutableAttributedString(string: text,
                                                 attributes: [.font : UIFont.alertMessageFont ])
-        attText.addAttribute(.font,
-                             value: UIFont.alertMessageFontBold,
+        attText.addAttribute(.link,
+                             value: URL(string: "https://www.google.com/search?q=Kashmir")!,
                              range: NSRange(text.range(of: "Kashmir")!, in: text))
         attText.addAttribute(.font,
                              value: UIFont.alertMessageFontItalic,
