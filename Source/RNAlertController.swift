@@ -140,10 +140,14 @@ private extension RNAlertController {
         if let message = message {
             messageLabel = AlertLabel(text: message, type: labelType)
         }
-        if let attributedMessage = attributedMessage {
-            messageLabel = AlertLabel(attributedText: attributedMessage)
-        }
         return messageLabel
+    }
+    
+    func createAttributedMessageView() -> AlertMessageTextView? {
+        guard let attributedMessage = attributedMessage else { return nil }
+        let messageTextView = AlertMessageTextView()
+        messageTextView.setAttributedTextWithCenterAlignment(attributedMessage)
+        return messageTextView
     }
     
     func createImageView() -> AlertImageView? {
@@ -199,11 +203,16 @@ private extension RNAlertController {
         var alertStackItems = [UIView]()
         let titleLabel = createTitleLabel()
         let messageLabel = createMessageLabel()
+        let messageTextView = createAttributedMessageView()
         if titleLabel != nil {
             alertStackItems.append(titleLabel!)
         }
-        if messageLabel != nil {
-            alertStackItems.append(messageLabel!)
+        if messageTextView != nil {
+            alertStackItems.append(messageTextView!)
+        } else {
+            if messageLabel != nil {
+                alertStackItems.append(messageLabel!)
+            }
         }
         let alertStackView = AlertStackView(arrangedSubviews: alertStackItems)
         return alertStackView
