@@ -28,6 +28,7 @@
 		E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */; };
 		E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8722542234B14E10054A937 /* AlertDatePicker.swift */; };
 		E88841062366F90E00CFF2AA /* AlertBannerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */; };
+		E896FF022398ED930003CCD0 /* AlertMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896FF012398ED930003CCD0 /* AlertMessageTextView.swift */; };
 		E8CE528F227B07D200466CAF /* AlertImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE528E227B07D200466CAF /* AlertImageView.swift */; };
 		E8CE5291227B092400466CAF /* AlertStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5290227B092400466CAF /* AlertStackView.swift */; };
 		E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE5292227B0FD400466CAF /* AlertContainerView.swift */; };
@@ -108,6 +109,7 @@
 		E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertURLButton.swift; sourceTree = "<group>"; };
 		E8722542234B14E10054A937 /* AlertDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDatePicker.swift; sourceTree = "<group>"; };
 		E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBannerPosition.swift; sourceTree = "<group>"; };
+		E896FF012398ED930003CCD0 /* AlertMessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageTextView.swift; sourceTree = "<group>"; };
 		E8CE528E227B07D200466CAF /* AlertImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertImageView.swift; sourceTree = "<group>"; };
 		E8CE5290227B092400466CAF /* AlertStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStackView.swift; sourceTree = "<group>"; };
 		E8CE5292227B0FD400466CAF /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				E8CE5294227C506000466CAF /* AlertPickerView.swift */,
 				E8CE5290227B092400466CAF /* AlertStackView.swift */,
 				E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */,
+				E896FF012398ED930003CCD0 /* AlertMessageTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */,
 				E88841062366F90E00CFF2AA /* AlertBannerPosition.swift in Sources */,
 				E8FEEE2623104A9F00A155E2 /* UIColor+Extra.swift in Sources */,
+				E896FF022398ED930003CCD0 /* AlertMessageTextView.swift in Sources */,
 				E8CE5293227B0FD400466CAF /* AlertContainerView.swift in Sources */,
 				E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */,
 				E8CE5295227C506000466CAF /* AlertPickerView.swift in Sources */,
@@ -569,7 +573,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 670;
+				CURRENT_PROJECT_VERSION = 671;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = "$(SRCROOT)/RNAlertControllerExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -591,7 +595,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 670;
+				CURRENT_PROJECT_VERSION = 671;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				INFOPLIST_FILE = "$(SRCROOT)/RNAlertControllerExample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -738,7 +742,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1010;
+				CURRENT_PROJECT_VERSION = 1011;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -770,7 +774,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1010;
+				CURRENT_PROJECT_VERSION = 1011;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PCH85ZHVFN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
