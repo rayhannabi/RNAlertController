@@ -13,6 +13,7 @@
 		E82A053C2366F5E900DF9E74 /* AlertPickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A053B2366F5E900DF9E74 /* AlertPickerRow.swift */; };
 		E82A053E2366F62A00DF9E74 /* AlertURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A053D2366F62A00DF9E74 /* AlertURL.swift */; };
 		E82A05402366F68F00DF9E74 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A053F2366F68F00DF9E74 /* Typealiases.swift */; };
+		E8421A8A23CC6376005C689F /* AlertCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8421A8923CC6376005C689F /* AlertCheckboxView.swift */; };
 		E8508678231E5F2100F0D6B3 /* RNAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */; };
 		E850867A231E5F2100F0D6B3 /* RNAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */; };
 		E85086BB231E649800F0D6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85086B6231E649700F0D6B3 /* AppDelegate.swift */; };
@@ -91,6 +92,7 @@
 		E82A053B2366F5E900DF9E74 /* AlertPickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPickerRow.swift; sourceTree = "<group>"; };
 		E82A053D2366F62A00DF9E74 /* AlertURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertURL.swift; sourceTree = "<group>"; };
 		E82A053F2366F68F00DF9E74 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		E8421A8923CC6376005C689F /* AlertCheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCheckboxView.swift; sourceTree = "<group>"; };
 		E8508675231E5F2100F0D6B3 /* RNAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAlertControllerTests.swift; sourceTree = "<group>"; };
 		E8508679231E5F2100F0D6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				E8FEEE232310409200A155E2 /* AlertButton.swift */,
 				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
+				E8421A8923CC6376005C689F /* AlertCheckboxView.swift */,
 				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
 				E8722542234B14E10054A937 /* AlertDatePicker.swift */,
 				E8CE528E227B07D200466CAF /* AlertImageView.swift */,
@@ -459,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8ECFAE722772EFC00D4BA3F /* RNAlertController.swift in Sources */,
+				E8421A8A23CC6376005C689F /* AlertCheckboxView.swift in Sources */,
 				E82A053A2366F5AD00DF9E74 /* AlertLabelType.swift in Sources */,
 				E8ECFAE422772EFC00D4BA3F /* Button.swift in Sources */,
 				E82A05362366F50B00DF9E74 /* AlertActionWrapper.swift in Sources */,

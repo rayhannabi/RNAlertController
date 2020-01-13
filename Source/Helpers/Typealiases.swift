@@ -18,4 +18,4 @@ public typealias AlertPickerAction = (AlertPickerRow) -> Void
 public typealias AlertDatePickerAction = (Date) -> Void
 
 /// Action block to perform when checkbox is selected or deselected
-public typealias AlertCheckBoxAction = (Bool) -> Void
+public typealias AlertCheckboxAction = (Bool) -> Void

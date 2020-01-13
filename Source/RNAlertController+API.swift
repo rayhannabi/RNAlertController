@@ -142,4 +142,10 @@ public extension RNAlertController {
         return self
     }
     
+    @discardableResult func setCheckboxView(title: String?,
+                                        isSelected: Bool = false,
+                                        action: AlertCheckboxAction? = nil) -> RNAlertController {
+        return self
+    }
+    
 }
