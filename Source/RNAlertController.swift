@@ -21,6 +21,7 @@ import UIKit
     var selectedPickerRow       : Int?
     var alertURL                : AlertURL?
     var alertDatePicker         : AlertDatePicker?
+    var checkboxView            : AlertCheckboxView?
     
     private var alertWindow         : UIWindow?
     private var originalWindow      : UIWindow?
@@ -195,7 +196,11 @@ private extension RNAlertController {
         if alertDatePicker != nil {
             extraStackItems.append(alertDatePicker!)
         }
+        if checkboxView != nil {
+            extraStackItems.append(checkboxView!)
+        }
         let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
+        extraStackView.alignment = .center
         return extraStackView
     }
     
