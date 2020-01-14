@@ -10,6 +10,11 @@ import UIKit
 
 public extension RNAlertController {
     
+    /// Initializes the alert.
+    /// - Parameters:
+    ///   - title: Title for the alert.
+    ///   - message: Message body of the alert.
+    /// - Returns: `RNAlertController` instance.
     static func alertController(title: String?, message: String?) -> RNAlertController {
         return RNAlertController(title: title, message: message)
     }
@@ -146,9 +151,16 @@ public extension RNAlertController {
         return self
     }
     
-    @discardableResult func setCheckboxView(title: String?,
-                                        isSelected: Bool,
-                                        action: AlertCheckboxAction?) -> RNAlertController {
+    /// Sets a checkbox with a title below the message body.
+    /// - Parameters:
+    ///   - title: A message that is shown on the right of the checkbox.
+    ///   - isSelected: Boolean value indicating the primary state of the checkbox.
+    ///   - action: Block to execute the checkbox is toggled.
+    /// - Returns: `RNAlertController` instance.
+    @discardableResult
+    func setCheckboxView(title: String?,
+                         isSelected: Bool,
+                         action: AlertCheckboxAction?) -> RNAlertController {
         checkboxView = AlertCheckboxView(title: title, isSelected: isSelected)
         checkboxView?.selectionAction = action
         return self

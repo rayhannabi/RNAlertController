@@ -39,11 +39,11 @@ import UIKit
         super.init(coder: aDecoder)
     }
     
-    /// Initializes the alert
+    /// Initializes the alert.
     ///
     /// - Parameters:
-    ///   - title: Title for the alert
-    ///   - message: Message body of the alert
+    ///   - title: Title for the alert.
+    ///   - message: Message body of the alert.
     public convenience init(title: String?, message: String?) {
         self.init(nibName: nil, bundle: nil)
         self.title = title
