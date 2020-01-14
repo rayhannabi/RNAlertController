@@ -180,9 +180,7 @@
 			children = (
 				E8FEEE232310409200A155E2 /* AlertButton.swift */,
 				E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */,
-				E8421A8923CC6376005C689F /* AlertCheckboxView.swift */,
-				E84B326623CC93ED00DEEBE0 /* AlertCheckboxButton.swift */,
-				E867EDE523CDA695009489E6 /* AlertCheckboxLabel.swift */,
+				E867EDE723CDAC8E009489E6 /* Checkbox Views */,
 				E8CE5292227B0FD400466CAF /* AlertContainerView.swift */,
 				E8722542234B14E10054A937 /* AlertDatePicker.swift */,
 				E8CE528E227B07D200466CAF /* AlertImageView.swift */,
@@ -267,6 +265,16 @@
 				E85086AF231E649700F0D6B3 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E867EDE723CDAC8E009489E6 /* Checkbox Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8421A8923CC6376005C689F /* AlertCheckboxView.swift */,
+				E84B326623CC93ED00DEEBE0 /* AlertCheckboxButton.swift */,
+				E867EDE523CDA695009489E6 /* AlertCheckboxLabel.swift */,
+			);
+			path = "Checkbox Views";
 			sourceTree = "<group>";
 		};
 		E8ECFAC122772ED000D4BA3F = {
