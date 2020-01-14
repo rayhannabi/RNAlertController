@@ -30,6 +30,9 @@ class OtherViewController: UIViewController {
         RNAlertController(title: "Kashmir Valley", message: nil)
             .setAttributedTextForMessage(attText)
             .setBannerImage(UIImage(named: "crop")!, position: .beforeBody)
+            .setCheckboxView(title: "Remember my choice", isSelected: true, action: { isSelected in
+                print(isSelected)
+            })
             .addOkButton()
             .present()
     }

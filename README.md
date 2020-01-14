@@ -20,6 +20,7 @@ An easy-to-use alert framework for iOS written purely in Swift. With native look
 * Multiple buttons with closure action
 * Picker view
 * URL Button
+* Checkbox
 
 ## Requirements
 

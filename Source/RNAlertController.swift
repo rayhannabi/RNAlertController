@@ -13,7 +13,7 @@ import UIKit
         
     var message                 : String?
     var attributedMessage       : NSAttributedString?
-    var buttons                 : [Button]?
+    var buttons                 : [ActionButton]?
     var image                   : UIImage?
     var imagePosition           : AlertBannerPosition?
     var pickerData              : [String]?
@@ -21,6 +21,7 @@ import UIKit
     var selectedPickerRow       : Int?
     var alertURL                : AlertURL?
     var alertDatePicker         : AlertDatePicker?
+    var checkboxView            : AlertCheckboxView?
     
     private var alertWindow         : UIWindow?
     private var originalWindow      : UIWindow?
@@ -38,11 +39,11 @@ import UIKit
         super.init(coder: aDecoder)
     }
     
-    /// Initializes the alert
+    /// Initializes the alert.
     ///
     /// - Parameters:
-    ///   - title: Title for the alert
-    ///   - message: Message body of the alert
+    ///   - title: Title for the alert.
+    ///   - message: Message body of the alert.
     public convenience init(title: String?, message: String?) {
         self.init(nibName: nil, bundle: nil)
         self.title = title
@@ -195,7 +196,11 @@ private extension RNAlertController {
         if alertDatePicker != nil {
             extraStackItems.append(alertDatePicker!)
         }
+        if checkboxView != nil {
+            extraStackItems.append(checkboxView!)
+        }
         let extraStackView = AlertStackView(arrangedSubviews: extraStackItems)
+        extraStackView.alignment = .center
         return extraStackView
     }
     
