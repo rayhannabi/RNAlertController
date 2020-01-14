@@ -10,6 +10,10 @@ import UIKit
 
 public extension RNAlertController {
     
+    static func alertController(title: String?, message: String?) -> RNAlertController {
+        return RNAlertController(title: title, message: message)
+    }
+    
     /// Presents the alert on the specified view controller or a window.
     ///
     /// Use this method to present `RNAlertController` alert on a specific view controller. Passing `nil`

@@ -41,7 +41,7 @@
 		E8ECFAE122772EFC00D4BA3F /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */; };
 		E8ECFAE222772EFC00D4BA3F /* UIFont+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */; };
 		E8ECFAE322772EFC00D4BA3F /* AlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */; };
-		E8ECFAE422772EFC00D4BA3F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADC22772EFB00D4BA3F /* Button.swift */; };
+		E8ECFAE422772EFC00D4BA3F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADC22772EFB00D4BA3F /* ActionButton.swift */; };
 		E8ECFAE622772EFC00D4BA3F /* AlertButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */; };
 		E8ECFAE722772EFC00D4BA3F /* RNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */; };
 		E8F6B2E9233E32E0006A03F4 /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F6B2E8233E32E0006A03F4 /* UIView+Appearance.swift */; };
@@ -128,7 +128,7 @@
 		E8ECFAD922772EFB00D4BA3F /* UIButton+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Action.swift"; sourceTree = "<group>"; };
 		E8ECFADA22772EFB00D4BA3F /* UIFont+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extra.swift"; sourceTree = "<group>"; };
 		E8ECFADB22772EFB00D4BA3F /* AlertLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertLabel.swift; sourceTree = "<group>"; };
-		E8ECFADC22772EFB00D4BA3F /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E8ECFADC22772EFB00D4BA3F /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		E8ECFADE22772EFB00D4BA3F /* AlertButtonStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButtonStackView.swift; sourceTree = "<group>"; };
 		E8ECFADF22772EFB00D4BA3F /* RNAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNAlertController.swift; sourceTree = "<group>"; };
 		E8F6B2E8233E32E0006A03F4 /* UIView+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Appearance.swift"; sourceTree = "<group>"; };
@@ -190,13 +190,13 @@
 		E82A05342366F4E300DF9E74 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E8ECFADC22772EFB00D4BA3F /* ActionButton.swift */,
 				E82A05352366F50B00DF9E74 /* AlertActionWrapper.swift */,
 				E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */,
 				E82A05372366F57900DF9E74 /* AlertButtonType.swift */,
 				E82A05392366F5AD00DF9E74 /* AlertLabelType.swift */,
 				E82A053B2366F5E900DF9E74 /* AlertPickerRow.swift */,
 				E82A053D2366F62A00DF9E74 /* AlertURL.swift */,
-				E8ECFADC22772EFB00D4BA3F /* Button.swift */,
 				E82A053F2366F68F00DF9E74 /* Typealiases.swift */,
 			);
 			path = Helpers;
@@ -264,9 +264,9 @@
 		E867EDE723CDAC8E009489E6 /* Checkbox Views */ = {
 			isa = PBXGroup;
 			children = (
-				E8421A8923CC6376005C689F /* AlertCheckboxView.swift */,
 				E84B326623CC93ED00DEEBE0 /* AlertCheckboxButton.swift */,
 				E867EDE523CDA695009489E6 /* AlertCheckboxLabel.swift */,
+				E8421A8923CC6376005C689F /* AlertCheckboxView.swift */,
 			);
 			path = "Checkbox Views";
 			sourceTree = "<group>";
@@ -514,7 +514,7 @@
 				E8ECFAE722772EFC00D4BA3F /* RNAlertController.swift in Sources */,
 				E8421A8A23CC6376005C689F /* AlertCheckboxView.swift in Sources */,
 				E82A053A2366F5AD00DF9E74 /* AlertLabelType.swift in Sources */,
-				E8ECFAE422772EFC00D4BA3F /* Button.swift in Sources */,
+				E8ECFAE422772EFC00D4BA3F /* ActionButton.swift in Sources */,
 				E82A05362366F50B00DF9E74 /* AlertActionWrapper.swift in Sources */,
 				E867EDE623CDA695009489E6 /* AlertCheckboxLabel.swift in Sources */,
 				E8ECFAE122772EFC00D4BA3F /* UIButton+Action.swift in Sources */,
