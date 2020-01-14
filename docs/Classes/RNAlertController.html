@@ -14,7 +14,7 @@
     <a title="RNAlertController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RNAlertController Docs</a></p>
+        <p><a href="../index.html">📖 RNAlertController Documentation</a></p>
         <p class="header-right"><a href="https://github.com/rayhannabi/RNAlertController"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -54,7 +54,13 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
               </li>
             </ul>
           </li>
@@ -63,6 +69,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:17RNAlertController11AlertActiona">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17RNAlertController19AlertCheckboxActiona">AlertCheckboxAction</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:17RNAlertController21AlertDatePickerActiona">AlertDatePickerAction</a>
@@ -104,7 +113,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes the alert</p>
+                        <p>Initializes the alert.</p>
 
                       </div>
                       <div class="declaration">
@@ -127,7 +136,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Title for the alert</p>
+                                  <p>Title for the alert.</p>
                                 </div>
                               </td>
                             </tr>
@@ -139,7 +148,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Message body of the alert</p>
+                                  <p>Message body of the alert.</p>
                                 </div>
                               </td>
                             </tr>
@@ -279,10 +288,68 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(cm)alertControllerWithTitle:message:"></a>
+                    <a name="//apple_ref/swift/Method/alertController(title:message:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(cm)alertControllerWithTitle:message:">alertController(title:message:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the alert.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">alertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Title for the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Message body of the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>RNAlertController</code> instance.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -888,13 +955,90 @@ replacement of previously set URL.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setCheckboxViewWithTitle:isSelected:action:"></a>
+                    <a name="//apple_ref/swift/Method/setCheckboxView(title:isSelected:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setCheckboxViewWithTitle:isSelected:action:">setCheckboxView(title:isSelected:action:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a checkbox with a title below the message body.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">setCheckboxView</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                     <span class="nv">isSelected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                     <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:17RNAlertController19AlertCheckboxActiona">AlertCheckboxAction</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A message that is shown on the right of the checkbox.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isSelected</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Boolean value indicating the primary state of the checkbox.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>action</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to execute the checkbox is toggled.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>RNAlertController</code> instance.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
           <p>Copyright © Rayhan Nabi 2019,  published under  <a class="link" href="https://github.com/rayhannabi/RNAlertController/blob/master/LICENSE" target="_blank" rel="external">MIT License</a></p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

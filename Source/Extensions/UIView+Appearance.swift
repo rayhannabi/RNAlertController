@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UIView {
+public extension UIView {
     
     var isDarkInterfaceStyle: Bool {
         if #available(iOS 12.0, *) {

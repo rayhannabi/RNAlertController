@@ -6,9 +6,9 @@
 //  Copyright © 2019 Rayhan Nabi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-extension UIColor {
+public extension UIColor {
     
     static var alertButtonTextRegular: UIColor {
         return UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0)
