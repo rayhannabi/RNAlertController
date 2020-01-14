@@ -23,7 +23,7 @@ final class AlertButtonStackView: UIStackView {
         super.init(coder: coder)
     }
     
-    convenience init(alertButtons: [Button]) {
+    convenience init(alertButtons: [ActionButton]) {
         self.init(frame: .zero)
         let stackItems = createButtonCollection(from: alertButtons)
         let shouldUseVerticalAxis = adjustForOversizedText(buttonCollection: stackItems)
@@ -33,7 +33,7 @@ final class AlertButtonStackView: UIStackView {
         }
     }
     
-    fileprivate func createButtonCollection(from alertButtons: [Button]) -> [UIView] {
+    fileprivate func createButtonCollection(from alertButtons: [ActionButton]) -> [UIView] {
         var stackItems = [UIView]()
         for index in 0..<alertButtons.count {
             let alertButton = alertButtons[index]
