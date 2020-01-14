@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.summary                = "Customizable Alert Framework for iOS"
 
   spec.description            = <<-DESC
-                                An UIAlertController alternative for iOS written purely in Swift
+                                A customizable UIAlertController alternative for iOS written purely in Swift
                                 DESC
 
   spec.homepage               = "https://github.com/rayhannabi/RNAlertController"
