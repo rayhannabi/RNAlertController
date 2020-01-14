@@ -41,7 +41,7 @@ public extension RNAlertController {
         let action = {
             self.dismiss(animated: true, completion: action)
         }
-        let button = Button(text: title, type: type, action: action)
+        let button = ActionButton(text: title, type: type, action: action)
         buttons?.append(button)
         
         return self

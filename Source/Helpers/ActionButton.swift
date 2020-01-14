@@ -1,5 +1,5 @@
 //
-//  Button.swift
+//  ActionButton.swift
 //  RNAlertController
 //
 //  Created by Rayhan Nabi on 4/24/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Button: NSObject {
+class ActionButton: NSObject {
     
     let text        : String
     let action      : AlertAction
