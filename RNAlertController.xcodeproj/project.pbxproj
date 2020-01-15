@@ -15,7 +15,6 @@
 		E82A05402366F68F00DF9E74 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A053F2366F68F00DF9E74 /* Typealiases.swift */; };
 		E8421A8A23CC6376005C689F /* AlertCheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8421A8923CC6376005C689F /* AlertCheckboxView.swift */; };
 		E84B326723CC93ED00DEEBE0 /* AlertCheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B326623CC93ED00DEEBE0 /* AlertCheckboxButton.swift */; };
-		E84B326A23CCA6EF00DEEBE0 /* RNAImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84B326823CC960C00DEEBE0 /* RNAImages.xcassets */; };
 		E8508678231E5F2100F0D6B3 /* RNAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8508677231E5F2100F0D6B3 /* RNAlertControllerTests.swift */; };
 		E850867A231E5F2100F0D6B3 /* RNAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8ECFACB22772ED000D4BA3F /* RNAlertController.framework */; };
 		E85086BB231E649800F0D6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85086B6231E649700F0D6B3 /* AppDelegate.swift */; };
@@ -30,6 +29,7 @@
 		E85086C7231E670200F0D6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85086B7231E649700F0D6B3 /* Assets.xcassets */; };
 		E85EC3DE2293F6FA00C7B417 /* AlertURLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85EC3DD2293F6FA00C7B417 /* AlertURLButton.swift */; };
 		E867EDE623CDA695009489E6 /* AlertCheckboxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867EDE523CDA695009489E6 /* AlertCheckboxLabel.swift */; };
+		E867EDEC23CDF7E4009489E6 /* RNAImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84B326823CC960C00DEEBE0 /* RNAImages.xcassets */; };
 		E8722543234B14E10054A937 /* AlertDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8722542234B14E10054A937 /* AlertDatePicker.swift */; };
 		E88841062366F90E00CFF2AA /* AlertBannerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88841052366F90E00CFF2AA /* AlertBannerPosition.swift */; };
 		E896FF022398ED930003CCD0 /* AlertMessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896FF012398ED930003CCD0 /* AlertMessageTextView.swift */; };
@@ -309,11 +309,19 @@
 			path = "Extra Views";
 			sourceTree = "<group>";
 		};
-		E8ECFAC122772ED000D4BA3F = {
+		E8C631DF23CEF2CF00694F4F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E84B326823CC960C00DEEBE0 /* RNAImages.xcassets */,
-				E8ECFACD22772ED000D4BA3F /* Source */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8ECFAC122772ED000D4BA3F = {
+			isa = PBXGroup;
+			children = (
+				E8C631DF23CEF2CF00694F4F /* Resources */,
+				E8ECFACD22772ED000D4BA3F /* Sources */,
 				E8508676231E5F2100F0D6B3 /* RNAlertControllerTests */,
 				E850869B231E647600F0D6B3 /* RNAlertControllerExample */,
 				E8ECFACC22772ED000D4BA3F /* Products */,
@@ -330,7 +338,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8ECFACD22772ED000D4BA3F /* Source */ = {
+		E8ECFACD22772ED000D4BA3F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				E8ECFACE22772ED000D4BA3F /* RNAlertController.h */,
@@ -341,7 +349,7 @@
 				E82A05342366F4E300DF9E74 /* Helpers */,
 				E813210D231E7343007BD8F7 /* Views */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,7 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84B326A23CCA6EF00DEEBE0 /* RNAImages.xcassets in Resources */,
+				E867EDEC23CDF7E4009489E6 /* RNAImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
