@@ -29,7 +29,8 @@ Pod::Spec.new do |spec|
                                   :tag => "v#{spec.version}"
                                 }
   spec.swift_version          = '5.0'
-  spec.source_files           = "Source/**/*.swift"
+  spec.source_files           = "Sources/**/*.swift"
+  spec.resources              = "Resources/**/*.xcassets"
   spec.framework              = "UIKit"
   spec.requires_arc           = true
 
