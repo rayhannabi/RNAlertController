@@ -99,6 +99,15 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer"></a>
+                <a name="//apple_ref/swift/Section/Initializer" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializer"></a>
+                  <h3 class="section-name"><p>Initializer</p>
+</h3>
+                </div>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -158,6 +167,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UIViewController%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/UIViewController Overrides" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/UIViewController%20Overrides"></a>
+                  <h3 class="section-name"><p>UIViewController Overrides</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -288,6 +310,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static%20Initializer"></a>
+                <a name="//apple_ref/swift/Section/Static Initializer" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Static%20Initializer"></a>
+                  <h3 class="section-name"><p>Static Initializer</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -350,6 +385,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Presentation"></a>
+                <a name="//apple_ref/swift/Section/Presentation" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Presentation"></a>
+                  <h3 class="section-name"><p>Presentation</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -363,17 +411,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Presents the alert on the specified view controller or a window.</p>
+                        <p>Presents the alert on the specified view controller.</p>
 
-<p>Use this method to present <code>RNAlertController</code> alert on a specific view controller. Passing <code>nil</code>
-for view controller will present the alert on a custom window.</p>
+<p>Use this method to present <code>RNAlertController</code> alert on a specific view controller.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="n">on</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="n">on</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -411,6 +458,111 @@ for view controller will present the alert on a custom window.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)present:"></a>
+                    <a name="//apple_ref/swift/Method/present(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)present:">present(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents the alert on its own window.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run after presenting the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)dismiss:"></a>
+                    <a name="//apple_ref/swift/Method/dismiss(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)dismiss:">dismiss(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dismisses the alert.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dismiss</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Block to run after dismissing the alert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Alert%20Components"></a>
+                <a name="//apple_ref/swift/Section/Alert Components" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Alert%20Components"></a>
+                  <h3 class="section-name"><p>Alert Components</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -482,55 +634,6 @@ for view controller will present the alert on a custom window.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p><code>RNAlertController</code> instance.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setAttributedTextForMessage:"></a>
-                    <a name="//apple_ref/swift/Method/setAttributedTextForMessage(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setAttributedTextForMessage:">setAttributedTextForMessage(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets attributed text for the message.</p>
-
-<p>When set, message text will use attributed text instead of regular text.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">setAttributedTextForMessage</span><span class="p">(</span><span class="n">_</span> <span class="nv">attributedText</span><span class="p">:</span> <span class="kt">NSAttributedString</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attributedText</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attributed string to set.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -640,6 +743,55 @@ for view controller will present the alert on a custom window.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setAttributedMessageText:"></a>
+                    <a name="//apple_ref/swift/Method/setAttributedMessageText(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setAttributedMessageText:">setAttributedMessageText(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets attributed text for the message.</p>
+
+<p>When set, message text will use attributed text instead of regular text.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">setAttributedMessageText</span><span class="p">(</span><span class="n">_</span> <span class="nv">attributedText</span><span class="p">:</span> <span class="kt">NSAttributedString</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">RNAlertController</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributedText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Attributed string to set.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setBannerImage:position:"></a>
                     <a name="//apple_ref/swift/Method/setBannerImage(_:position:)" class="dashAnchor"></a>
                     <a class="token" href="#/c:@CM@RNAlertController@objc(cs)RNAlertController(im)setBannerImage:position:">setBannerImage(_:position:)</a>
@@ -652,7 +804,7 @@ for view controller will present the alert on a custom window.</p>
                       <div class="abstract">
                         <p>Sets the banner image for the alert.</p>
 
-<p>Banner image is displayed under the message body.
+<p>Banner image is displayed under the message body or at the very top of the body.
 Consequent calls of this method will result in replacement of previously set image.</p>
 
                       </div>

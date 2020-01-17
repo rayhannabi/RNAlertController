@@ -1,127 +1,127 @@
 {
   "warnings": [
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIColor+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIColor+Extra.swift",
       "line": 13,
       "symbol": "UIColor.alertButtonTextRegular",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIColor+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIColor+Extra.swift",
       "line": 17,
       "symbol": "UIColor.alertButtonTextDestructive",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIColor+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIColor+Extra.swift",
       "line": 21,
       "symbol": "UIColor.defaultLightBackground",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIColor+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIColor+Extra.swift",
       "line": 25,
       "symbol": "UIColor.defaultDarkBackground",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIColor+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIColor+Extra.swift",
       "line": 29,
       "symbol": "UIColor.highlightedLightBackground",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIColor+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIColor+Extra.swift",
       "line": 33,
       "symbol": "UIColor.highlightedDarkBackground",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIFont+Extra.swift",
       "line": 13,
       "symbol": "UIFont.alertTitleFont",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIFont+Extra.swift",
       "line": 17,
       "symbol": "UIFont.alertMessageFont",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIFont+Extra.swift",
       "line": 21,
       "symbol": "UIFont.alertMessageFontBold",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIFont+Extra.swift",
       "line": 25,
       "symbol": "UIFont.alertMessageFontItalic",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIFont+Extra.swift",
       "line": 29,
       "symbol": "UIFont.alertButtonFontRegular",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIFont+Extra.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIFont+Extra.swift",
       "line": 33,
       "symbol": "UIFont.alertButtonFontBold",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/Extensions/UIView+Appearance.swift",
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/Extensions/UIView+Appearance.swift",
       "line": 13,
       "symbol": "UIView.isDarkInterfaceStyle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/RNAlertController.swift",
-      "line": 54,
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/RNAlertController.swift",
+      "line": 58,
       "symbol": "RNAlertController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/RNAlertController.swift",
-      "line": 61,
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/RNAlertController.swift",
+      "line": 65,
       "symbol": "RNAlertController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/RNAlertController.swift",
-      "line": 66,
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/RNAlertController.swift",
+      "line": 70,
       "symbol": "RNAlertController.viewWillDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/RNAlertController.swift",
-      "line": 75,
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/RNAlertController.swift",
+      "line": 79,
       "symbol": "RNAlertController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/rayhan/Documents/Work/RNAlertController/Source/RNAlertController.swift",
-      "line": 81,
+      "file": "/Users/rayhan/Documents/Work/RNAlertController/Sources/RNAlertController.swift",
+      "line": 85,
       "symbol": "RNAlertController.traitCollectionDidChange(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
