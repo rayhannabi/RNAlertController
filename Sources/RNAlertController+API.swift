@@ -10,6 +10,8 @@ import UIKit
 
 public extension RNAlertController {
     
+    // MARK: - Static Initializer
+    
     /// Initializes the alert.
     /// - Parameters:
     ///   - title: Title for the alert.
@@ -19,20 +21,31 @@ public extension RNAlertController {
         return RNAlertController(title: title, message: message)
     }
     
-    /// Presents the alert on the specified view controller or a window.
+    // MARK: - Presentation
+    
+    /// Presents the alert on the specified view controller.
     ///
-    /// Use this method to present `RNAlertController` alert on a specific view controller. Passing `nil`
-    /// for view controller will present the alert on a custom window.
+    /// Use this method to present `RNAlertController` alert on a specific view controller.
     /// - Parameters:
     ///   - viewController: `UIViewController` where the alert is to be presented.
     ///   - completion: Block to run after presenting the alert.
-    func present(on viewController: UIViewController? = nil, completion: (() -> Void)? = nil) {
-        if let viewController = viewController {
-            presentOnViewController(viewController, completion: completion)
-        } else {
-            presentOnWindow(completion: completion)
-        }
+    func present(on viewController: UIViewController, completion: (() -> Void)? = nil) {
+        presentOnViewController(viewController, completion: completion)
     }
+    
+    /// Presents the alert on its own window.
+    /// - Parameter completion: Block to run after presenting the alert.
+    func present(_ completion: (() -> Void)? = nil) {
+        presentOnWindow(completion: completion)
+    }
+    
+    /// Dismisses the alert.
+    /// - Parameter completion: Block to run after dismissing the alert.
+    func dismiss(_ completion: (() -> Void)? = nil) {
+        self.dismiss(animated: true, completion: completion)
+    }
+    
+    // MARK: - Alert Components
     
     /// Adds a button to the alert.
     ///
@@ -49,16 +62,6 @@ public extension RNAlertController {
         let button = ActionButton(text: title, type: type, action: action)
         buttons?.append(button)
         
-        return self
-    }
-    
-    /// Sets attributed text for the message.
-    ///
-    /// When set, message text will use attributed text instead of regular text.
-    /// - Parameter attributedText: Attributed string to set.
-    @discardableResult
-    func setAttributedTextForMessage(_ attributedText: NSAttributedString?) -> RNAlertController {
-        self.attributedMessage = attributedText
         return self
     }
     
@@ -80,9 +83,19 @@ public extension RNAlertController {
         return addButton(title: "Cancel", type: .cancel, action: action)
     }
     
+    /// Sets attributed text for the message.
+    ///
+    /// When set, message text will use attributed text instead of regular text.
+    /// - Parameter attributedText: Attributed string to set.
+    @discardableResult
+    func setAttributedMessageText(_ attributedText: NSAttributedString?) -> RNAlertController {
+        self.attributedMessage = attributedText
+        return self
+    }
+    
     /// Sets the banner image for the alert.
     ///
-    /// Banner image is displayed under the message body.
+    /// Banner image is displayed under the message body or at the very top of the body.
     /// Consequent calls of this method will result in replacement of previously set image.
     /// - Parameters:
     ///     - image: image to use in the alert.
