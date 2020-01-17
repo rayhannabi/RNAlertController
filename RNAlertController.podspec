@@ -5,7 +5,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = "RNAlertController"
-  spec.version                = "0.7.1"
+  spec.version                = "0.7.2"
   spec.summary                = "Customizable Alert Framework for iOS"
 
   spec.description            = <<-DESC
