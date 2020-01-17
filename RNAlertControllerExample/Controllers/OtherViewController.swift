@@ -28,7 +28,7 @@ class OtherViewController: UIViewController {
                              range: NSRange(text.range(of: "káśmīra")!, in: text))
         
         RNAlertController(title: "Kashmir Valley", message: nil)
-            .setAttributedTextForMessage(attText)
+            .setAttributedMessageText(attText)
             .setBannerImage(UIImage(named: "crop")!, position: .beforeBody)
             .setCheckboxView(title: "Remember my choice", isSelected: true, action: { isSelected in
                 print(isSelected)

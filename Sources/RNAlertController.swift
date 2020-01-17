@@ -28,6 +28,8 @@ import UIKit
     private var alertBodyBackground : UIView!
     private var container           : AlertContainerView!
     
+    // MARK: - Initializer
+    
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         modalPresentationStyle = .overCurrentContext
@@ -50,6 +52,8 @@ import UIKit
         self.message = message
         buttons = []
     }
+    
+    // MARK: - UIViewController Overrides
     
     public override func viewDidLoad() {
         super.viewDidLoad()
