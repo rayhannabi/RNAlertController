@@ -27,7 +27,7 @@ public extension UIColor {
     }
     
     static var highlightedLightBackground: UIColor {
-        return UIColor(white: 1, alpha: 0.35)
+        return UIColor(white: 1, alpha: 0.40)
     }
     
     static var highlightedDarkBackground: UIColor {

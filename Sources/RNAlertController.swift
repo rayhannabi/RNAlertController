@@ -10,7 +10,7 @@ import UIKit
 
 /// An object that provides RNAlertController.
 @objcMembers public final class RNAlertController: UIViewController {
-        
+    
     var message                 : String?
     var attributedMessage       : NSAttributedString?
     var buttons                 : [ActionButton]?
@@ -270,7 +270,7 @@ private extension RNAlertController {
         )
         
         if let bannerPosition = imagePosition, image != nil, bannerPosition == .beforeBody {
-             let imageView = createImageView()
+            let imageView = createImageView()
             if imageView != nil {
                 alertBody.addArrangedSubview(imageView!)
             }

@@ -33,7 +33,11 @@ final class AlertButtonStackView: UIStackView {
         }
     }
     
-    fileprivate func createButtonCollection(from alertButtons: [ActionButton]) -> [UIView] {
+}
+
+private extension AlertButtonStackView {
+    
+    func createButtonCollection(from alertButtons: [ActionButton]) -> [UIView] {
         var stackItems = [UIView]()
         for index in 0..<alertButtons.count {
             let alertButton = alertButtons[index]
@@ -45,7 +49,7 @@ final class AlertButtonStackView: UIStackView {
         return stackItems
     }
     
-    fileprivate func adjustForOversizedText(buttonCollection: [UIView]) -> Bool {
+    func adjustForOversizedText(buttonCollection: [UIView]) -> Bool {
         let widthFactor = getDeviceWidthOrHeight(multiplier: 0.35)
         var shouldUseVerticalAxis = false
         if buttonCollection.count >= 2 {
@@ -60,7 +64,7 @@ final class AlertButtonStackView: UIStackView {
         return shouldUseVerticalAxis
     }
     
-    fileprivate func getDeviceWidthOrHeight(multiplier: CGFloat = 1.0) -> CGFloat {
+    func getDeviceWidthOrHeight(multiplier: CGFloat = 1.0) -> CGFloat {
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         if screenWidth < screenHeight {

@@ -29,7 +29,11 @@ class AlertMessageTextView: UITextView {
         self.attributedText = mutableAttributedText
     }
     
-    private func setLinkAttributes() {
+}
+
+private extension AlertMessageTextView {
+    
+    func setLinkAttributes() {
         let linkAttributes: [NSAttributedString.Key : Any] = [
             .foregroundColor: UIColor.alertButtonTextRegular,
             .underlineColor: UIColor.alertButtonTextRegular,
@@ -38,7 +42,7 @@ class AlertMessageTextView: UITextView {
         linkTextAttributes = linkAttributes
     }
     
-    private func setEditableProperties() {
+    func setEditableProperties() {
         isScrollEnabled = false
         isEditable = false
         showsHorizontalScrollIndicator = false

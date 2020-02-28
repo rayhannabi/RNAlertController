@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             .addOkButton(action: {
                 self.customAlertFull()
             })
-            .addButton(title: "Request Help", type: .cancel)
+            .addButton(title: "Enter Manually", type: .cancel)
             .present()
     }
     
